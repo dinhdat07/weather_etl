@@ -22,6 +22,7 @@ def forcast_5d3h_api_url(lat: float, lon: float):
 def air_pollution_api_url(lat: float, lon: float):
     return f"https://api.openweathermap.org/data/2.5/air_pollution?lat={lat}&lon={lon}&appid={api_key}"
 
+
 def geocoding_api_url(city: str, country: str):
     return f"https://api.openweathermap.org/geo/1.0/direct?q={city},{country}&limit=1&appid={api_key}"
 
@@ -98,7 +99,13 @@ def geo_lookup():
     else:
         print("No new geodata fetched.")
 
-            
+
+def is_api_success(data: dict) -> bool:
+    cod = data.get("cod")
+    if cod is None:
+        return True
+    return str(cod) == "200"  
+
 
 def fetch_weather_info(
     api_func: Callable[[float, float], str],
@@ -123,9 +130,8 @@ def fetch_weather_info(
             response = requests.get(url, timeout=10)
             response.raise_for_status()
             data = response.json()
-
-            if data.get("cod") != 200:
-                print(f"[Error] API error for {city} (lat={lat}, lon={lon}): {data.get('message', 'Unknown error')}")
+            if not is_api_success(data):
+                print(f"[ERROR] API error for {city}: {data.get('message', 'No error message')}")
                 continue
 
             weather_info.append({
@@ -144,10 +150,8 @@ def fetch_weather_info(
         sleep(1)  # respect rate limit
     
     if not weather_info:
-        print("No weather data fetched for {output_filename}.")
+        print(f"No weather data fetched for {output_filename}.")
         return None
-    
-
     
     try:
         os.makedirs(output_dir, exist_ok=True)
@@ -158,10 +162,13 @@ def fetch_weather_info(
             json.dump(weather_info, f, ensure_ascii=False, indent=4)
         
         print(f"Saved {len(weather_info)} records to {output_path}")
+        return output_path
 
     except Exception as e:
         print(f"[ERROR] Failed to save file: {str(e)}")
         return None
 
 
-
+# fetch_weather_info(curr_weather_api_url, "current_weather")
+# fetch_weather_info(forcast_5d3h_api_url, "forecast_5d3h")
+fetch_weather_info(air_pollution_api_url, "air_pollution")
