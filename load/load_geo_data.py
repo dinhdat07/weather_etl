@@ -84,7 +84,6 @@ def load_geo_data(conn: pg.extensions.connection, csv_path: str = 'raw/geo_data.
             raise RuntimeError(f"Database operation failed: {e}")
         
 def main() -> NoReturn:
-    """Entry point chính cho script."""
     try:
         conn = get_db_connection()
         create_cities_table(conn)

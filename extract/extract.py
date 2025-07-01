@@ -123,7 +123,7 @@ def fetch_weather_info(
     
     weather_info = []
     for row in df.itertuples():
-        city, lat, lon = row.city, row.lat, row.lon
+        city, lat, lon, country = row.city, row.lat, row.lon, row.country
         url = api_func(lat, lon)
 
         try: 
@@ -138,6 +138,7 @@ def fetch_weather_info(
                     "city": city,
                     "lat": lat,
                     "lon": lon,
+                    "country": country,
                     "data": data
                 })
             print(f"Fetched data for {city}")
@@ -169,6 +170,6 @@ def fetch_weather_info(
         return None
 
 
-# fetch_weather_info(curr_weather_api_url, "current_weather")
+fetch_weather_info(curr_weather_api_url, "current_weather")
 # fetch_weather_info(forcast_5d3h_api_url, "forecast_5d3h")
-fetch_weather_info(air_pollution_api_url, "air_pollution")
+# fetch_weather_info(air_pollution_api_url, "air_pollution")
