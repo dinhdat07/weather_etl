@@ -1,8 +1,11 @@
-from datetime import datetime
-import json
+import csv
 import logging
 import os
-from typing import List, Dict, Any
+import shutil
+from typing import List, Dict, Any, Optional
+from datetime import datetime, timezone, timedelta
+import json
+from timezonefinder import TimezoneFinder
 
 # Constants
 DEFAULT_COUNTRY = 'VN'
@@ -30,6 +33,79 @@ def save_json_file(data: List[Dict[str, Any]], filepath: str) -> None:
     with open(filepath, 'w+', encoding='utf-8') as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
     logger.info(f"Saved {len(data)} records to {filepath}")
+
+
+
+
+def get_timezone(weather_data: dict) -> str:
+    if 'timezone' in weather_data:
+        offset_hours = weather_data['timezone'] / 3600
+        return f"UTC{'+' if offset_hours >=0 else ''}{int(offset_hours)}"
+    
+    return "UTC"
+
+
+def add_timezones_to_csv(
+    csv_path: str,
+    json_path: str,
+    output_path: Optional[str] = None,
+    overwrite: bool = False,
+    backup: bool = True
+) -> None:
+    
+
+    # validate output path
+    if output_path is None:
+        if not overwrite:
+            raise ValueError("Must specify output_path or enable overwrite=True")
+        output_path = csv_path
+    
+    # create backup if needed
+    if overwrite and backup and os.path.exists(csv_path):
+        backup_path = f"{csv_path}.bak"
+        shutil.copy2(csv_path, backup_path)
+        print(f"[INFO] Created backup at: {backup_path}")
+
+    # load data
+    with open(csv_path, 'r', encoding='utf-8') as csv_file:
+        rows = list(csv.DictReader(csv_file))
+    
+    with open(json_path, 'r', encoding='utf-8') as json_file:
+        weather_data = json.load(json_file)
+
+    # process rows with matching
+    
+    matched = 0
+    for row in rows:
+        city_match = None
+        for item in weather_data:
+            if item.get('city', '').lower() == row.get('city', '').lower():
+                if 'lat' in item and 'lon' in item and 'lat' in row and 'lon' in row:
+                    coord_diff = abs(float(item['lat']) - abs(float(row['lat']))) + \
+                                 abs(float(item['lon']) - abs(float(row['lon'])))
+                    if coord_diff > 1.0:  # threshold for coordinate mismatch
+                        print(f"[WARNING] Possible mismatch for {row.get('city', '')}: "
+                              f"Coordinates differ by {coord_diff:.2f} degrees")
+                        continue
+                city_match = item
+                matched += 1
+                break
+        
+        city_data = city_match.get('data', {})
+        if not city_data:
+            print(f"[WARNING] No weather data found for city: {row.get('city', '')}")
+        
+        row['timezone'] = get_timezone(city_data) if city_match else 'UTC'
+
+    print(f"[INFO] Successfully matched {matched}/{len(rows)} cities")
+
+    # write output
+    with open(output_path, 'w', encoding='utf-8', newline='') as out_file:
+        writer = csv.DictWriter(out_file, fieldnames=rows[0].keys())
+        writer.writeheader()
+        writer.writerows(rows)
+    
+    print(f"[SUCCESS] Updated timezones written to: {output_path}")
 
 def _transform_common_fields(row: Dict) -> Dict:
     city = row.get('city', UNKNOWN_CITY)
@@ -62,22 +138,32 @@ def transform_weather_data(raw_data: List[Dict[str, any]]) -> List[Dict[str, any
         rain = data.get('rain', {})
 
 
-        # timestamp conversion
-        timestamp = data.get('dt')
-        time = datetime.fromtimestamp(timestamp).isoformat() if timestamp else None
+        # conversion
+        kelvin_temp = main.get('temp')
+        temp_c = round(kelvin_temp - 273.15, 1) if kelvin_temp is not None else None
+            
+        kelvin_feels = main.get('feels_like')
+        feels_like_c = round(kelvin_feels - 273.15, 1) if kelvin_feels is not None else None
+            
+        wind_speed_kmh = round(wind.get('speed') * 3.6, 1) if wind.get('speed') is not None else None
+        visibility_km = round(data.get('visibility')/1000, 1) if data.get('visibility') else None
 
+        timezone = data.get('timezone')
+        timestamp = data.get('dt')
+        time = datetime.fromtimestamp(timestamp, tz=timezone.utc) if timestamp else None
+        
         record = {
             **base_info,
-            'temperature': main.get('temp'),
-            'feels_like': main.get('feels_like'),
+            'temperature': temp_c,
+            'feels_like': feels_like_c,
             'weather_main': weather.get('main'),
             'weather_description': weather.get('description'),
             'humidity': main.get('humidity'),
             'clouds': data.get('clouds', {}).get('all'),
             'pressure': main.get('pressure'),
-            'wind_speed': wind.get('speed'),
+            'wind_speed': wind_speed_kmh,
             'wind_deg': wind.get('deg'),
-            'visibility': data.get('visibility'),
+            'visibility': visibility_km,
             'rain_1h': rain.get('1h'),
             'timestamp': timestamp,
             'time': time  
@@ -104,23 +190,36 @@ def transform_forecast_data(raw_data: List[Dict[str, any]]) -> List[Dict[str, an
             rain = item.get('rain', {})
 
             # timestamp conversion
+            kelvin_temp = main.get('temp')
+            temp_c = round(kelvin_temp - 273.15, 1) if kelvin_temp is not None else None
+                
+            kelvin_feels = main.get('feels_like')
+            feels_like_c = round(kelvin_feels - 273.15, 1) if kelvin_feels is not None else None
+            
+            pop_raw = item.get('pop')
+            pop_percent = round(pop_raw * 100) if pop_raw is not None else None
+                
+            wind_speed_kmh = round(wind.get('speed') * 3.6, 1) if wind.get('speed') is not None else None
+            visibility_km = round(item.get('visibility')/1000, 1) if item.get('visibility') else None
+
             timestamp = item.get('dt')
-            time = datetime.fromtimestamp(timestamp).isoformat() if timestamp else None
+            time = datetime.fromtimestamp(timestamp, tz=timezone.utc) if timestamp else None
+            
 
             record = {
                 **base_info,
 
-                'temperature': main.get('temp'),
-                'feels_like': main.get('feels_like'),
+                'temperature': temp_c,
+                'feels_like': feels_like_c,
                 'weather_main': weather.get('main'),
                 'weather_description': weather.get('description'),
-                'humidity': item.get('humidity'),
+                'humidity': main.get('humidity'),
                 'clouds': item.get('clouds', {}).get('all'),
-                'pop': item.get('pop'),
+                'pop': pop_percent,
                 'pressure': main.get('pressure'),
-                'wind_speed': wind.get('speed'),
+                'wind_speed': wind_speed_kmh,
                 'wind_deg': wind.get('deg'),
-                'visibility': item.get('visibility'),
+                'visibility': visibility_km,
                 'rain_3h': rain.get('3h'),
                 'timestamp': timestamp,
                 'time': time  
@@ -144,7 +243,7 @@ def transform_air_quality(raw_data: List[Dict[str, Any]]) -> List[Dict[str, Any]
         components = aqi_data.get("components", {})
     
         timestamp = aqi_data.get("dt")
-        time_iso = datetime.fromtimestamp(timestamp).isoformat() if timestamp else None
+        time_iso = datetime.fromtimestamp(timestamp, tz=timezone.utc) if timestamp else None
         
         # transformed record
         record = {
@@ -167,9 +266,45 @@ def transform_air_quality(raw_data: List[Dict[str, Any]]) -> List[Dict[str, Any]
     logger.info(f"Transformed air quality data: {len(transformed_data)} records")
     return transformed_data
 
+def transform_sun_times_data(raw_data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    logger.info(f"Transforming air quality data, {len(raw_data)} records")
+    transformed_data = []
+    
+    for row in raw_data:
+        base_info = _transform_common_fields(row)
+        data = row.get('data', {})
+        sys = data.get('sys', {})
+    
+        sunset_timestamp = sys.get('sunset')
+        sunset = datetime.fromtimestamp(sunset_timestamp, tz=timezone.utc) if sunset_timestamp else None
+
+        sunrise_timestamp = sys.get('sunrise')
+        sunrise = datetime.fromtimestamp(sunrise_timestamp, tz=timezone.utc) if sunrise_timestamp else None
+
+        record = {
+            **base_info,
+            'sunrise': sunrise,
+            'sunset': sunset,
+            'sunrise_stamp': sunrise_timestamp,
+            'sunset_stamp': sunset_timestamp  
+        }
+
+
+        transformed_data.append(record)
+
+    logger.info(f"Transformed sun times data: {len(transformed_data)} records")
+    return transformed_data
+
 
 def main():
     try:
+        logger.info("Getting timezone data for transformation pipeline...")
+        add_timezones_to_csv(
+            csv_path='raw/geo_data.csv',
+            json_path='raw/current_weather_2025-07-01T17-40.json',
+            overwrite=True
+        )
+
         logger.info("Starting data transformation pipeline...")
         processed_dir = "processed"
         os.makedirs(processed_dir, exist_ok=True)
@@ -181,6 +316,12 @@ def main():
         weather_output = os.path.join(processed_dir, "current_weather_transformed.json")
         save_json_file(weather_transformed, weather_output)
         
+        weather_file = "raw/current_weather_2025-07-01T17-40.json"
+        weather_raw = load_json_file(weather_file)
+        weather_transformed = transform_sun_times_data(weather_raw)
+        weather_output = os.path.join(processed_dir, "sun_times_transformed.json")
+        save_json_file(weather_transformed, weather_output)
+
         # forecast data
         forecast_file = "raw/forecast_5d3h_2025-07-01T17-40.json"
         forecast_raw = load_json_file(forecast_file)
@@ -199,6 +340,7 @@ def main():
         
     except Exception as e:
         logger.exception(f"Pipeline failed with error: {str(e)}")
+
 
 if __name__ == "__main__":
     main()
