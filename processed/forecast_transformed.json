@@ -8,7 +8,7 @@
     "feels_like": 26.8,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 84,
     "clouds": 100,
     "pop": 100,
     "pressure": 1003,
@@ -17,7 +17,7 @@
     "visibility": 8.4,
     "rain_3h": 10.12,
     "timestamp": 1751371200,
-    "time": "2025-07-01T19:00:00"
+    "time": "2025-07-01T19:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -28,7 +28,7 @@
     "feels_like": 26.0,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 85,
     "clouds": 100,
     "pop": 100,
     "pressure": 1004,
@@ -37,7 +37,7 @@
     "visibility": 10.0,
     "rain_3h": 11.07,
     "timestamp": 1751382000,
-    "time": "2025-07-01T22:00:00"
+    "time": "2025-07-01T22:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -48,7 +48,7 @@
     "feels_like": 26.0,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 86,
     "clouds": 100,
     "pop": 100,
     "pressure": 1004,
@@ -57,7 +57,7 @@
     "visibility": 6.4,
     "rain_3h": 5.04,
     "timestamp": 1751392800,
-    "time": "2025-07-02T01:00:00"
+    "time": "2025-07-02T01:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -68,7 +68,7 @@
     "feels_like": 26.4,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 89,
     "clouds": 100,
     "pop": 100,
     "pressure": 1004,
@@ -77,7 +77,7 @@
     "visibility": 10.0,
     "rain_3h": 2.04,
     "timestamp": 1751403600,
-    "time": "2025-07-02T04:00:00"
+    "time": "2025-07-02T04:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -88,7 +88,7 @@
     "feels_like": 30.5,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 85,
     "clouds": 100,
     "pop": 100,
     "pressure": 1006,
@@ -97,7 +97,7 @@
     "visibility": 10.0,
     "rain_3h": 2.59,
     "timestamp": 1751414400,
-    "time": "2025-07-02T07:00:00"
+    "time": "2025-07-02T07:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -108,7 +108,7 @@
     "feels_like": 35.9,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 71,
     "clouds": 100,
     "pop": 100,
     "pressure": 1006,
@@ -117,7 +117,7 @@
     "visibility": 3.1,
     "rain_3h": 5.02,
     "timestamp": 1751425200,
-    "time": "2025-07-02T10:00:00"
+    "time": "2025-07-02T10:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -128,7 +128,7 @@
     "feels_like": 37.5,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 67,
     "clouds": 100,
     "pop": 100,
     "pressure": 1005,
@@ -137,7 +137,7 @@
     "visibility": 4.8,
     "rain_3h": 6.48,
     "timestamp": 1751436000,
-    "time": "2025-07-02T13:00:00"
+    "time": "2025-07-02T13:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -148,7 +148,7 @@
     "feels_like": 36.7,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 69,
     "clouds": 100,
     "pop": 100,
     "pressure": 1003,
@@ -157,7 +157,7 @@
     "visibility": 10.0,
     "rain_3h": 4.65,
     "timestamp": 1751446800,
-    "time": "2025-07-02T16:00:00"
+    "time": "2025-07-02T16:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -168,7 +168,7 @@
     "feels_like": 30.7,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 85,
     "clouds": 100,
     "pop": 100,
     "pressure": 1005,
@@ -177,7 +177,7 @@
     "visibility": 10.0,
     "rain_3h": 5.17,
     "timestamp": 1751457600,
-    "time": "2025-07-02T19:00:00"
+    "time": "2025-07-02T19:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -188,7 +188,7 @@
     "feels_like": 26.6,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 87,
     "clouds": 100,
     "pop": 100,
     "pressure": 1007,
@@ -197,7 +197,7 @@
     "visibility": 10.0,
     "rain_3h": 3.7,
     "timestamp": 1751468400,
-    "time": "2025-07-02T22:00:00"
+    "time": "2025-07-02T22:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -208,7 +208,7 @@
     "feels_like": 26.4,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 85,
     "clouds": 100,
     "pop": 100,
     "pressure": 1006,
@@ -217,7 +217,7 @@
     "visibility": 10.0,
     "rain_3h": 1.88,
     "timestamp": 1751479200,
-    "time": "2025-07-03T01:00:00"
+    "time": "2025-07-03T01:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -228,7 +228,7 @@
     "feels_like": 26.7,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 87,
     "clouds": 72,
     "pop": 25,
     "pressure": 1005,
@@ -237,7 +237,7 @@
     "visibility": 10.0,
     "rain_3h": 0.11,
     "timestamp": 1751490000,
-    "time": "2025-07-03T04:00:00"
+    "time": "2025-07-03T04:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -248,7 +248,7 @@
     "feels_like": 30.2,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 83,
     "clouds": 75,
     "pop": 100,
     "pressure": 1007,
@@ -257,7 +257,7 @@
     "visibility": 10.0,
     "rain_3h": 0.88,
     "timestamp": 1751500800,
-    "time": "2025-07-03T07:00:00"
+    "time": "2025-07-03T07:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -268,7 +268,7 @@
     "feels_like": 34.0,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 72,
     "clouds": 97,
     "pop": 100,
     "pressure": 1007,
@@ -277,7 +277,7 @@
     "visibility": 10.0,
     "rain_3h": 1.71,
     "timestamp": 1751511600,
-    "time": "2025-07-03T10:00:00"
+    "time": "2025-07-03T10:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -288,7 +288,7 @@
     "feels_like": 37.2,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 61,
     "clouds": 98,
     "pop": 100,
     "pressure": 1005,
@@ -297,7 +297,7 @@
     "visibility": 10.0,
     "rain_3h": 1.55,
     "timestamp": 1751522400,
-    "time": "2025-07-03T13:00:00"
+    "time": "2025-07-03T13:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -308,7 +308,7 @@
     "feels_like": 36.9,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 66,
     "clouds": 96,
     "pop": 100,
     "pressure": 1003,
@@ -317,7 +317,7 @@
     "visibility": 10.0,
     "rain_3h": 2.24,
     "timestamp": 1751533200,
-    "time": "2025-07-03T16:00:00"
+    "time": "2025-07-03T16:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -328,7 +328,7 @@
     "feels_like": 31.8,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 81,
     "clouds": 96,
     "pop": 99,
     "pressure": 1005,
@@ -337,7 +337,7 @@
     "visibility": 10.0,
     "rain_3h": 0.75,
     "timestamp": 1751544000,
-    "time": "2025-07-03T19:00:00"
+    "time": "2025-07-03T19:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -348,7 +348,7 @@
     "feels_like": 26.5,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 88,
     "clouds": 100,
     "pop": 100,
     "pressure": 1007,
@@ -357,7 +357,7 @@
     "visibility": 10.0,
     "rain_3h": 0.93,
     "timestamp": 1751554800,
-    "time": "2025-07-03T22:00:00"
+    "time": "2025-07-03T22:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -368,7 +368,7 @@
     "feels_like": 26.0,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 90,
     "clouds": 100,
     "pop": 100,
     "pressure": 1005,
@@ -377,7 +377,7 @@
     "visibility": 10.0,
     "rain_3h": 1.41,
     "timestamp": 1751565600,
-    "time": "2025-07-04T01:00:00"
+    "time": "2025-07-04T01:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -388,7 +388,7 @@
     "feels_like": 26.5,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 92,
     "clouds": 100,
     "pop": 33,
     "pressure": 1005,
@@ -397,7 +397,7 @@
     "visibility": 10.0,
     "rain_3h": 0.1,
     "timestamp": 1751576400,
-    "time": "2025-07-04T04:00:00"
+    "time": "2025-07-04T04:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -408,7 +408,7 @@
     "feels_like": 30.1,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 85,
     "clouds": 97,
     "pop": 20,
     "pressure": 1006,
@@ -417,7 +417,7 @@
     "visibility": 10.0,
     "rain_3h": 0.13,
     "timestamp": 1751587200,
-    "time": "2025-07-04T07:00:00"
+    "time": "2025-07-04T07:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -428,7 +428,7 @@
     "feels_like": 36.6,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 64,
     "clouds": 76,
     "pop": 36,
     "pressure": 1006,
@@ -437,7 +437,7 @@
     "visibility": 10.0,
     "rain_3h": 0.27,
     "timestamp": 1751598000,
-    "time": "2025-07-04T10:00:00"
+    "time": "2025-07-04T10:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -448,7 +448,7 @@
     "feels_like": 38.7,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 52,
     "clouds": 80,
     "pop": 26,
     "pressure": 1003,
@@ -457,7 +457,7 @@
     "visibility": 10.0,
     "rain_3h": 0.19,
     "timestamp": 1751608800,
-    "time": "2025-07-04T13:00:00"
+    "time": "2025-07-04T13:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -468,7 +468,7 @@
     "feels_like": 36.5,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 67,
     "clouds": 100,
     "pop": 22,
     "pressure": 1002,
@@ -477,7 +477,7 @@
     "visibility": 10.0,
     "rain_3h": 0.11,
     "timestamp": 1751619600,
-    "time": "2025-07-04T16:00:00"
+    "time": "2025-07-04T16:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -488,7 +488,7 @@
     "feels_like": 33.6,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 73,
     "clouds": 100,
     "pop": 31,
     "pressure": 1004,
@@ -497,7 +497,7 @@
     "visibility": 10.0,
     "rain_3h": 0.15,
     "timestamp": 1751630400,
-    "time": "2025-07-04T19:00:00"
+    "time": "2025-07-04T19:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -508,7 +508,7 @@
     "feels_like": 30.7,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 85,
     "clouds": 98,
     "pop": 44,
     "pressure": 1005,
@@ -517,7 +517,7 @@
     "visibility": 10.0,
     "rain_3h": 0.15,
     "timestamp": 1751641200,
-    "time": "2025-07-04T22:00:00"
+    "time": "2025-07-04T22:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -528,7 +528,7 @@
     "feels_like": 29.7,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 88,
     "clouds": 99,
     "pop": 70,
     "pressure": 1004,
@@ -537,7 +537,7 @@
     "visibility": 10.0,
     "rain_3h": 0.49,
     "timestamp": 1751652000,
-    "time": "2025-07-05T01:00:00"
+    "time": "2025-07-05T01:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -548,7 +548,7 @@
     "feels_like": 26.0,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 90,
     "clouds": 100,
     "pop": 100,
     "pressure": 1003,
@@ -557,7 +557,7 @@
     "visibility": 10.0,
     "rain_3h": 3.02,
     "timestamp": 1751662800,
-    "time": "2025-07-05T04:00:00"
+    "time": "2025-07-05T04:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -568,7 +568,7 @@
     "feels_like": 29.6,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 87,
     "clouds": 100,
     "pop": 100,
     "pressure": 1005,
@@ -577,7 +577,7 @@
     "visibility": 10.0,
     "rain_3h": 2.99,
     "timestamp": 1751673600,
-    "time": "2025-07-05T07:00:00"
+    "time": "2025-07-05T07:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -588,7 +588,7 @@
     "feels_like": 31.1,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 85,
     "clouds": 100,
     "pop": 98,
     "pressure": 1005,
@@ -597,7 +597,7 @@
     "visibility": 10.0,
     "rain_3h": 1.25,
     "timestamp": 1751684400,
-    "time": "2025-07-05T10:00:00"
+    "time": "2025-07-05T10:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -608,7 +608,7 @@
     "feels_like": 33.4,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 77,
     "clouds": 100,
     "pop": 100,
     "pressure": 1003,
@@ -617,7 +617,7 @@
     "visibility": 10.0,
     "rain_3h": 4.33,
     "timestamp": 1751695200,
-    "time": "2025-07-05T13:00:00"
+    "time": "2025-07-05T13:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -628,7 +628,7 @@
     "feels_like": 33.1,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 78,
     "clouds": 100,
     "pop": 100,
     "pressure": 1002,
@@ -637,7 +637,7 @@
     "visibility": 10.0,
     "rain_3h": 3.1,
     "timestamp": 1751706000,
-    "time": "2025-07-05T16:00:00"
+    "time": "2025-07-05T16:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -648,7 +648,7 @@
     "feels_like": 30.7,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 86,
     "clouds": 100,
     "pop": 100,
     "pressure": 1003,
@@ -657,7 +657,7 @@
     "visibility": 10.0,
     "rain_3h": 0.81,
     "timestamp": 1751716800,
-    "time": "2025-07-05T19:00:00"
+    "time": "2025-07-05T19:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -668,7 +668,7 @@
     "feels_like": 26.6,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 87,
     "clouds": 100,
     "pop": 97,
     "pressure": 1005,
@@ -677,7 +677,7 @@
     "visibility": 10.0,
     "rain_3h": 1.38,
     "timestamp": 1751727600,
-    "time": "2025-07-05T22:00:00"
+    "time": "2025-07-05T22:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -688,7 +688,7 @@
     "feels_like": 26.6,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 90,
     "clouds": 100,
     "pop": 91,
     "pressure": 1003,
@@ -697,7 +697,7 @@
     "visibility": 10.0,
     "rain_3h": 1.68,
     "timestamp": 1751738400,
-    "time": "2025-07-06T01:00:00"
+    "time": "2025-07-06T01:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -708,7 +708,7 @@
     "feels_like": 26.0,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 93,
     "clouds": 93,
     "pop": 83,
     "pressure": 1003,
@@ -717,7 +717,7 @@
     "visibility": 10.0,
     "rain_3h": 0.59,
     "timestamp": 1751749200,
-    "time": "2025-07-06T04:00:00"
+    "time": "2025-07-06T04:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -728,7 +728,7 @@
     "feels_like": 26.8,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 90,
     "clouds": 96,
     "pop": 100,
     "pressure": 1004,
@@ -737,7 +737,7 @@
     "visibility": 10.0,
     "rain_3h": 2.97,
     "timestamp": 1751760000,
-    "time": "2025-07-06T07:00:00"
+    "time": "2025-07-06T07:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -748,7 +748,7 @@
     "feels_like": 33.7,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 74,
     "clouds": 100,
     "pop": 51,
     "pressure": 1004,
@@ -757,7 +757,7 @@
     "visibility": 10.0,
     "rain_3h": 0.18,
     "timestamp": 1751770800,
-    "time": "2025-07-06T10:00:00"
+    "time": "2025-07-06T10:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -768,16 +768,16 @@
     "feels_like": 37.4,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 62,
     "clouds": 100,
     "pop": 45,
     "pressure": 1003,
     "wind_speed": 9.8,
     "wind_deg": 240,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751781600,
-    "time": "2025-07-06T13:00:00"
+    "time": "2025-07-06T13:00:00+07:00"
   },
   {
     "city": "Hanoi",
@@ -788,7 +788,7 @@
     "feels_like": 34.4,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 77,
     "clouds": 100,
     "pop": 66,
     "pressure": 1002,
@@ -797,7 +797,7 @@
     "visibility": 10.0,
     "rain_3h": 0.54,
     "timestamp": 1751792400,
-    "time": "2025-07-06T16:00:00"
+    "time": "2025-07-06T16:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -808,7 +808,7 @@
     "feels_like": 34.3,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 66,
     "clouds": 100,
     "pop": 39,
     "pressure": 1005,
@@ -817,7 +817,7 @@
     "visibility": 10.0,
     "rain_3h": 0.11,
     "timestamp": 1751371200,
-    "time": "2025-07-01T19:00:00"
+    "time": "2025-07-01T19:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -828,16 +828,16 @@
     "feels_like": 33.3,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 68,
     "clouds": 100,
     "pop": 0,
     "pressure": 1006,
     "wind_speed": 13.7,
     "wind_deg": 236,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751382000,
-    "time": "2025-07-01T22:00:00"
+    "time": "2025-07-01T22:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -848,16 +848,16 @@
     "feels_like": 31.8,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 73,
     "clouds": 100,
     "pop": 0,
     "pressure": 1006,
     "wind_speed": 13.1,
     "wind_deg": 244,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751392800,
-    "time": "2025-07-02T01:00:00"
+    "time": "2025-07-02T01:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -868,7 +868,7 @@
     "feels_like": 29.1,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 78,
     "clouds": 100,
     "pop": 34,
     "pressure": 1006,
@@ -877,7 +877,7 @@
     "visibility": 10.0,
     "rain_3h": 0.1,
     "timestamp": 1751403600,
-    "time": "2025-07-02T04:00:00"
+    "time": "2025-07-02T04:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -888,16 +888,16 @@
     "feels_like": 29.8,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 75,
     "clouds": 100,
     "pop": 16,
     "pressure": 1008,
     "wind_speed": 10.3,
     "wind_deg": 286,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751414400,
-    "time": "2025-07-02T07:00:00"
+    "time": "2025-07-02T07:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -908,16 +908,16 @@
     "feels_like": 35.2,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 57,
     "clouds": 100,
     "pop": 0,
     "pressure": 1008,
     "wind_speed": 11.4,
     "wind_deg": 284,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751425200,
-    "time": "2025-07-02T10:00:00"
+    "time": "2025-07-02T10:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -928,16 +928,16 @@
     "feels_like": 39.2,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 45,
     "clouds": 87,
     "pop": 0,
     "pressure": 1006,
     "wind_speed": 12.3,
     "wind_deg": 296,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751436000,
-    "time": "2025-07-02T13:00:00"
+    "time": "2025-07-02T13:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -948,7 +948,7 @@
     "feels_like": 35.1,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 64,
     "clouds": 100,
     "pop": 100,
     "pressure": 1005,
@@ -957,7 +957,7 @@
     "visibility": 10.0,
     "rain_3h": 1.71,
     "timestamp": 1751446800,
-    "time": "2025-07-02T16:00:00"
+    "time": "2025-07-02T16:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -968,7 +968,7 @@
     "feels_like": 31.5,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 78,
     "clouds": 100,
     "pop": 100,
     "pressure": 1007,
@@ -977,7 +977,7 @@
     "visibility": 4.2,
     "rain_3h": 7.98,
     "timestamp": 1751457600,
-    "time": "2025-07-02T19:00:00"
+    "time": "2025-07-02T19:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -988,7 +988,7 @@
     "feels_like": 26.1,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 92,
     "clouds": 100,
     "pop": 100,
     "pressure": 1010,
@@ -997,7 +997,7 @@
     "visibility": 7.6,
     "rain_3h": 4.77,
     "timestamp": 1751468400,
-    "time": "2025-07-02T22:00:00"
+    "time": "2025-07-02T22:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -1008,7 +1008,7 @@
     "feels_like": 25.5,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 95,
     "clouds": 100,
     "pop": 100,
     "pressure": 1008,
@@ -1017,7 +1017,7 @@
     "visibility": 10.0,
     "rain_3h": 6.37,
     "timestamp": 1751479200,
-    "time": "2025-07-03T01:00:00"
+    "time": "2025-07-03T01:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -1028,7 +1028,7 @@
     "feels_like": 25.0,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 92,
     "clouds": 100,
     "pop": 94,
     "pressure": 1008,
@@ -1037,7 +1037,7 @@
     "visibility": 10.0,
     "rain_3h": 1.39,
     "timestamp": 1751490000,
-    "time": "2025-07-03T04:00:00"
+    "time": "2025-07-03T04:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -1048,16 +1048,16 @@
     "feels_like": 25.7,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 90,
     "clouds": 100,
     "pop": 76,
     "pressure": 1009,
     "wind_speed": 6.1,
     "wind_deg": 245,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751500800,
-    "time": "2025-07-03T07:00:00"
+    "time": "2025-07-03T07:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -1068,7 +1068,7 @@
     "feels_like": 26.5,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 86,
     "clouds": 100,
     "pop": 100,
     "pressure": 1010,
@@ -1077,7 +1077,7 @@
     "visibility": 10.0,
     "rain_3h": 1.49,
     "timestamp": 1751511600,
-    "time": "2025-07-03T10:00:00"
+    "time": "2025-07-03T10:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -1088,7 +1088,7 @@
     "feels_like": 30.1,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 78,
     "clouds": 100,
     "pop": 100,
     "pressure": 1008,
@@ -1097,7 +1097,7 @@
     "visibility": 10.0,
     "rain_3h": 0.8,
     "timestamp": 1751522400,
-    "time": "2025-07-03T13:00:00"
+    "time": "2025-07-03T13:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -1108,16 +1108,16 @@
     "feels_like": 31.2,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 71,
     "clouds": 100,
     "pop": 11,
     "pressure": 1006,
     "wind_speed": 13.9,
     "wind_deg": 271,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751533200,
-    "time": "2025-07-03T16:00:00"
+    "time": "2025-07-03T16:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -1128,16 +1128,16 @@
     "feels_like": 26.6,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 84,
     "clouds": 100,
     "pop": 0,
     "pressure": 1009,
     "wind_speed": 11.6,
     "wind_deg": 248,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751544000,
-    "time": "2025-07-03T19:00:00"
+    "time": "2025-07-03T19:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -1148,16 +1148,16 @@
     "feels_like": 26.0,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 87,
     "clouds": 100,
     "pop": 0,
     "pressure": 1010,
     "wind_speed": 9.8,
     "wind_deg": 229,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751554800,
-    "time": "2025-07-03T22:00:00"
+    "time": "2025-07-03T22:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -1168,16 +1168,16 @@
     "feels_like": 25.6,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 87,
     "clouds": 100,
     "pop": 0,
     "pressure": 1009,
     "wind_speed": 7.5,
     "wind_deg": 244,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751565600,
-    "time": "2025-07-04T01:00:00"
+    "time": "2025-07-04T01:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -1188,7 +1188,7 @@
     "feels_like": 25.4,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 88,
     "clouds": 100,
     "pop": 49,
     "pressure": 1008,
@@ -1197,7 +1197,7 @@
     "visibility": 10.0,
     "rain_3h": 0.36,
     "timestamp": 1751576400,
-    "time": "2025-07-04T04:00:00"
+    "time": "2025-07-04T04:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -1208,16 +1208,16 @@
     "feels_like": 26.2,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 85,
     "clouds": 99,
     "pop": 0,
     "pressure": 1010,
     "wind_speed": 7.9,
     "wind_deg": 266,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751587200,
-    "time": "2025-07-04T07:00:00"
+    "time": "2025-07-04T07:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -1228,16 +1228,16 @@
     "feels_like": 33.2,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 65,
     "clouds": 90,
     "pop": 0,
     "pressure": 1010,
     "wind_speed": 19.6,
     "wind_deg": 273,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751598000,
-    "time": "2025-07-04T10:00:00"
+    "time": "2025-07-04T10:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -1248,7 +1248,7 @@
     "feels_like": 34.2,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 68,
     "clouds": 94,
     "pop": 100,
     "pressure": 1008,
@@ -1257,7 +1257,7 @@
     "visibility": 6.7,
     "rain_3h": 1.83,
     "timestamp": 1751608800,
-    "time": "2025-07-04T13:00:00"
+    "time": "2025-07-04T13:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -1268,7 +1268,7 @@
     "feels_like": 31.6,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 77,
     "clouds": 98,
     "pop": 100,
     "pressure": 1007,
@@ -1277,7 +1277,7 @@
     "visibility": 8.1,
     "rain_3h": 3.83,
     "timestamp": 1751619600,
-    "time": "2025-07-04T16:00:00"
+    "time": "2025-07-04T16:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -1288,7 +1288,7 @@
     "feels_like": 26.4,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 84,
     "clouds": 99,
     "pop": 100,
     "pressure": 1009,
@@ -1297,7 +1297,7 @@
     "visibility": 10.0,
     "rain_3h": 1.59,
     "timestamp": 1751630400,
-    "time": "2025-07-04T19:00:00"
+    "time": "2025-07-04T19:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -1308,16 +1308,16 @@
     "feels_like": 25.8,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 86,
     "clouds": 100,
     "pop": 0,
     "pressure": 1010,
     "wind_speed": 10.2,
     "wind_deg": 264,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751641200,
-    "time": "2025-07-04T22:00:00"
+    "time": "2025-07-04T22:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -1328,16 +1328,16 @@
     "feels_like": 24.9,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 88,
     "clouds": 100,
     "pop": 0,
     "pressure": 1009,
     "wind_speed": 7.6,
     "wind_deg": 249,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751652000,
-    "time": "2025-07-05T01:00:00"
+    "time": "2025-07-05T01:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -1348,16 +1348,16 @@
     "feels_like": 24.6,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 88,
     "clouds": 100,
     "pop": 0,
     "pressure": 1008,
     "wind_speed": 4.9,
     "wind_deg": 244,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751662800,
-    "time": "2025-07-05T04:00:00"
+    "time": "2025-07-05T04:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -1368,16 +1368,16 @@
     "feels_like": 25.6,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 83,
     "clouds": 100,
     "pop": 0,
     "pressure": 1009,
     "wind_speed": 9.5,
     "wind_deg": 279,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751673600,
-    "time": "2025-07-05T07:00:00"
+    "time": "2025-07-05T07:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -1388,16 +1388,16 @@
     "feels_like": 33.4,
     "weather_main": "Clouds",
     "weather_description": "scattered clouds",
-    "humidity": null,
+    "humidity": 62,
     "clouds": 38,
     "pop": 0,
     "pressure": 1010,
     "wind_speed": 16.8,
     "wind_deg": 285,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751684400,
-    "time": "2025-07-05T10:00:00"
+    "time": "2025-07-05T10:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -1408,16 +1408,16 @@
     "feels_like": 34.4,
     "weather_main": "Clouds",
     "weather_description": "broken clouds",
-    "humidity": null,
+    "humidity": 56,
     "clouds": 60,
     "pop": 1,
     "pressure": 1007,
     "wind_speed": 16.1,
     "wind_deg": 276,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751695200,
-    "time": "2025-07-05T13:00:00"
+    "time": "2025-07-05T13:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -1428,7 +1428,7 @@
     "feels_like": 34.5,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 58,
     "clouds": 100,
     "pop": 35,
     "pressure": 1006,
@@ -1437,7 +1437,7 @@
     "visibility": 10.0,
     "rain_3h": 0.15,
     "timestamp": 1751706000,
-    "time": "2025-07-05T16:00:00"
+    "time": "2025-07-05T16:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -1448,7 +1448,7 @@
     "feels_like": 30.3,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 77,
     "clouds": 99,
     "pop": 45,
     "pressure": 1008,
@@ -1457,7 +1457,7 @@
     "visibility": 10.0,
     "rain_3h": 0.37,
     "timestamp": 1751716800,
-    "time": "2025-07-05T19:00:00"
+    "time": "2025-07-05T19:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -1468,7 +1468,7 @@
     "feels_like": 26.8,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 87,
     "clouds": 91,
     "pop": 100,
     "pressure": 1010,
@@ -1477,7 +1477,7 @@
     "visibility": 10.0,
     "rain_3h": 1.24,
     "timestamp": 1751727600,
-    "time": "2025-07-05T22:00:00"
+    "time": "2025-07-05T22:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -1488,7 +1488,7 @@
     "feels_like": 25.9,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 87,
     "clouds": 74,
     "pop": 100,
     "pressure": 1009,
@@ -1497,7 +1497,7 @@
     "visibility": 10.0,
     "rain_3h": 0.15,
     "timestamp": 1751738400,
-    "time": "2025-07-06T01:00:00"
+    "time": "2025-07-06T01:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -1508,16 +1508,16 @@
     "feels_like": 25.7,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 88,
     "clouds": 99,
     "pop": 0,
     "pressure": 1008,
     "wind_speed": 8.7,
     "wind_deg": 252,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751749200,
-    "time": "2025-07-06T04:00:00"
+    "time": "2025-07-06T04:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -1528,16 +1528,16 @@
     "feels_like": 26.0,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 84,
     "clouds": 99,
     "pop": 0,
     "pressure": 1010,
     "wind_speed": 11.2,
     "wind_deg": 246,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751760000,
-    "time": "2025-07-06T07:00:00"
+    "time": "2025-07-06T07:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -1548,16 +1548,16 @@
     "feels_like": 34.6,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 59,
     "clouds": 93,
     "pop": 4,
     "pressure": 1010,
     "wind_speed": 19.2,
     "wind_deg": 271,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751770800,
-    "time": "2025-07-06T10:00:00"
+    "time": "2025-07-06T10:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -1568,7 +1568,7 @@
     "feels_like": 34.4,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 63,
     "clouds": 95,
     "pop": 100,
     "pressure": 1007,
@@ -1577,7 +1577,7 @@
     "visibility": 10.0,
     "rain_3h": 0.84,
     "timestamp": 1751781600,
-    "time": "2025-07-06T13:00:00"
+    "time": "2025-07-06T13:00:00+07:00"
   },
   {
     "city": "Ho Chi Minh City",
@@ -1588,7 +1588,7 @@
     "feels_like": 34.5,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 60,
     "clouds": 88,
     "pop": 69,
     "pressure": 1006,
@@ -1597,7 +1597,7 @@
     "visibility": 10.0,
     "rain_3h": 0.48,
     "timestamp": 1751792400,
-    "time": "2025-07-06T16:00:00"
+    "time": "2025-07-06T16:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -1608,7 +1608,7 @@
     "feels_like": 31.9,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 87,
     "clouds": 80,
     "pop": 88,
     "pressure": 1005,
@@ -1617,7 +1617,7 @@
     "visibility": 10.0,
     "rain_3h": 4.48,
     "timestamp": 1751371200,
-    "time": "2025-07-01T19:00:00"
+    "time": "2025-07-01T19:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -1628,7 +1628,7 @@
     "feels_like": 30.8,
     "weather_main": "Rain",
     "weather_description": "heavy intensity rain",
-    "humidity": null,
+    "humidity": 88,
     "clouds": 83,
     "pop": 100,
     "pressure": 1006,
@@ -1637,7 +1637,7 @@
     "visibility": 10.0,
     "rain_3h": 12.1,
     "timestamp": 1751382000,
-    "time": "2025-07-01T22:00:00"
+    "time": "2025-07-01T22:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -1648,7 +1648,7 @@
     "feels_like": 26.3,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 89,
     "clouds": 89,
     "pop": 93,
     "pressure": 1006,
@@ -1657,7 +1657,7 @@
     "visibility": 10.0,
     "rain_3h": 0.82,
     "timestamp": 1751392800,
-    "time": "2025-07-02T01:00:00"
+    "time": "2025-07-02T01:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -1668,16 +1668,16 @@
     "feels_like": 26.6,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 89,
     "clouds": 100,
     "pop": 0,
     "pressure": 1004,
     "wind_speed": 7.0,
     "wind_deg": 237,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751403600,
-    "time": "2025-07-02T04:00:00"
+    "time": "2025-07-02T04:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -1688,16 +1688,16 @@
     "feels_like": 30.4,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 83,
     "clouds": 100,
     "pop": 0,
     "pressure": 1006,
     "wind_speed": 5.5,
     "wind_deg": 312,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751414400,
-    "time": "2025-07-02T07:00:00"
+    "time": "2025-07-02T07:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -1708,16 +1708,16 @@
     "feels_like": 34.8,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 69,
     "clouds": 100,
     "pop": 0,
     "pressure": 1007,
     "wind_speed": 3.9,
     "wind_deg": 43,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751425200,
-    "time": "2025-07-02T10:00:00"
+    "time": "2025-07-02T10:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -1728,7 +1728,7 @@
     "feels_like": 35.4,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 79,
     "clouds": 100,
     "pop": 61,
     "pressure": 1005,
@@ -1737,7 +1737,7 @@
     "visibility": 10.0,
     "rain_3h": 1.23,
     "timestamp": 1751436000,
-    "time": "2025-07-02T13:00:00"
+    "time": "2025-07-02T13:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -1748,7 +1748,7 @@
     "feels_like": 35.1,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 79,
     "clouds": 83,
     "pop": 72,
     "pressure": 1004,
@@ -1757,7 +1757,7 @@
     "visibility": 10.0,
     "rain_3h": 1.33,
     "timestamp": 1751446800,
-    "time": "2025-07-02T16:00:00"
+    "time": "2025-07-02T16:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -1768,7 +1768,7 @@
     "feels_like": 26.5,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 89,
     "clouds": 86,
     "pop": 91,
     "pressure": 1006,
@@ -1777,7 +1777,7 @@
     "visibility": 10.0,
     "rain_3h": 2.39,
     "timestamp": 1751457600,
-    "time": "2025-07-02T19:00:00"
+    "time": "2025-07-02T19:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -1788,16 +1788,16 @@
     "feels_like": 26.1,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 89,
     "clouds": 93,
     "pop": 19,
     "pressure": 1007,
     "wind_speed": 11.8,
     "wind_deg": 231,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751468400,
-    "time": "2025-07-02T22:00:00"
+    "time": "2025-07-02T22:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -1808,16 +1808,16 @@
     "feels_like": 26.6,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 87,
     "clouds": 96,
     "pop": 2,
     "pressure": 1005,
     "wind_speed": 9.2,
     "wind_deg": 245,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751479200,
-    "time": "2025-07-03T01:00:00"
+    "time": "2025-07-03T01:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -1828,7 +1828,7 @@
     "feels_like": 26.1,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 84,
     "clouds": 100,
     "pop": 28,
     "pressure": 1005,
@@ -1837,7 +1837,7 @@
     "visibility": 10.0,
     "rain_3h": 0.19,
     "timestamp": 1751490000,
-    "time": "2025-07-03T04:00:00"
+    "time": "2025-07-03T04:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -1848,7 +1848,7 @@
     "feels_like": 29.3,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 82,
     "clouds": 100,
     "pop": 61,
     "pressure": 1006,
@@ -1857,7 +1857,7 @@
     "visibility": 10.0,
     "rain_3h": 0.84,
     "timestamp": 1751500800,
-    "time": "2025-07-03T07:00:00"
+    "time": "2025-07-03T07:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -1868,16 +1868,16 @@
     "feels_like": 32.4,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 73,
     "clouds": 100,
     "pop": 38,
     "pressure": 1007,
     "wind_speed": 1.4,
     "wind_deg": 205,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751511600,
-    "time": "2025-07-03T10:00:00"
+    "time": "2025-07-03T10:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -1888,7 +1888,7 @@
     "feels_like": 34.5,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 75,
     "clouds": 100,
     "pop": 50,
     "pressure": 1005,
@@ -1897,7 +1897,7 @@
     "visibility": 10.0,
     "rain_3h": 0.28,
     "timestamp": 1751522400,
-    "time": "2025-07-03T13:00:00"
+    "time": "2025-07-03T13:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -1908,7 +1908,7 @@
     "feels_like": 34.0,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 77,
     "clouds": 100,
     "pop": 62,
     "pressure": 1004,
@@ -1917,7 +1917,7 @@
     "visibility": 10.0,
     "rain_3h": 1.04,
     "timestamp": 1751533200,
-    "time": "2025-07-03T16:00:00"
+    "time": "2025-07-03T16:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -1928,7 +1928,7 @@
     "feels_like": 30.3,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 84,
     "clouds": 100,
     "pop": 92,
     "pressure": 1006,
@@ -1937,7 +1937,7 @@
     "visibility": 10.0,
     "rain_3h": 3.86,
     "timestamp": 1751544000,
-    "time": "2025-07-03T19:00:00"
+    "time": "2025-07-03T19:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -1948,7 +1948,7 @@
     "feels_like": 26.2,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 88,
     "clouds": 100,
     "pop": 100,
     "pressure": 1007,
@@ -1957,7 +1957,7 @@
     "visibility": 10.0,
     "rain_3h": 2.44,
     "timestamp": 1751554800,
-    "time": "2025-07-03T22:00:00"
+    "time": "2025-07-03T22:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -1968,7 +1968,7 @@
     "feels_like": 26.4,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 93,
     "clouds": 100,
     "pop": 100,
     "pressure": 1005,
@@ -1977,7 +1977,7 @@
     "visibility": 10.0,
     "rain_3h": 1.33,
     "timestamp": 1751565600,
-    "time": "2025-07-04T01:00:00"
+    "time": "2025-07-04T01:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -1988,7 +1988,7 @@
     "feels_like": 26.5,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 88,
     "clouds": 96,
     "pop": 66,
     "pressure": 1005,
@@ -1997,7 +1997,7 @@
     "visibility": 10.0,
     "rain_3h": 0.65,
     "timestamp": 1751576400,
-    "time": "2025-07-04T04:00:00"
+    "time": "2025-07-04T04:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -2008,16 +2008,16 @@
     "feels_like": 29.6,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 83,
     "clouds": 95,
     "pop": 59,
     "pressure": 1007,
     "wind_speed": 1.9,
     "wind_deg": 299,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751587200,
-    "time": "2025-07-04T07:00:00"
+    "time": "2025-07-04T07:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -2028,7 +2028,7 @@
     "feels_like": 34.6,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 76,
     "clouds": 94,
     "pop": 72,
     "pressure": 1007,
@@ -2037,7 +2037,7 @@
     "visibility": 10.0,
     "rain_3h": 0.48,
     "timestamp": 1751598000,
-    "time": "2025-07-04T10:00:00"
+    "time": "2025-07-04T10:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -2048,7 +2048,7 @@
     "feels_like": 36.4,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 77,
     "clouds": 97,
     "pop": 93,
     "pressure": 1005,
@@ -2057,7 +2057,7 @@
     "visibility": 10.0,
     "rain_3h": 0.93,
     "timestamp": 1751608800,
-    "time": "2025-07-04T13:00:00"
+    "time": "2025-07-04T13:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -2068,7 +2068,7 @@
     "feels_like": 33.8,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 84,
     "clouds": 93,
     "pop": 100,
     "pressure": 1004,
@@ -2077,7 +2077,7 @@
     "visibility": 10.0,
     "rain_3h": 2.9,
     "timestamp": 1751619600,
-    "time": "2025-07-04T16:00:00"
+    "time": "2025-07-04T16:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -2088,7 +2088,7 @@
     "feels_like": 31.4,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 85,
     "clouds": 90,
     "pop": 89,
     "pressure": 1006,
@@ -2097,7 +2097,7 @@
     "visibility": 10.0,
     "rain_3h": 0.81,
     "timestamp": 1751630400,
-    "time": "2025-07-04T19:00:00"
+    "time": "2025-07-04T19:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -2108,7 +2108,7 @@
     "feels_like": 26.6,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 88,
     "clouds": 100,
     "pop": 78,
     "pressure": 1007,
@@ -2117,7 +2117,7 @@
     "visibility": 10.0,
     "rain_3h": 0.94,
     "timestamp": 1751641200,
-    "time": "2025-07-04T22:00:00"
+    "time": "2025-07-04T22:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -2128,16 +2128,16 @@
     "feels_like": 26.9,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 88,
     "clouds": 99,
     "pop": 51,
     "pressure": 1005,
     "wind_speed": 8.1,
     "wind_deg": 233,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751652000,
-    "time": "2025-07-05T01:00:00"
+    "time": "2025-07-05T01:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -2148,16 +2148,16 @@
     "feels_like": 26.5,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 85,
     "clouds": 99,
     "pop": 9,
     "pressure": 1004,
     "wind_speed": 7.2,
     "wind_deg": 241,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751662800,
-    "time": "2025-07-05T04:00:00"
+    "time": "2025-07-05T04:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -2168,16 +2168,16 @@
     "feels_like": 29.7,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 82,
     "clouds": 99,
     "pop": 2,
     "pressure": 1006,
     "wind_speed": 5.8,
     "wind_deg": 253,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751673600,
-    "time": "2025-07-05T07:00:00"
+    "time": "2025-07-05T07:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -2188,16 +2188,16 @@
     "feels_like": 35.5,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 67,
     "clouds": 100,
     "pop": 0,
     "pressure": 1006,
     "wind_speed": 3.3,
     "wind_deg": 43,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751684400,
-    "time": "2025-07-05T10:00:00"
+    "time": "2025-07-05T10:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -2208,7 +2208,7 @@
     "feels_like": 35.0,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 78,
     "clouds": 94,
     "pop": 48,
     "pressure": 1005,
@@ -2217,7 +2217,7 @@
     "visibility": 10.0,
     "rain_3h": 0.51,
     "timestamp": 1751695200,
-    "time": "2025-07-05T13:00:00"
+    "time": "2025-07-05T13:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -2228,7 +2228,7 @@
     "feels_like": 36.7,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 79,
     "clouds": 52,
     "pop": 63,
     "pressure": 1004,
@@ -2237,7 +2237,7 @@
     "visibility": 10.0,
     "rain_3h": 1.14,
     "timestamp": 1751706000,
-    "time": "2025-07-05T16:00:00"
+    "time": "2025-07-05T16:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -2248,7 +2248,7 @@
     "feels_like": 31.2,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 87,
     "clouds": 67,
     "pop": 100,
     "pressure": 1006,
@@ -2257,7 +2257,7 @@
     "visibility": 10.0,
     "rain_3h": 3.14,
     "timestamp": 1751716800,
-    "time": "2025-07-05T19:00:00"
+    "time": "2025-07-05T19:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -2268,7 +2268,7 @@
     "feels_like": 26.8,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 91,
     "clouds": 100,
     "pop": 91,
     "pressure": 1007,
@@ -2277,7 +2277,7 @@
     "visibility": 10.0,
     "rain_3h": 1.36,
     "timestamp": 1751727600,
-    "time": "2025-07-05T22:00:00"
+    "time": "2025-07-05T22:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -2288,7 +2288,7 @@
     "feels_like": 26.8,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 89,
     "clouds": 100,
     "pop": 99,
     "pressure": 1005,
@@ -2297,7 +2297,7 @@
     "visibility": 10.0,
     "rain_3h": 0.32,
     "timestamp": 1751738400,
-    "time": "2025-07-06T01:00:00"
+    "time": "2025-07-06T01:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -2308,16 +2308,16 @@
     "feels_like": 26.5,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 87,
     "clouds": 99,
     "pop": 0,
     "pressure": 1004,
     "wind_speed": 8.2,
     "wind_deg": 222,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751749200,
-    "time": "2025-07-06T04:00:00"
+    "time": "2025-07-06T04:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -2328,16 +2328,16 @@
     "feels_like": 26.6,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 84,
     "clouds": 100,
     "pop": 0,
     "pressure": 1006,
     "wind_speed": 7.8,
     "wind_deg": 224,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751760000,
-    "time": "2025-07-06T07:00:00"
+    "time": "2025-07-06T07:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -2348,16 +2348,16 @@
     "feels_like": 36.0,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 64,
     "clouds": 97,
     "pop": 0,
     "pressure": 1006,
     "wind_speed": 1.5,
     "wind_deg": 270,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751770800,
-    "time": "2025-07-06T10:00:00"
+    "time": "2025-07-06T10:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -2368,7 +2368,7 @@
     "feels_like": 34.4,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 81,
     "clouds": 99,
     "pop": 20,
     "pressure": 1004,
@@ -2377,7 +2377,7 @@
     "visibility": 10.0,
     "rain_3h": 0.15,
     "timestamp": 1751781600,
-    "time": "2025-07-06T13:00:00"
+    "time": "2025-07-06T13:00:00+07:00"
   },
   {
     "city": "Da Nang",
@@ -2388,7 +2388,7 @@
     "feels_like": 36.8,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 82,
     "clouds": 100,
     "pop": 64,
     "pressure": 1004,
@@ -2397,7 +2397,7 @@
     "visibility": 10.0,
     "rain_3h": 0.81,
     "timestamp": 1751792400,
-    "time": "2025-07-06T16:00:00"
+    "time": "2025-07-06T16:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -2408,7 +2408,7 @@
     "feels_like": 30.4,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 89,
     "clouds": 95,
     "pop": 100,
     "pressure": 1003,
@@ -2417,7 +2417,7 @@
     "visibility": 10.0,
     "rain_3h": 1.69,
     "timestamp": 1751371200,
-    "time": "2025-07-01T19:00:00"
+    "time": "2025-07-01T19:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -2428,7 +2428,7 @@
     "feels_like": 30.1,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 89,
     "clouds": 97,
     "pop": 100,
     "pressure": 1004,
@@ -2437,7 +2437,7 @@
     "visibility": 10.0,
     "rain_3h": 4.31,
     "timestamp": 1751382000,
-    "time": "2025-07-01T22:00:00"
+    "time": "2025-07-01T22:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -2448,7 +2448,7 @@
     "feels_like": 26.5,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 89,
     "clouds": 98,
     "pop": 100,
     "pressure": 1004,
@@ -2457,7 +2457,7 @@
     "visibility": 10.0,
     "rain_3h": 2.65,
     "timestamp": 1751392800,
-    "time": "2025-07-02T01:00:00"
+    "time": "2025-07-02T01:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -2468,7 +2468,7 @@
     "feels_like": 26.9,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 88,
     "clouds": 100,
     "pop": 95,
     "pressure": 1005,
@@ -2477,7 +2477,7 @@
     "visibility": 10.0,
     "rain_3h": 1.79,
     "timestamp": 1751403600,
-    "time": "2025-07-02T04:00:00"
+    "time": "2025-07-02T04:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -2488,7 +2488,7 @@
     "feels_like": 31.8,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 83,
     "clouds": 100,
     "pop": 100,
     "pressure": 1006,
@@ -2497,7 +2497,7 @@
     "visibility": 9.1,
     "rain_3h": 1.16,
     "timestamp": 1751414400,
-    "time": "2025-07-02T07:00:00"
+    "time": "2025-07-02T07:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -2508,7 +2508,7 @@
     "feels_like": 35.3,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 70,
     "clouds": 100,
     "pop": 86,
     "pressure": 1007,
@@ -2517,7 +2517,7 @@
     "visibility": 10.0,
     "rain_3h": 0.7,
     "timestamp": 1751425200,
-    "time": "2025-07-02T10:00:00"
+    "time": "2025-07-02T10:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -2528,16 +2528,16 @@
     "feels_like": 36.7,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 67,
     "clouds": 100,
     "pop": 58,
     "pressure": 1005,
     "wind_speed": 20.5,
     "wind_deg": 110,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751436000,
-    "time": "2025-07-02T13:00:00"
+    "time": "2025-07-02T13:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -2548,16 +2548,16 @@
     "feels_like": 35.1,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 69,
     "clouds": 100,
     "pop": 0,
     "pressure": 1004,
     "wind_speed": 20.4,
     "wind_deg": 113,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751446800,
-    "time": "2025-07-02T16:00:00"
+    "time": "2025-07-02T16:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -2568,16 +2568,16 @@
     "feels_like": 31.6,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 82,
     "clouds": 100,
     "pop": 0,
     "pressure": 1005,
     "wind_speed": 12.5,
     "wind_deg": 100,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751457600,
-    "time": "2025-07-02T19:00:00"
+    "time": "2025-07-02T19:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -2588,16 +2588,16 @@
     "feels_like": 30.1,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 87,
     "clouds": 100,
     "pop": 0,
     "pressure": 1007,
     "wind_speed": 7.1,
     "wind_deg": 85,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751468400,
-    "time": "2025-07-02T22:00:00"
+    "time": "2025-07-02T22:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -2608,7 +2608,7 @@
     "feels_like": 26.8,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 90,
     "clouds": 99,
     "pop": 96,
     "pressure": 1006,
@@ -2617,7 +2617,7 @@
     "visibility": 10.0,
     "rain_3h": 3.27,
     "timestamp": 1751479200,
-    "time": "2025-07-03T01:00:00"
+    "time": "2025-07-03T01:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -2628,7 +2628,7 @@
     "feels_like": 25.8,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 95,
     "clouds": 100,
     "pop": 100,
     "pressure": 1005,
@@ -2637,7 +2637,7 @@
     "visibility": 10.0,
     "rain_3h": 10.29,
     "timestamp": 1751490000,
-    "time": "2025-07-03T04:00:00"
+    "time": "2025-07-03T04:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -2648,7 +2648,7 @@
     "feels_like": 26.3,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 93,
     "clouds": 100,
     "pop": 100,
     "pressure": 1007,
@@ -2657,7 +2657,7 @@
     "visibility": 10.0,
     "rain_3h": 4.52,
     "timestamp": 1751500800,
-    "time": "2025-07-03T07:00:00"
+    "time": "2025-07-03T07:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -2668,7 +2668,7 @@
     "feels_like": 31.4,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 85,
     "clouds": 100,
     "pop": 100,
     "pressure": 1007,
@@ -2677,7 +2677,7 @@
     "visibility": 9.7,
     "rain_3h": 3.04,
     "timestamp": 1751511600,
-    "time": "2025-07-03T10:00:00"
+    "time": "2025-07-03T10:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -2688,7 +2688,7 @@
     "feels_like": 35.6,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 77,
     "clouds": 100,
     "pop": 100,
     "pressure": 1005,
@@ -2697,7 +2697,7 @@
     "visibility": 10.0,
     "rain_3h": 4.27,
     "timestamp": 1751522400,
-    "time": "2025-07-03T13:00:00"
+    "time": "2025-07-03T13:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -2708,16 +2708,16 @@
     "feels_like": 35.3,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 73,
     "clouds": 91,
     "pop": 0,
     "pressure": 1004,
     "wind_speed": 19.9,
     "wind_deg": 116,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751533200,
-    "time": "2025-07-03T16:00:00"
+    "time": "2025-07-03T16:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -2728,16 +2728,16 @@
     "feels_like": 30.8,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 87,
     "clouds": 100,
     "pop": 0,
     "pressure": 1005,
     "wind_speed": 10.8,
     "wind_deg": 114,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751544000,
-    "time": "2025-07-03T19:00:00"
+    "time": "2025-07-03T19:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -2748,16 +2748,16 @@
     "feels_like": 26.5,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 89,
     "clouds": 99,
     "pop": 0,
     "pressure": 1007,
     "wind_speed": 7.4,
     "wind_deg": 99,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751554800,
-    "time": "2025-07-03T22:00:00"
+    "time": "2025-07-03T22:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -2768,7 +2768,7 @@
     "feels_like": 26.6,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 91,
     "clouds": 99,
     "pop": 88,
     "pressure": 1005,
@@ -2777,7 +2777,7 @@
     "visibility": 6.7,
     "rain_3h": 1.65,
     "timestamp": 1751565600,
-    "time": "2025-07-04T01:00:00"
+    "time": "2025-07-04T01:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -2788,7 +2788,7 @@
     "feels_like": 26.3,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 90,
     "clouds": 72,
     "pop": 97,
     "pressure": 1005,
@@ -2797,7 +2797,7 @@
     "visibility": 10.0,
     "rain_3h": 2.57,
     "timestamp": 1751576400,
-    "time": "2025-07-04T04:00:00"
+    "time": "2025-07-04T04:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -2808,16 +2808,16 @@
     "feels_like": 30.2,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 84,
     "clouds": 87,
     "pop": 86,
     "pressure": 1006,
     "wind_speed": 4.8,
     "wind_deg": 15,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751587200,
-    "time": "2025-07-04T07:00:00"
+    "time": "2025-07-04T07:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -2828,7 +2828,7 @@
     "feels_like": 34.9,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 71,
     "clouds": 84,
     "pop": 92,
     "pressure": 1006,
@@ -2837,7 +2837,7 @@
     "visibility": 10.0,
     "rain_3h": 1.21,
     "timestamp": 1751598000,
-    "time": "2025-07-04T10:00:00"
+    "time": "2025-07-04T10:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -2848,7 +2848,7 @@
     "feels_like": 35.7,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 64,
     "clouds": 85,
     "pop": 95,
     "pressure": 1004,
@@ -2857,7 +2857,7 @@
     "visibility": 10.0,
     "rain_3h": 0.89,
     "timestamp": 1751608800,
-    "time": "2025-07-04T13:00:00"
+    "time": "2025-07-04T13:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -2868,16 +2868,16 @@
     "feels_like": 36.0,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 69,
     "clouds": 100,
     "pop": 11,
     "pressure": 1002,
     "wind_speed": 16.3,
     "wind_deg": 120,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751619600,
-    "time": "2025-07-04T16:00:00"
+    "time": "2025-07-04T16:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -2888,7 +2888,7 @@
     "feels_like": 30.8,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 86,
     "clouds": 92,
     "pop": 30,
     "pressure": 1004,
@@ -2897,7 +2897,7 @@
     "visibility": 10.0,
     "rain_3h": 0.1,
     "timestamp": 1751630400,
-    "time": "2025-07-04T19:00:00"
+    "time": "2025-07-04T19:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -2908,16 +2908,16 @@
     "feels_like": 26.6,
     "weather_main": "Clouds",
     "weather_description": "broken clouds",
-    "humidity": null,
+    "humidity": 89,
     "clouds": 70,
     "pop": 0,
     "pressure": 1005,
     "wind_speed": 8.0,
     "wind_deg": 110,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751641200,
-    "time": "2025-07-04T22:00:00"
+    "time": "2025-07-04T22:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -2928,7 +2928,7 @@
     "feels_like": 26.9,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 91,
     "clouds": 84,
     "pop": 71,
     "pressure": 1004,
@@ -2937,7 +2937,7 @@
     "visibility": 10.0,
     "rain_3h": 1.17,
     "timestamp": 1751652000,
-    "time": "2025-07-05T01:00:00"
+    "time": "2025-07-05T01:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -2948,7 +2948,7 @@
     "feels_like": 26.6,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 90,
     "clouds": 95,
     "pop": 100,
     "pressure": 1003,
@@ -2957,7 +2957,7 @@
     "visibility": 10.0,
     "rain_3h": 2.74,
     "timestamp": 1751662800,
-    "time": "2025-07-05T04:00:00"
+    "time": "2025-07-05T04:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -2968,16 +2968,16 @@
     "feels_like": 31.2,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 83,
     "clouds": 97,
     "pop": 78,
     "pressure": 1005,
     "wind_speed": 4.0,
     "wind_deg": 80,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751673600,
-    "time": "2025-07-05T07:00:00"
+    "time": "2025-07-05T07:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -2988,16 +2988,16 @@
     "feels_like": 36.1,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 66,
     "clouds": 96,
     "pop": 0,
     "pressure": 1005,
     "wind_speed": 9.3,
     "wind_deg": 153,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751684400,
-    "time": "2025-07-05T10:00:00"
+    "time": "2025-07-05T10:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -3008,7 +3008,7 @@
     "feels_like": 35.4,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 74,
     "clouds": 96,
     "pop": 100,
     "pressure": 1003,
@@ -3017,7 +3017,7 @@
     "visibility": 10.0,
     "rain_3h": 3.65,
     "timestamp": 1751695200,
-    "time": "2025-07-05T13:00:00"
+    "time": "2025-07-05T13:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -3028,7 +3028,7 @@
     "feels_like": 33.5,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 79,
     "clouds": 99,
     "pop": 100,
     "pressure": 1002,
@@ -3037,7 +3037,7 @@
     "visibility": 10.0,
     "rain_3h": 3.29,
     "timestamp": 1751706000,
-    "time": "2025-07-05T16:00:00"
+    "time": "2025-07-05T16:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -3048,7 +3048,7 @@
     "feels_like": 29.9,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 88,
     "clouds": 87,
     "pop": 100,
     "pressure": 1003,
@@ -3057,7 +3057,7 @@
     "visibility": 10.0,
     "rain_3h": 2.4,
     "timestamp": 1751716800,
-    "time": "2025-07-05T19:00:00"
+    "time": "2025-07-05T19:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -3068,7 +3068,7 @@
     "feels_like": 26.6,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 89,
     "clouds": 100,
     "pop": 63,
     "pressure": 1005,
@@ -3077,7 +3077,7 @@
     "visibility": 10.0,
     "rain_3h": 0.4,
     "timestamp": 1751727600,
-    "time": "2025-07-05T22:00:00"
+    "time": "2025-07-05T22:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -3088,7 +3088,7 @@
     "feels_like": 26.1,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 91,
     "clouds": 99,
     "pop": 100,
     "pressure": 1003,
@@ -3097,7 +3097,7 @@
     "visibility": 10.0,
     "rain_3h": 1.62,
     "timestamp": 1751738400,
-    "time": "2025-07-06T01:00:00"
+    "time": "2025-07-06T01:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -3108,7 +3108,7 @@
     "feels_like": 26.0,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 89,
     "clouds": 98,
     "pop": 100,
     "pressure": 1003,
@@ -3117,7 +3117,7 @@
     "visibility": 10.0,
     "rain_3h": 4.82,
     "timestamp": 1751749200,
-    "time": "2025-07-06T04:00:00"
+    "time": "2025-07-06T04:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -3128,7 +3128,7 @@
     "feels_like": 31.4,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 86,
     "clouds": 94,
     "pop": 100,
     "pressure": 1004,
@@ -3137,7 +3137,7 @@
     "visibility": 10.0,
     "rain_3h": 0.95,
     "timestamp": 1751760000,
-    "time": "2025-07-06T07:00:00"
+    "time": "2025-07-06T07:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -3148,7 +3148,7 @@
     "feels_like": 35.4,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 77,
     "clouds": 86,
     "pop": 100,
     "pressure": 1005,
@@ -3157,7 +3157,7 @@
     "visibility": 10.0,
     "rain_3h": 4.02,
     "timestamp": 1751770800,
-    "time": "2025-07-06T10:00:00"
+    "time": "2025-07-06T10:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -3168,7 +3168,7 @@
     "feels_like": 32.8,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 86,
     "clouds": 94,
     "pop": 100,
     "pressure": 1003,
@@ -3177,7 +3177,7 @@
     "visibility": 10.0,
     "rain_3h": 4.17,
     "timestamp": 1751781600,
-    "time": "2025-07-06T13:00:00"
+    "time": "2025-07-06T13:00:00+07:00"
   },
   {
     "city": "Hai Phong",
@@ -3188,7 +3188,7 @@
     "feels_like": 35.4,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 78,
     "clouds": 99,
     "pop": 100,
     "pressure": 1002,
@@ -3197,7 +3197,7 @@
     "visibility": 10.0,
     "rain_3h": 2.67,
     "timestamp": 1751792400,
-    "time": "2025-07-06T16:00:00"
+    "time": "2025-07-06T16:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3208,16 +3208,16 @@
     "feels_like": 31.5,
     "weather_main": "Clouds",
     "weather_description": "scattered clouds",
-    "humidity": null,
+    "humidity": 81,
     "clouds": 30,
     "pop": 0,
     "pressure": 1006,
     "wind_speed": 18.6,
     "wind_deg": 249,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751371200,
-    "time": "2025-07-01T19:00:00"
+    "time": "2025-07-01T19:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3228,16 +3228,16 @@
     "feels_like": 31.2,
     "weather_main": "Clouds",
     "weather_description": "broken clouds",
-    "humidity": null,
+    "humidity": 82,
     "clouds": 53,
     "pop": 0,
     "pressure": 1007,
     "wind_speed": 18.4,
     "wind_deg": 245,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751382000,
-    "time": "2025-07-01T22:00:00"
+    "time": "2025-07-01T22:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3248,16 +3248,16 @@
     "feels_like": 29.7,
     "weather_main": "Clouds",
     "weather_description": "broken clouds",
-    "humidity": null,
+    "humidity": 83,
     "clouds": 77,
     "pop": 0,
     "pressure": 1007,
     "wind_speed": 15.4,
     "wind_deg": 249,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751392800,
-    "time": "2025-07-02T01:00:00"
+    "time": "2025-07-02T01:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3268,7 +3268,7 @@
     "feels_like": 26.6,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 89,
     "clouds": 100,
     "pop": 100,
     "pressure": 1006,
@@ -3277,7 +3277,7 @@
     "visibility": 10.0,
     "rain_3h": 2.39,
     "timestamp": 1751403600,
-    "time": "2025-07-02T04:00:00"
+    "time": "2025-07-02T04:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3288,7 +3288,7 @@
     "feels_like": 29.5,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 86,
     "clouds": 100,
     "pop": 100,
     "pressure": 1008,
@@ -3297,7 +3297,7 @@
     "visibility": 10.0,
     "rain_3h": 1.6,
     "timestamp": 1751414400,
-    "time": "2025-07-02T07:00:00"
+    "time": "2025-07-02T07:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3308,7 +3308,7 @@
     "feels_like": 35.8,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 70,
     "clouds": 100,
     "pop": 100,
     "pressure": 1009,
@@ -3317,7 +3317,7 @@
     "visibility": 10.0,
     "rain_3h": 2.1,
     "timestamp": 1751425200,
-    "time": "2025-07-02T10:00:00"
+    "time": "2025-07-02T10:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3328,7 +3328,7 @@
     "feels_like": 36.9,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 68,
     "clouds": 99,
     "pop": 100,
     "pressure": 1007,
@@ -3337,7 +3337,7 @@
     "visibility": 9.4,
     "rain_3h": 5.21,
     "timestamp": 1751436000,
-    "time": "2025-07-02T13:00:00"
+    "time": "2025-07-02T13:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3348,7 +3348,7 @@
     "feels_like": 32.5,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 80,
     "clouds": 100,
     "pop": 100,
     "pressure": 1006,
@@ -3357,7 +3357,7 @@
     "visibility": 10.0,
     "rain_3h": 4.12,
     "timestamp": 1751446800,
-    "time": "2025-07-02T16:00:00"
+    "time": "2025-07-02T16:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3368,7 +3368,7 @@
     "feels_like": 26.0,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 86,
     "clouds": 100,
     "pop": 100,
     "pressure": 1008,
@@ -3377,7 +3377,7 @@
     "visibility": 10.0,
     "rain_3h": 0.29,
     "timestamp": 1751457600,
-    "time": "2025-07-02T19:00:00"
+    "time": "2025-07-02T19:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3388,7 +3388,7 @@
     "feels_like": 26.0,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 90,
     "clouds": 100,
     "pop": 100,
     "pressure": 1010,
@@ -3397,7 +3397,7 @@
     "visibility": 7.3,
     "rain_3h": 4.78,
     "timestamp": 1751468400,
-    "time": "2025-07-02T22:00:00"
+    "time": "2025-07-02T22:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3408,7 +3408,7 @@
     "feels_like": 25.2,
     "weather_main": "Rain",
     "weather_description": "heavy intensity rain",
-    "humidity": null,
+    "humidity": 95,
     "clouds": 100,
     "pop": 100,
     "pressure": 1009,
@@ -3417,7 +3417,7 @@
     "visibility": 5.4,
     "rain_3h": 14.21,
     "timestamp": 1751479200,
-    "time": "2025-07-03T01:00:00"
+    "time": "2025-07-03T01:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3428,7 +3428,7 @@
     "feels_like": 25.1,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 94,
     "clouds": 100,
     "pop": 100,
     "pressure": 1008,
@@ -3437,7 +3437,7 @@
     "visibility": 9.9,
     "rain_3h": 6.65,
     "timestamp": 1751490000,
-    "time": "2025-07-03T04:00:00"
+    "time": "2025-07-03T04:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3448,7 +3448,7 @@
     "feels_like": 25.3,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 95,
     "clouds": 100,
     "pop": 100,
     "pressure": 1009,
@@ -3457,7 +3457,7 @@
     "visibility": 10.0,
     "rain_3h": 4.88,
     "timestamp": 1751500800,
-    "time": "2025-07-03T07:00:00"
+    "time": "2025-07-03T07:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3468,7 +3468,7 @@
     "feels_like": 26.0,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 93,
     "clouds": 100,
     "pop": 100,
     "pressure": 1010,
@@ -3477,7 +3477,7 @@
     "visibility": 10.0,
     "rain_3h": 1.35,
     "timestamp": 1751511600,
-    "time": "2025-07-03T10:00:00"
+    "time": "2025-07-03T10:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3488,7 +3488,7 @@
     "feels_like": 25.8,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 92,
     "clouds": 100,
     "pop": 100,
     "pressure": 1009,
@@ -3497,7 +3497,7 @@
     "visibility": 10.0,
     "rain_3h": 0.38,
     "timestamp": 1751522400,
-    "time": "2025-07-03T13:00:00"
+    "time": "2025-07-03T13:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3508,16 +3508,16 @@
     "feels_like": 25.6,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 92,
     "clouds": 100,
     "pop": 0,
     "pressure": 1007,
     "wind_speed": 12.8,
     "wind_deg": 268,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751533200,
-    "time": "2025-07-03T16:00:00"
+    "time": "2025-07-03T16:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3528,16 +3528,16 @@
     "feels_like": 25.5,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 92,
     "clouds": 100,
     "pop": 0,
     "pressure": 1009,
     "wind_speed": 9.5,
     "wind_deg": 252,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751544000,
-    "time": "2025-07-03T19:00:00"
+    "time": "2025-07-03T19:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3548,7 +3548,7 @@
     "feels_like": 24.4,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 96,
     "clouds": 100,
     "pop": 100,
     "pressure": 1011,
@@ -3557,7 +3557,7 @@
     "visibility": 8.7,
     "rain_3h": 2.05,
     "timestamp": 1751554800,
-    "time": "2025-07-03T22:00:00"
+    "time": "2025-07-03T22:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3568,7 +3568,7 @@
     "feels_like": 24.8,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 94,
     "clouds": 100,
     "pop": 100,
     "pressure": 1009,
@@ -3577,7 +3577,7 @@
     "visibility": 10.0,
     "rain_3h": 2.51,
     "timestamp": 1751565600,
-    "time": "2025-07-04T01:00:00"
+    "time": "2025-07-04T01:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3588,7 +3588,7 @@
     "feels_like": 24.5,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 94,
     "clouds": 100,
     "pop": 55,
     "pressure": 1008,
@@ -3597,7 +3597,7 @@
     "visibility": 10.0,
     "rain_3h": 0.32,
     "timestamp": 1751576400,
-    "time": "2025-07-04T04:00:00"
+    "time": "2025-07-04T04:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3608,7 +3608,7 @@
     "feels_like": 25.2,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 93,
     "clouds": 99,
     "pop": 100,
     "pressure": 1010,
@@ -3617,7 +3617,7 @@
     "visibility": 10.0,
     "rain_3h": 1.33,
     "timestamp": 1751587200,
-    "time": "2025-07-04T07:00:00"
+    "time": "2025-07-04T07:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3628,16 +3628,16 @@
     "feels_like": 25.6,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 93,
     "clouds": 100,
     "pop": 13,
     "pressure": 1010,
     "wind_speed": 15.6,
     "wind_deg": 271,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751598000,
-    "time": "2025-07-04T10:00:00"
+    "time": "2025-07-04T10:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3648,7 +3648,7 @@
     "feels_like": 33.0,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 71,
     "clouds": 94,
     "pop": 24,
     "pressure": 1008,
@@ -3657,7 +3657,7 @@
     "visibility": 10.0,
     "rain_3h": 0.1,
     "timestamp": 1751608800,
-    "time": "2025-07-04T13:00:00"
+    "time": "2025-07-04T13:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3668,7 +3668,7 @@
     "feels_like": 30.7,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 80,
     "clouds": 87,
     "pop": 100,
     "pressure": 1007,
@@ -3677,7 +3677,7 @@
     "visibility": 10.0,
     "rain_3h": 1.03,
     "timestamp": 1751619600,
-    "time": "2025-07-04T16:00:00"
+    "time": "2025-07-04T16:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3688,16 +3688,16 @@
     "feels_like": 25.4,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 86,
     "clouds": 91,
     "pop": 78,
     "pressure": 1009,
     "wind_speed": 16.5,
     "wind_deg": 267,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751630400,
-    "time": "2025-07-04T19:00:00"
+    "time": "2025-07-04T19:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3708,16 +3708,16 @@
     "feels_like": 25.1,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 88,
     "clouds": 100,
     "pop": 0,
     "pressure": 1010,
     "wind_speed": 13.5,
     "wind_deg": 266,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751641200,
-    "time": "2025-07-04T22:00:00"
+    "time": "2025-07-04T22:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3728,16 +3728,16 @@
     "feels_like": 25.2,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 89,
     "clouds": 100,
     "pop": 0,
     "pressure": 1009,
     "wind_speed": 7.6,
     "wind_deg": 254,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751652000,
-    "time": "2025-07-05T01:00:00"
+    "time": "2025-07-05T01:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3748,7 +3748,7 @@
     "feels_like": 24.6,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 95,
     "clouds": 100,
     "pop": 77,
     "pressure": 1008,
@@ -3757,7 +3757,7 @@
     "visibility": 10.0,
     "rain_3h": 0.83,
     "timestamp": 1751662800,
-    "time": "2025-07-05T04:00:00"
+    "time": "2025-07-05T04:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3768,7 +3768,7 @@
     "feels_like": 26.5,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 89,
     "clouds": 100,
     "pop": 78,
     "pressure": 1009,
@@ -3777,7 +3777,7 @@
     "visibility": 10.0,
     "rain_3h": 0.68,
     "timestamp": 1751673600,
-    "time": "2025-07-05T07:00:00"
+    "time": "2025-07-05T07:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3788,7 +3788,7 @@
     "feels_like": 34.0,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 67,
     "clouds": 39,
     "pop": 60,
     "pressure": 1010,
@@ -3797,7 +3797,7 @@
     "visibility": 10.0,
     "rain_3h": 0.36,
     "timestamp": 1751684400,
-    "time": "2025-07-05T10:00:00"
+    "time": "2025-07-05T10:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3808,7 +3808,7 @@
     "feels_like": 34.8,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 70,
     "clouds": 53,
     "pop": 100,
     "pressure": 1008,
@@ -3817,7 +3817,7 @@
     "visibility": 6.9,
     "rain_3h": 2.94,
     "timestamp": 1751695200,
-    "time": "2025-07-05T13:00:00"
+    "time": "2025-07-05T13:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3828,7 +3828,7 @@
     "feels_like": 33.4,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 68,
     "clouds": 100,
     "pop": 100,
     "pressure": 1007,
@@ -3837,7 +3837,7 @@
     "visibility": 10.0,
     "rain_3h": 1.12,
     "timestamp": 1751706000,
-    "time": "2025-07-05T16:00:00"
+    "time": "2025-07-05T16:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3848,16 +3848,16 @@
     "feels_like": 26.3,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 81,
     "clouds": 99,
     "pop": 86,
     "pressure": 1008,
     "wind_speed": 16.3,
     "wind_deg": 247,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751716800,
-    "time": "2025-07-05T19:00:00"
+    "time": "2025-07-05T19:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3868,16 +3868,16 @@
     "feels_like": 26.0,
     "weather_main": "Clouds",
     "weather_description": "broken clouds",
-    "humidity": null,
+    "humidity": 86,
     "clouds": 81,
     "pop": 0,
     "pressure": 1010,
     "wind_speed": 11.9,
     "wind_deg": 243,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751727600,
-    "time": "2025-07-05T22:00:00"
+    "time": "2025-07-05T22:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3888,16 +3888,16 @@
     "feels_like": 25.4,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 88,
     "clouds": 90,
     "pop": 0,
     "pressure": 1009,
     "wind_speed": 10.8,
     "wind_deg": 226,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751738400,
-    "time": "2025-07-06T01:00:00"
+    "time": "2025-07-06T01:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3908,16 +3908,16 @@
     "feels_like": 25.2,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 90,
     "clouds": 98,
     "pop": 0,
     "pressure": 1008,
     "wind_speed": 11.2,
     "wind_deg": 232,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751749200,
-    "time": "2025-07-06T04:00:00"
+    "time": "2025-07-06T04:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3928,7 +3928,7 @@
     "feels_like": 26.7,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 86,
     "clouds": 99,
     "pop": 36,
     "pressure": 1010,
@@ -3937,7 +3937,7 @@
     "visibility": 10.0,
     "rain_3h": 0.46,
     "timestamp": 1751760000,
-    "time": "2025-07-06T07:00:00"
+    "time": "2025-07-06T07:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3948,16 +3948,16 @@
     "feels_like": 31.6,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 73,
     "clouds": 100,
     "pop": 0,
     "pressure": 1010,
     "wind_speed": 18.0,
     "wind_deg": 260,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751770800,
-    "time": "2025-07-06T10:00:00"
+    "time": "2025-07-06T10:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3968,16 +3968,16 @@
     "feels_like": 35.1,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 60,
     "clouds": 94,
     "pop": 0,
     "pressure": 1008,
     "wind_speed": 28.3,
     "wind_deg": 261,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751781600,
-    "time": "2025-07-06T13:00:00"
+    "time": "2025-07-06T13:00:00+07:00"
   },
   {
     "city": "Can Tho",
@@ -3988,16 +3988,16 @@
     "feels_like": 32.5,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 71,
     "clouds": 100,
     "pop": 11,
     "pressure": 1007,
     "wind_speed": 24.0,
     "wind_deg": 253,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751792400,
-    "time": "2025-07-06T16:00:00"
+    "time": "2025-07-06T16:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4008,7 +4008,7 @@
     "feels_like": 26.5,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 85,
     "clouds": 95,
     "pop": 99,
     "pressure": 1004,
@@ -4017,7 +4017,7 @@
     "visibility": 10.0,
     "rain_3h": 3.83,
     "timestamp": 1751371200,
-    "time": "2025-07-01T19:00:00"
+    "time": "2025-07-01T19:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4028,7 +4028,7 @@
     "feels_like": 26.5,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 88,
     "clouds": 97,
     "pop": 100,
     "pressure": 1005,
@@ -4037,7 +4037,7 @@
     "visibility": 10.0,
     "rain_3h": 1.88,
     "timestamp": 1751382000,
-    "time": "2025-07-01T22:00:00"
+    "time": "2025-07-01T22:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4048,7 +4048,7 @@
     "feels_like": 26.5,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 93,
     "clouds": 98,
     "pop": 100,
     "pressure": 1005,
@@ -4057,7 +4057,7 @@
     "visibility": 10.0,
     "rain_3h": 0.95,
     "timestamp": 1751392800,
-    "time": "2025-07-02T01:00:00"
+    "time": "2025-07-02T01:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4068,16 +4068,16 @@
     "feels_like": 26.6,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 94,
     "clouds": 100,
     "pop": 0,
     "pressure": 1004,
     "wind_speed": 7.8,
     "wind_deg": 244,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751403600,
-    "time": "2025-07-02T04:00:00"
+    "time": "2025-07-02T04:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4088,16 +4088,16 @@
     "feels_like": 33.8,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 88,
     "clouds": 100,
     "pop": 0,
     "pressure": 1006,
     "wind_speed": 4.0,
     "wind_deg": 164,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751414400,
-    "time": "2025-07-02T07:00:00"
+    "time": "2025-07-02T07:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4108,16 +4108,16 @@
     "feels_like": 35.3,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 65,
     "clouds": 100,
     "pop": 10,
     "pressure": 1006,
     "wind_speed": 6.1,
     "wind_deg": 92,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751425200,
-    "time": "2025-07-02T10:00:00"
+    "time": "2025-07-02T10:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4128,7 +4128,7 @@
     "feels_like": 37.2,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 72,
     "clouds": 100,
     "pop": 65,
     "pressure": 1005,
@@ -4137,7 +4137,7 @@
     "visibility": 10.0,
     "rain_3h": 1.17,
     "timestamp": 1751436000,
-    "time": "2025-07-02T13:00:00"
+    "time": "2025-07-02T13:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4148,7 +4148,7 @@
     "feels_like": 34.0,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 87,
     "clouds": 97,
     "pop": 100,
     "pressure": 1004,
@@ -4157,7 +4157,7 @@
     "visibility": 9.3,
     "rain_3h": 5.37,
     "timestamp": 1751446800,
-    "time": "2025-07-02T16:00:00"
+    "time": "2025-07-02T16:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4168,7 +4168,7 @@
     "feels_like": 27.0,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 91,
     "clouds": 96,
     "pop": 100,
     "pressure": 1005,
@@ -4177,7 +4177,7 @@
     "visibility": 10.0,
     "rain_3h": 5.1,
     "timestamp": 1751457600,
-    "time": "2025-07-02T19:00:00"
+    "time": "2025-07-02T19:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4188,7 +4188,7 @@
     "feels_like": 26.0,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 95,
     "clouds": 99,
     "pop": 83,
     "pressure": 1007,
@@ -4197,7 +4197,7 @@
     "visibility": 10.0,
     "rain_3h": 1.03,
     "timestamp": 1751468400,
-    "time": "2025-07-02T22:00:00"
+    "time": "2025-07-02T22:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4208,16 +4208,16 @@
     "feels_like": 25.2,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 93,
     "clouds": 100,
     "pop": 71,
     "pressure": 1005,
     "wind_speed": 5.1,
     "wind_deg": 226,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751479200,
-    "time": "2025-07-03T01:00:00"
+    "time": "2025-07-03T01:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4228,7 +4228,7 @@
     "feels_like": 24.9,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 92,
     "clouds": 100,
     "pop": 30,
     "pressure": 1005,
@@ -4237,7 +4237,7 @@
     "visibility": 10.0,
     "rain_3h": 0.11,
     "timestamp": 1751490000,
-    "time": "2025-07-03T04:00:00"
+    "time": "2025-07-03T04:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4248,7 +4248,7 @@
     "feels_like": 26.3,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 89,
     "clouds": 100,
     "pop": 36,
     "pressure": 1006,
@@ -4257,7 +4257,7 @@
     "visibility": 10.0,
     "rain_3h": 0.22,
     "timestamp": 1751500800,
-    "time": "2025-07-03T07:00:00"
+    "time": "2025-07-03T07:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4268,16 +4268,16 @@
     "feels_like": 34.3,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 69,
     "clouds": 99,
     "pop": 0,
     "pressure": 1006,
     "wind_speed": 3.7,
     "wind_deg": 38,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751511600,
-    "time": "2025-07-03T10:00:00"
+    "time": "2025-07-03T10:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4288,7 +4288,7 @@
     "feels_like": 36.4,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 82,
     "clouds": 94,
     "pop": 92,
     "pressure": 1004,
@@ -4297,7 +4297,7 @@
     "visibility": 8.6,
     "rain_3h": 2.03,
     "timestamp": 1751522400,
-    "time": "2025-07-03T13:00:00"
+    "time": "2025-07-03T13:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4308,7 +4308,7 @@
     "feels_like": 30.7,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 88,
     "clouds": 98,
     "pop": 100,
     "pressure": 1003,
@@ -4317,7 +4317,7 @@
     "visibility": 10.0,
     "rain_3h": 6.79,
     "timestamp": 1751533200,
-    "time": "2025-07-03T16:00:00"
+    "time": "2025-07-03T16:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4328,7 +4328,7 @@
     "feels_like": 26.4,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 93,
     "clouds": 99,
     "pop": 100,
     "pressure": 1005,
@@ -4337,7 +4337,7 @@
     "visibility": 10.0,
     "rain_3h": 0.44,
     "timestamp": 1751544000,
-    "time": "2025-07-03T19:00:00"
+    "time": "2025-07-03T19:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4348,16 +4348,16 @@
     "feels_like": 25.9,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 94,
     "clouds": 100,
     "pop": 35,
     "pressure": 1007,
     "wind_speed": 4.8,
     "wind_deg": 188,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751554800,
-    "time": "2025-07-03T22:00:00"
+    "time": "2025-07-03T22:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4368,7 +4368,7 @@
     "feels_like": 25.2,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 97,
     "clouds": 99,
     "pop": 91,
     "pressure": 1005,
@@ -4377,7 +4377,7 @@
     "visibility": 10.0,
     "rain_3h": 1.21,
     "timestamp": 1751565600,
-    "time": "2025-07-04T01:00:00"
+    "time": "2025-07-04T01:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4388,7 +4388,7 @@
     "feels_like": 24.9,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 95,
     "clouds": 92,
     "pop": 36,
     "pressure": 1005,
@@ -4397,7 +4397,7 @@
     "visibility": 10.0,
     "rain_3h": 0.16,
     "timestamp": 1751576400,
-    "time": "2025-07-04T04:00:00"
+    "time": "2025-07-04T04:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4408,16 +4408,16 @@
     "feels_like": 25.4,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 92,
     "clouds": 96,
     "pop": 19,
     "pressure": 1006,
     "wind_speed": 3.9,
     "wind_deg": 190,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751587200,
-    "time": "2025-07-04T07:00:00"
+    "time": "2025-07-04T07:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4428,16 +4428,16 @@
     "feels_like": 34.5,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 69,
     "clouds": 91,
     "pop": 0,
     "pressure": 1006,
     "wind_speed": 3.9,
     "wind_deg": 10,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751598000,
-    "time": "2025-07-04T10:00:00"
+    "time": "2025-07-04T10:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4448,7 +4448,7 @@
     "feels_like": 37.0,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 66,
     "clouds": 84,
     "pop": 32,
     "pressure": 1004,
@@ -4457,7 +4457,7 @@
     "visibility": 10.0,
     "rain_3h": 0.2,
     "timestamp": 1751608800,
-    "time": "2025-07-04T13:00:00"
+    "time": "2025-07-04T13:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4468,7 +4468,7 @@
     "feels_like": 35.2,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 78,
     "clouds": 74,
     "pop": 93,
     "pressure": 1003,
@@ -4477,7 +4477,7 @@
     "visibility": 10.0,
     "rain_3h": 0.84,
     "timestamp": 1751619600,
-    "time": "2025-07-04T16:00:00"
+    "time": "2025-07-04T16:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4488,7 +4488,7 @@
     "feels_like": 26.5,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 90,
     "clouds": 87,
     "pop": 88,
     "pressure": 1005,
@@ -4497,7 +4497,7 @@
     "visibility": 10.0,
     "rain_3h": 0.43,
     "timestamp": 1751630400,
-    "time": "2025-07-04T19:00:00"
+    "time": "2025-07-04T19:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4508,7 +4508,7 @@
     "feels_like": 25.9,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 95,
     "clouds": 95,
     "pop": 54,
     "pressure": 1006,
@@ -4517,7 +4517,7 @@
     "visibility": 10.0,
     "rain_3h": 0.44,
     "timestamp": 1751641200,
-    "time": "2025-07-04T22:00:00"
+    "time": "2025-07-04T22:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4528,7 +4528,7 @@
     "feels_like": 24.5,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 95,
     "clouds": 95,
     "pop": 88,
     "pressure": 1005,
@@ -4537,7 +4537,7 @@
     "visibility": 10.0,
     "rain_3h": 1.51,
     "timestamp": 1751652000,
-    "time": "2025-07-05T01:00:00"
+    "time": "2025-07-05T01:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4548,16 +4548,16 @@
     "feels_like": 24.0,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 93,
     "clouds": 100,
     "pop": 2,
     "pressure": 1004,
     "wind_speed": 5.1,
     "wind_deg": 200,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751662800,
-    "time": "2025-07-05T04:00:00"
+    "time": "2025-07-05T04:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4568,16 +4568,16 @@
     "feels_like": 26.2,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 88,
     "clouds": 100,
     "pop": 0,
     "pressure": 1006,
     "wind_speed": 4.3,
     "wind_deg": 193,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751673600,
-    "time": "2025-07-05T07:00:00"
+    "time": "2025-07-05T07:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4588,16 +4588,16 @@
     "feels_like": 36.1,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 63,
     "clouds": 100,
     "pop": 0,
     "pressure": 1006,
     "wind_speed": 5.8,
     "wind_deg": 52,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751684400,
-    "time": "2025-07-05T10:00:00"
+    "time": "2025-07-05T10:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4608,16 +4608,16 @@
     "feels_like": 37.0,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 66,
     "clouds": 88,
     "pop": 0,
     "pressure": 1004,
     "wind_speed": 15.9,
     "wind_deg": 63,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751695200,
-    "time": "2025-07-05T13:00:00"
+    "time": "2025-07-05T13:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4628,7 +4628,7 @@
     "feels_like": 36.8,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 74,
     "clouds": 28,
     "pop": 83,
     "pressure": 1003,
@@ -4637,7 +4637,7 @@
     "visibility": 10.0,
     "rain_3h": 1.37,
     "timestamp": 1751706000,
-    "time": "2025-07-05T16:00:00"
+    "time": "2025-07-05T16:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4648,7 +4648,7 @@
     "feels_like": 26.4,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 92,
     "clouds": 54,
     "pop": 91,
     "pressure": 1005,
@@ -4657,7 +4657,7 @@
     "visibility": 10.0,
     "rain_3h": 1.2,
     "timestamp": 1751716800,
-    "time": "2025-07-05T19:00:00"
+    "time": "2025-07-05T19:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4668,7 +4668,7 @@
     "feels_like": 26.3,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 95,
     "clouds": 100,
     "pop": 61,
     "pressure": 1006,
@@ -4677,7 +4677,7 @@
     "visibility": 10.0,
     "rain_3h": 0.18,
     "timestamp": 1751727600,
-    "time": "2025-07-05T22:00:00"
+    "time": "2025-07-05T22:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4688,7 +4688,7 @@
     "feels_like": 25.2,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 95,
     "clouds": 100,
     "pop": 65,
     "pressure": 1005,
@@ -4697,7 +4697,7 @@
     "visibility": 10.0,
     "rain_3h": 0.11,
     "timestamp": 1751738400,
-    "time": "2025-07-06T01:00:00"
+    "time": "2025-07-06T01:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4708,16 +4708,16 @@
     "feels_like": 24.4,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 92,
     "clouds": 100,
     "pop": 0,
     "pressure": 1004,
     "wind_speed": 6.6,
     "wind_deg": 218,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751749200,
-    "time": "2025-07-06T04:00:00"
+    "time": "2025-07-06T04:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4728,16 +4728,16 @@
     "feels_like": 26.5,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 86,
     "clouds": 99,
     "pop": 0,
     "pressure": 1006,
     "wind_speed": 4.5,
     "wind_deg": 192,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751760000,
-    "time": "2025-07-06T07:00:00"
+    "time": "2025-07-06T07:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4748,16 +4748,16 @@
     "feels_like": 36.6,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 61,
     "clouds": 94,
     "pop": 0,
     "pressure": 1006,
     "wind_speed": 3.8,
     "wind_deg": 60,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751770800,
-    "time": "2025-07-06T10:00:00"
+    "time": "2025-07-06T10:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4768,16 +4768,16 @@
     "feels_like": 38.7,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 61,
     "clouds": 97,
     "pop": 0,
     "pressure": 1004,
     "wind_speed": 11.1,
     "wind_deg": 37,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751781600,
-    "time": "2025-07-06T13:00:00"
+    "time": "2025-07-06T13:00:00+07:00"
   },
   {
     "city": "Hue",
@@ -4788,7 +4788,7 @@
     "feels_like": 36.1,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 75,
     "clouds": 63,
     "pop": 100,
     "pressure": 1004,
@@ -4797,7 +4797,7 @@
     "visibility": 10.0,
     "rain_3h": 0.84,
     "timestamp": 1751792400,
-    "time": "2025-07-06T16:00:00"
+    "time": "2025-07-06T16:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -4808,7 +4808,7 @@
     "feels_like": 32.5,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 84,
     "clouds": 100,
     "pop": 100,
     "pressure": 1005,
@@ -4817,7 +4817,7 @@
     "visibility": 9.9,
     "rain_3h": 6.49,
     "timestamp": 1751371200,
-    "time": "2025-07-01T19:00:00"
+    "time": "2025-07-01T19:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -4828,7 +4828,7 @@
     "feels_like": 31.3,
     "weather_main": "Rain",
     "weather_description": "heavy intensity rain",
-    "humidity": null,
+    "humidity": 87,
     "clouds": 100,
     "pop": 100,
     "pressure": 1006,
@@ -4837,7 +4837,7 @@
     "visibility": 10.0,
     "rain_3h": 15.29,
     "timestamp": 1751382000,
-    "time": "2025-07-01T22:00:00"
+    "time": "2025-07-01T22:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -4848,7 +4848,7 @@
     "feels_like": 26.2,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 90,
     "clouds": 100,
     "pop": 100,
     "pressure": 1006,
@@ -4857,7 +4857,7 @@
     "visibility": 10.0,
     "rain_3h": 2.04,
     "timestamp": 1751392800,
-    "time": "2025-07-02T01:00:00"
+    "time": "2025-07-02T01:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -4868,7 +4868,7 @@
     "feels_like": 26.6,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 91,
     "clouds": 100,
     "pop": 69,
     "pressure": 1005,
@@ -4877,7 +4877,7 @@
     "visibility": 10.0,
     "rain_3h": 0.46,
     "timestamp": 1751403600,
-    "time": "2025-07-02T04:00:00"
+    "time": "2025-07-02T04:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -4888,7 +4888,7 @@
     "feels_like": 36.1,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 85,
     "clouds": 98,
     "pop": 50,
     "pressure": 1007,
@@ -4897,7 +4897,7 @@
     "visibility": 10.0,
     "rain_3h": 0.16,
     "timestamp": 1751414400,
-    "time": "2025-07-02T07:00:00"
+    "time": "2025-07-02T07:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -4908,16 +4908,16 @@
     "feels_like": 35.6,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 66,
     "clouds": 100,
     "pop": 0,
     "pressure": 1007,
     "wind_speed": 6.2,
     "wind_deg": 135,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751425200,
-    "time": "2025-07-02T10:00:00"
+    "time": "2025-07-02T10:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -4928,7 +4928,7 @@
     "feels_like": 37.1,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 68,
     "clouds": 100,
     "pop": 21,
     "pressure": 1005,
@@ -4937,7 +4937,7 @@
     "visibility": 10.0,
     "rain_3h": 0.35,
     "timestamp": 1751436000,
-    "time": "2025-07-02T13:00:00"
+    "time": "2025-07-02T13:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -4948,7 +4948,7 @@
     "feels_like": 30.6,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 88,
     "clouds": 100,
     "pop": 100,
     "pressure": 1004,
@@ -4957,7 +4957,7 @@
     "visibility": 10.0,
     "rain_3h": 5.34,
     "timestamp": 1751446800,
-    "time": "2025-07-02T16:00:00"
+    "time": "2025-07-02T16:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -4968,7 +4968,7 @@
     "feels_like": 26.5,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 89,
     "clouds": 100,
     "pop": 100,
     "pressure": 1006,
@@ -4977,7 +4977,7 @@
     "visibility": 10.0,
     "rain_3h": 0.29,
     "timestamp": 1751457600,
-    "time": "2025-07-02T19:00:00"
+    "time": "2025-07-02T19:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -4988,7 +4988,7 @@
     "feels_like": 26.2,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 90,
     "clouds": 100,
     "pop": 49,
     "pressure": 1007,
@@ -4997,7 +4997,7 @@
     "visibility": 10.0,
     "rain_3h": 0.15,
     "timestamp": 1751468400,
-    "time": "2025-07-02T22:00:00"
+    "time": "2025-07-02T22:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -5008,16 +5008,16 @@
     "feels_like": 26.1,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 89,
     "clouds": 100,
     "pop": 32,
     "pressure": 1006,
     "wind_speed": 8.0,
     "wind_deg": 276,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751479200,
-    "time": "2025-07-03T01:00:00"
+    "time": "2025-07-03T01:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -5028,16 +5028,16 @@
     "feels_like": 25.4,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 87,
     "clouds": 100,
     "pop": 0,
     "pressure": 1005,
     "wind_speed": 9.0,
     "wind_deg": 285,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751490000,
-    "time": "2025-07-03T04:00:00"
+    "time": "2025-07-03T04:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -5048,16 +5048,16 @@
     "feels_like": 26.2,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 79,
     "clouds": 100,
     "pop": 0,
     "pressure": 1007,
     "wind_speed": 7.7,
     "wind_deg": 293,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751500800,
-    "time": "2025-07-03T07:00:00"
+    "time": "2025-07-03T07:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -5068,16 +5068,16 @@
     "feels_like": 35.2,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 61,
     "clouds": 100,
     "pop": 0,
     "pressure": 1007,
     "wind_speed": 1.0,
     "wind_deg": 176,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751511600,
-    "time": "2025-07-03T10:00:00"
+    "time": "2025-07-03T10:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -5088,7 +5088,7 @@
     "feels_like": 35.7,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 62,
     "clouds": 97,
     "pop": 20,
     "pressure": 1005,
@@ -5097,7 +5097,7 @@
     "visibility": 10.0,
     "rain_3h": 0.1,
     "timestamp": 1751522400,
-    "time": "2025-07-03T13:00:00"
+    "time": "2025-07-03T13:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -5108,7 +5108,7 @@
     "feels_like": 30.9,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 85,
     "clouds": 100,
     "pop": 100,
     "pressure": 1005,
@@ -5117,7 +5117,7 @@
     "visibility": 6.0,
     "rain_3h": 4.58,
     "timestamp": 1751533200,
-    "time": "2025-07-03T16:00:00"
+    "time": "2025-07-03T16:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -5128,7 +5128,7 @@
     "feels_like": 26.0,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 92,
     "clouds": 100,
     "pop": 100,
     "pressure": 1007,
@@ -5137,7 +5137,7 @@
     "visibility": 10.0,
     "rain_3h": 3.53,
     "timestamp": 1751544000,
-    "time": "2025-07-03T19:00:00"
+    "time": "2025-07-03T19:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -5148,7 +5148,7 @@
     "feels_like": 25.7,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 91,
     "clouds": 100,
     "pop": 86,
     "pressure": 1008,
@@ -5157,7 +5157,7 @@
     "visibility": 10.0,
     "rain_3h": 3.86,
     "timestamp": 1751554800,
-    "time": "2025-07-03T22:00:00"
+    "time": "2025-07-03T22:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -5168,16 +5168,16 @@
     "feels_like": 25.6,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 89,
     "clouds": 100,
     "pop": 82,
     "pressure": 1006,
     "wind_speed": 7.6,
     "wind_deg": 255,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751565600,
-    "time": "2025-07-04T01:00:00"
+    "time": "2025-07-04T01:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -5188,16 +5188,16 @@
     "feels_like": 25.4,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 89,
     "clouds": 100,
     "pop": 0,
     "pressure": 1006,
     "wind_speed": 8.2,
     "wind_deg": 291,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751576400,
-    "time": "2025-07-04T04:00:00"
+    "time": "2025-07-04T04:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -5208,16 +5208,16 @@
     "feels_like": 26.2,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 87,
     "clouds": 100,
     "pop": 0,
     "pressure": 1007,
     "wind_speed": 8.7,
     "wind_deg": 294,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751587200,
-    "time": "2025-07-04T07:00:00"
+    "time": "2025-07-04T07:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -5228,16 +5228,16 @@
     "feels_like": 31.7,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 71,
     "clouds": 100,
     "pop": 0,
     "pressure": 1008,
     "wind_speed": 3.9,
     "wind_deg": 290,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751598000,
-    "time": "2025-07-04T10:00:00"
+    "time": "2025-07-04T10:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -5248,16 +5248,16 @@
     "feels_like": 34.2,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 63,
     "clouds": 100,
     "pop": 0,
     "pressure": 1006,
     "wind_speed": 3.5,
     "wind_deg": 121,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751608800,
-    "time": "2025-07-04T13:00:00"
+    "time": "2025-07-04T13:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -5268,7 +5268,7 @@
     "feels_like": 33.1,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 79,
     "clouds": 100,
     "pop": 100,
     "pressure": 1005,
@@ -5277,7 +5277,7 @@
     "visibility": 5.3,
     "rain_3h": 1.22,
     "timestamp": 1751619600,
-    "time": "2025-07-04T16:00:00"
+    "time": "2025-07-04T16:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -5288,7 +5288,7 @@
     "feels_like": 26.6,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 86,
     "clouds": 100,
     "pop": 100,
     "pressure": 1007,
@@ -5297,7 +5297,7 @@
     "visibility": 10.0,
     "rain_3h": 1.89,
     "timestamp": 1751630400,
-    "time": "2025-07-04T19:00:00"
+    "time": "2025-07-04T19:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -5308,7 +5308,7 @@
     "feels_like": 26.2,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 92,
     "clouds": 100,
     "pop": 100,
     "pressure": 1008,
@@ -5317,7 +5317,7 @@
     "visibility": 10.0,
     "rain_3h": 1.65,
     "timestamp": 1751641200,
-    "time": "2025-07-04T22:00:00"
+    "time": "2025-07-04T22:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -5328,16 +5328,16 @@
     "feels_like": 25.4,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 90,
     "clouds": 100,
     "pop": 80,
     "pressure": 1006,
     "wind_speed": 10.8,
     "wind_deg": 294,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751652000,
-    "time": "2025-07-05T01:00:00"
+    "time": "2025-07-05T01:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -5348,16 +5348,16 @@
     "feels_like": 24.9,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 89,
     "clouds": 100,
     "pop": 0,
     "pressure": 1006,
     "wind_speed": 9.2,
     "wind_deg": 278,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751662800,
-    "time": "2025-07-05T04:00:00"
+    "time": "2025-07-05T04:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -5368,16 +5368,16 @@
     "feels_like": 26.2,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 86,
     "clouds": 98,
     "pop": 0,
     "pressure": 1007,
     "wind_speed": 9.9,
     "wind_deg": 293,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751673600,
-    "time": "2025-07-05T07:00:00"
+    "time": "2025-07-05T07:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -5388,16 +5388,16 @@
     "feels_like": 34.9,
     "weather_main": "Clouds",
     "weather_description": "broken clouds",
-    "humidity": null,
+    "humidity": 62,
     "clouds": 71,
     "pop": 0,
     "pressure": 1007,
     "wind_speed": 2.8,
     "wind_deg": 167,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751684400,
-    "time": "2025-07-05T10:00:00"
+    "time": "2025-07-05T10:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -5408,7 +5408,7 @@
     "feels_like": 34.8,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 72,
     "clouds": 72,
     "pop": 35,
     "pressure": 1005,
@@ -5417,7 +5417,7 @@
     "visibility": 10.0,
     "rain_3h": 0.19,
     "timestamp": 1751695200,
-    "time": "2025-07-05T13:00:00"
+    "time": "2025-07-05T13:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -5428,7 +5428,7 @@
     "feels_like": 30.0,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 90,
     "clouds": 95,
     "pop": 100,
     "pressure": 1005,
@@ -5437,7 +5437,7 @@
     "visibility": 10.0,
     "rain_3h": 3.88,
     "timestamp": 1751706000,
-    "time": "2025-07-05T16:00:00"
+    "time": "2025-07-05T16:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -5448,7 +5448,7 @@
     "feels_like": 26.2,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 89,
     "clouds": 71,
     "pop": 100,
     "pressure": 1007,
@@ -5457,7 +5457,7 @@
     "visibility": 10.0,
     "rain_3h": 0.85,
     "timestamp": 1751716800,
-    "time": "2025-07-05T19:00:00"
+    "time": "2025-07-05T19:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -5468,16 +5468,16 @@
     "feels_like": 26.5,
     "weather_main": "Clouds",
     "weather_description": "scattered clouds",
-    "humidity": null,
+    "humidity": 89,
     "clouds": 49,
     "pop": 0,
     "pressure": 1008,
     "wind_speed": 9.9,
     "wind_deg": 304,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751727600,
-    "time": "2025-07-05T22:00:00"
+    "time": "2025-07-05T22:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -5488,16 +5488,16 @@
     "feels_like": 25.8,
     "weather_main": "Clouds",
     "weather_description": "scattered clouds",
-    "humidity": null,
+    "humidity": 90,
     "clouds": 44,
     "pop": 0,
     "pressure": 1006,
     "wind_speed": 8.9,
     "wind_deg": 277,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751738400,
-    "time": "2025-07-06T01:00:00"
+    "time": "2025-07-06T01:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -5508,16 +5508,16 @@
     "feels_like": 25.1,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 88,
     "clouds": 88,
     "pop": 0,
     "pressure": 1006,
     "wind_speed": 9.4,
     "wind_deg": 287,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751749200,
-    "time": "2025-07-06T04:00:00"
+    "time": "2025-07-06T04:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -5528,16 +5528,16 @@
     "feels_like": 26.0,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 82,
     "clouds": 91,
     "pop": 0,
     "pressure": 1008,
     "wind_speed": 8.4,
     "wind_deg": 289,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751760000,
-    "time": "2025-07-06T07:00:00"
+    "time": "2025-07-06T07:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -5548,16 +5548,16 @@
     "feels_like": 35.2,
     "weather_main": "Clouds",
     "weather_description": "broken clouds",
-    "humidity": null,
+    "humidity": 61,
     "clouds": 80,
     "pop": 0,
     "pressure": 1007,
     "wind_speed": 4.1,
     "wind_deg": 113,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751770800,
-    "time": "2025-07-06T10:00:00"
+    "time": "2025-07-06T10:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -5568,7 +5568,7 @@
     "feels_like": 35.9,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 63,
     "clouds": 63,
     "pop": 30,
     "pressure": 1005,
@@ -5577,7 +5577,7 @@
     "visibility": 10.0,
     "rain_3h": 0.18,
     "timestamp": 1751781600,
-    "time": "2025-07-06T13:00:00"
+    "time": "2025-07-06T13:00:00+07:00"
   },
   {
     "city": "Nha Trang",
@@ -5588,7 +5588,7 @@
     "feels_like": 34.7,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 76,
     "clouds": 61,
     "pop": 79,
     "pressure": 1005,
@@ -5597,7 +5597,7 @@
     "visibility": 10.0,
     "rain_3h": 0.9,
     "timestamp": 1751792400,
-    "time": "2025-07-06T16:00:00"
+    "time": "2025-07-06T16:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -5608,7 +5608,7 @@
     "feels_like": 26.7,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 91,
     "clouds": 97,
     "pop": 100,
     "pressure": 1003,
@@ -5617,7 +5617,7 @@
     "visibility": 10.0,
     "rain_3h": 6.34,
     "timestamp": 1751371200,
-    "time": "2025-07-01T19:00:00"
+    "time": "2025-07-01T19:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -5628,7 +5628,7 @@
     "feels_like": 26.9,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 90,
     "clouds": 98,
     "pop": 55,
     "pressure": 1004,
@@ -5637,7 +5637,7 @@
     "visibility": 10.0,
     "rain_3h": 0.41,
     "timestamp": 1751382000,
-    "time": "2025-07-01T22:00:00"
+    "time": "2025-07-01T22:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -5648,16 +5648,16 @@
     "feels_like": 26.8,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 91,
     "clouds": 99,
     "pop": 28,
     "pressure": 1004,
     "wind_speed": 5.5,
     "wind_deg": 238,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751392800,
-    "time": "2025-07-02T01:00:00"
+    "time": "2025-07-02T01:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -5668,16 +5668,16 @@
     "feels_like": 26.4,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 91,
     "clouds": 100,
     "pop": 13,
     "pressure": 1004,
     "wind_speed": 6.7,
     "wind_deg": 254,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751403600,
-    "time": "2025-07-02T04:00:00"
+    "time": "2025-07-02T04:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -5688,16 +5688,16 @@
     "feels_like": 26.4,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 85,
     "clouds": 100,
     "pop": 5,
     "pressure": 1005,
     "wind_speed": 6.3,
     "wind_deg": 247,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751414400,
-    "time": "2025-07-02T07:00:00"
+    "time": "2025-07-02T07:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -5708,16 +5708,16 @@
     "feels_like": 33.4,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 74,
     "clouds": 100,
     "pop": 0,
     "pressure": 1006,
     "wind_speed": 6.3,
     "wind_deg": 292,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751425200,
-    "time": "2025-07-02T10:00:00"
+    "time": "2025-07-02T10:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -5728,16 +5728,16 @@
     "feels_like": 37.2,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 64,
     "clouds": 100,
     "pop": 0,
     "pressure": 1004,
     "wind_speed": 5.9,
     "wind_deg": 80,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751436000,
-    "time": "2025-07-02T13:00:00"
+    "time": "2025-07-02T13:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -5748,16 +5748,16 @@
     "feels_like": 35.7,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 71,
     "clouds": 100,
     "pop": 20,
     "pressure": 1003,
     "wind_speed": 9.9,
     "wind_deg": 61,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751446800,
-    "time": "2025-07-02T16:00:00"
+    "time": "2025-07-02T16:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -5768,7 +5768,7 @@
     "feels_like": 31.1,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 82,
     "clouds": 98,
     "pop": 64,
     "pressure": 1005,
@@ -5777,7 +5777,7 @@
     "visibility": 10.0,
     "rain_3h": 0.89,
     "timestamp": 1751457600,
-    "time": "2025-07-02T19:00:00"
+    "time": "2025-07-02T19:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -5788,7 +5788,7 @@
     "feels_like": 29.8,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 85,
     "clouds": 99,
     "pop": 89,
     "pressure": 1006,
@@ -5797,7 +5797,7 @@
     "visibility": 10.0,
     "rain_3h": 1.14,
     "timestamp": 1751468400,
-    "time": "2025-07-02T22:00:00"
+    "time": "2025-07-02T22:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -5808,7 +5808,7 @@
     "feels_like": 26.2,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 92,
     "clouds": 99,
     "pop": 100,
     "pressure": 1005,
@@ -5817,7 +5817,7 @@
     "visibility": 5.6,
     "rain_3h": 3.44,
     "timestamp": 1751479200,
-    "time": "2025-07-03T01:00:00"
+    "time": "2025-07-03T01:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -5828,7 +5828,7 @@
     "feels_like": 25.8,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 95,
     "clouds": 100,
     "pop": 100,
     "pressure": 1005,
@@ -5837,7 +5837,7 @@
     "visibility": 10.0,
     "rain_3h": 4.39,
     "timestamp": 1751490000,
-    "time": "2025-07-03T04:00:00"
+    "time": "2025-07-03T04:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -5848,7 +5848,7 @@
     "feels_like": 26.4,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 93,
     "clouds": 100,
     "pop": 100,
     "pressure": 1006,
@@ -5857,7 +5857,7 @@
     "visibility": 10.0,
     "rain_3h": 3.39,
     "timestamp": 1751500800,
-    "time": "2025-07-03T07:00:00"
+    "time": "2025-07-03T07:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -5868,7 +5868,7 @@
     "feels_like": 31.2,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 85,
     "clouds": 100,
     "pop": 100,
     "pressure": 1007,
@@ -5877,7 +5877,7 @@
     "visibility": 10.0,
     "rain_3h": 3.83,
     "timestamp": 1751511600,
-    "time": "2025-07-03T10:00:00"
+    "time": "2025-07-03T10:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -5888,7 +5888,7 @@
     "feels_like": 33.5,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 80,
     "clouds": 99,
     "pop": 100,
     "pressure": 1005,
@@ -5897,7 +5897,7 @@
     "visibility": 6.8,
     "rain_3h": 5.57,
     "timestamp": 1751522400,
-    "time": "2025-07-03T13:00:00"
+    "time": "2025-07-03T13:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -5908,7 +5908,7 @@
     "feels_like": 32.5,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 81,
     "clouds": 94,
     "pop": 100,
     "pressure": 1004,
@@ -5917,7 +5917,7 @@
     "visibility": 10.0,
     "rain_3h": 2.35,
     "timestamp": 1751533200,
-    "time": "2025-07-03T16:00:00"
+    "time": "2025-07-03T16:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -5928,7 +5928,7 @@
     "feels_like": 26.2,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 87,
     "clouds": 87,
     "pop": 100,
     "pressure": 1005,
@@ -5937,7 +5937,7 @@
     "visibility": 10.0,
     "rain_3h": 1.78,
     "timestamp": 1751544000,
-    "time": "2025-07-03T19:00:00"
+    "time": "2025-07-03T19:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -5948,7 +5948,7 @@
     "feels_like": 26.5,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 89,
     "clouds": 96,
     "pop": 86,
     "pressure": 1007,
@@ -5957,7 +5957,7 @@
     "visibility": 10.0,
     "rain_3h": 1.26,
     "timestamp": 1751554800,
-    "time": "2025-07-03T22:00:00"
+    "time": "2025-07-03T22:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -5968,16 +5968,16 @@
     "feels_like": 26.0,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 89,
     "clouds": 92,
     "pop": 70,
     "pressure": 1005,
     "wind_speed": 5.1,
     "wind_deg": 246,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751565600,
-    "time": "2025-07-04T01:00:00"
+    "time": "2025-07-04T01:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -5988,7 +5988,7 @@
     "feels_like": 25.6,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 91,
     "clouds": 88,
     "pop": 62,
     "pressure": 1004,
@@ -5997,7 +5997,7 @@
     "visibility": 10.0,
     "rain_3h": 0.31,
     "timestamp": 1751576400,
-    "time": "2025-07-04T04:00:00"
+    "time": "2025-07-04T04:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -6008,7 +6008,7 @@
     "feels_like": 26.8,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 89,
     "clouds": 88,
     "pop": 99,
     "pressure": 1006,
@@ -6017,7 +6017,7 @@
     "visibility": 10.0,
     "rain_3h": 0.53,
     "timestamp": 1751587200,
-    "time": "2025-07-04T07:00:00"
+    "time": "2025-07-04T07:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -6028,7 +6028,7 @@
     "feels_like": 33.5,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 78,
     "clouds": 100,
     "pop": 85,
     "pressure": 1006,
@@ -6037,7 +6037,7 @@
     "visibility": 10.0,
     "rain_3h": 1.24,
     "timestamp": 1751598000,
-    "time": "2025-07-04T10:00:00"
+    "time": "2025-07-04T10:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -6048,7 +6048,7 @@
     "feels_like": 35.4,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 70,
     "clouds": 100,
     "pop": 100,
     "pressure": 1004,
@@ -6057,7 +6057,7 @@
     "visibility": 10.0,
     "rain_3h": 3.29,
     "timestamp": 1751608800,
-    "time": "2025-07-04T13:00:00"
+    "time": "2025-07-04T13:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -6068,7 +6068,7 @@
     "feels_like": 35.2,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 75,
     "clouds": 91,
     "pop": 60,
     "pressure": 1002,
@@ -6077,7 +6077,7 @@
     "visibility": 10.0,
     "rain_3h": 0.58,
     "timestamp": 1751619600,
-    "time": "2025-07-04T16:00:00"
+    "time": "2025-07-04T16:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -6088,7 +6088,7 @@
     "feels_like": 30.4,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 84,
     "clouds": 97,
     "pop": 80,
     "pressure": 1004,
@@ -6097,7 +6097,7 @@
     "visibility": 10.0,
     "rain_3h": 1.58,
     "timestamp": 1751630400,
-    "time": "2025-07-04T19:00:00"
+    "time": "2025-07-04T19:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -6108,7 +6108,7 @@
     "feels_like": 26.4,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 92,
     "clouds": 99,
     "pop": 100,
     "pressure": 1006,
@@ -6117,7 +6117,7 @@
     "visibility": 6.9,
     "rain_3h": 5.35,
     "timestamp": 1751641200,
-    "time": "2025-07-04T22:00:00"
+    "time": "2025-07-04T22:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -6128,7 +6128,7 @@
     "feels_like": 25.9,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 94,
     "clouds": 100,
     "pop": 100,
     "pressure": 1004,
@@ -6137,7 +6137,7 @@
     "visibility": 10.0,
     "rain_3h": 3.42,
     "timestamp": 1751652000,
-    "time": "2025-07-05T01:00:00"
+    "time": "2025-07-05T01:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -6148,7 +6148,7 @@
     "feels_like": 25.7,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 97,
     "clouds": 100,
     "pop": 97,
     "pressure": 1004,
@@ -6157,7 +6157,7 @@
     "visibility": 10.0,
     "rain_3h": 1.36,
     "timestamp": 1751662800,
-    "time": "2025-07-05T04:00:00"
+    "time": "2025-07-05T04:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -6168,7 +6168,7 @@
     "feels_like": 25.3,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 97,
     "clouds": 100,
     "pop": 100,
     "pressure": 1005,
@@ -6177,7 +6177,7 @@
     "visibility": 10.0,
     "rain_3h": 3.65,
     "timestamp": 1751673600,
-    "time": "2025-07-05T07:00:00"
+    "time": "2025-07-05T07:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -6188,7 +6188,7 @@
     "feels_like": 30.4,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 86,
     "clouds": 100,
     "pop": 78,
     "pressure": 1006,
@@ -6197,7 +6197,7 @@
     "visibility": 10.0,
     "rain_3h": 0.57,
     "timestamp": 1751684400,
-    "time": "2025-07-05T10:00:00"
+    "time": "2025-07-05T10:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -6208,16 +6208,16 @@
     "feels_like": 31.6,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 81,
     "clouds": 100,
     "pop": 55,
     "pressure": 1004,
     "wind_speed": 9.5,
     "wind_deg": 246,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751695200,
-    "time": "2025-07-05T13:00:00"
+    "time": "2025-07-05T13:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -6228,16 +6228,16 @@
     "feels_like": 31.4,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 83,
     "clouds": 100,
     "pop": 0,
     "pressure": 1002,
     "wind_speed": 3.7,
     "wind_deg": 230,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751706000,
-    "time": "2025-07-05T16:00:00"
+    "time": "2025-07-05T16:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -6248,16 +6248,16 @@
     "feels_like": 29.9,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 84,
     "clouds": 100,
     "pop": 0,
     "pressure": 1004,
     "wind_speed": 1.5,
     "wind_deg": 326,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751716800,
-    "time": "2025-07-05T19:00:00"
+    "time": "2025-07-05T19:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -6268,16 +6268,16 @@
     "feels_like": 29.4,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 83,
     "clouds": 99,
     "pop": 3,
     "pressure": 1005,
     "wind_speed": 5.3,
     "wind_deg": 161,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751727600,
-    "time": "2025-07-05T22:00:00"
+    "time": "2025-07-05T22:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -6288,16 +6288,16 @@
     "feels_like": 26.8,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 87,
     "clouds": 100,
     "pop": 6,
     "pressure": 1003,
     "wind_speed": 6.9,
     "wind_deg": 241,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751738400,
-    "time": "2025-07-06T01:00:00"
+    "time": "2025-07-06T01:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -6308,7 +6308,7 @@
     "feels_like": 25.9,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 91,
     "clouds": 100,
     "pop": 29,
     "pressure": 1003,
@@ -6317,7 +6317,7 @@
     "visibility": 10.0,
     "rain_3h": 0.18,
     "timestamp": 1751749200,
-    "time": "2025-07-06T04:00:00"
+    "time": "2025-07-06T04:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -6328,7 +6328,7 @@
     "feels_like": 26.0,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 92,
     "clouds": 100,
     "pop": 23,
     "pressure": 1004,
@@ -6337,7 +6337,7 @@
     "visibility": 10.0,
     "rain_3h": 0.18,
     "timestamp": 1751760000,
-    "time": "2025-07-06T07:00:00"
+    "time": "2025-07-06T07:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -6348,16 +6348,16 @@
     "feels_like": 26.7,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 86,
     "clouds": 100,
     "pop": 0,
     "pressure": 1005,
     "wind_speed": 4.4,
     "wind_deg": 246,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751770800,
-    "time": "2025-07-06T10:00:00"
+    "time": "2025-07-06T10:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -6368,16 +6368,16 @@
     "feels_like": 31.6,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 82,
     "clouds": 100,
     "pop": 0,
     "pressure": 1004,
     "wind_speed": 4.1,
     "wind_deg": 237,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751781600,
-    "time": "2025-07-06T13:00:00"
+    "time": "2025-07-06T13:00:00+07:00"
   },
   {
     "city": "Vinh",
@@ -6388,16 +6388,16 @@
     "feels_like": 33.0,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 81,
     "clouds": 100,
     "pop": 0,
     "pressure": 1002,
     "wind_speed": 2.4,
     "wind_deg": 172,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751792400,
-    "time": "2025-07-06T16:00:00"
+    "time": "2025-07-06T16:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -6408,7 +6408,7 @@
     "feels_like": 29.8,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 88,
     "clouds": 100,
     "pop": 100,
     "pressure": 1006,
@@ -6417,7 +6417,7 @@
     "visibility": 7.1,
     "rain_3h": 9.89,
     "timestamp": 1751371200,
-    "time": "2025-07-01T19:00:00"
+    "time": "2025-07-01T19:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -6428,7 +6428,7 @@
     "feels_like": 26.3,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 91,
     "clouds": 100,
     "pop": 100,
     "pressure": 1006,
@@ -6437,7 +6437,7 @@
     "visibility": 6.9,
     "rain_3h": 5.36,
     "timestamp": 1751382000,
-    "time": "2025-07-01T22:00:00"
+    "time": "2025-07-01T22:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -6448,7 +6448,7 @@
     "feels_like": 26.2,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 90,
     "clouds": 100,
     "pop": 100,
     "pressure": 1006,
@@ -6457,7 +6457,7 @@
     "visibility": 10.0,
     "rain_3h": 0.29,
     "timestamp": 1751392800,
-    "time": "2025-07-02T01:00:00"
+    "time": "2025-07-02T01:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -6468,16 +6468,16 @@
     "feels_like": 26.8,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 87,
     "clouds": 100,
     "pop": 0,
     "pressure": 1004,
     "wind_speed": 5.5,
     "wind_deg": 242,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751403600,
-    "time": "2025-07-02T04:00:00"
+    "time": "2025-07-02T04:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -6488,16 +6488,16 @@
     "feels_like": 26.6,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 84,
     "clouds": 100,
     "pop": 0,
     "pressure": 1006,
     "wind_speed": 7.5,
     "wind_deg": 282,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751414400,
-    "time": "2025-07-02T07:00:00"
+    "time": "2025-07-02T07:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -6508,16 +6508,16 @@
     "feels_like": 36.0,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 64,
     "clouds": 100,
     "pop": 0,
     "pressure": 1006,
     "wind_speed": 7.3,
     "wind_deg": 258,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751425200,
-    "time": "2025-07-02T10:00:00"
+    "time": "2025-07-02T10:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -6528,16 +6528,16 @@
     "feels_like": 37.4,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 63,
     "clouds": 100,
     "pop": 0,
     "pressure": 1005,
     "wind_speed": 11.8,
     "wind_deg": 71,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751436000,
-    "time": "2025-07-02T13:00:00"
+    "time": "2025-07-02T13:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -6548,7 +6548,7 @@
     "feels_like": 30.7,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 86,
     "clouds": 100,
     "pop": 100,
     "pressure": 1004,
@@ -6557,7 +6557,7 @@
     "visibility": 0.6,
     "rain_3h": 5.26,
     "timestamp": 1751446800,
-    "time": "2025-07-02T16:00:00"
+    "time": "2025-07-02T16:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -6568,7 +6568,7 @@
     "feels_like": 26.3,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 87,
     "clouds": 100,
     "pop": 100,
     "pressure": 1006,
@@ -6577,7 +6577,7 @@
     "visibility": 10.0,
     "rain_3h": 6.55,
     "timestamp": 1751457600,
-    "time": "2025-07-02T19:00:00"
+    "time": "2025-07-02T19:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -6588,7 +6588,7 @@
     "feels_like": 26.1,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 89,
     "clouds": 100,
     "pop": 100,
     "pressure": 1008,
@@ -6597,7 +6597,7 @@
     "visibility": 10.0,
     "rain_3h": 1.97,
     "timestamp": 1751468400,
-    "time": "2025-07-02T22:00:00"
+    "time": "2025-07-02T22:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -6608,16 +6608,16 @@
     "feels_like": 26.9,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 90,
     "clouds": 100,
     "pop": 80,
     "pressure": 1006,
     "wind_speed": 8.3,
     "wind_deg": 219,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751479200,
-    "time": "2025-07-03T01:00:00"
+    "time": "2025-07-03T01:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -6628,16 +6628,16 @@
     "feels_like": 26.6,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 87,
     "clouds": 100,
     "pop": 0,
     "pressure": 1005,
     "wind_speed": 9.0,
     "wind_deg": 269,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751490000,
-    "time": "2025-07-03T04:00:00"
+    "time": "2025-07-03T04:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -6648,16 +6648,16 @@
     "feels_like": 26.7,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 84,
     "clouds": 100,
     "pop": 0,
     "pressure": 1006,
     "wind_speed": 9.4,
     "wind_deg": 254,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751500800,
-    "time": "2025-07-03T07:00:00"
+    "time": "2025-07-03T07:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -6668,16 +6668,16 @@
     "feels_like": 35.7,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 61,
     "clouds": 100,
     "pop": 0,
     "pressure": 1006,
     "wind_speed": 11.7,
     "wind_deg": 275,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751511600,
-    "time": "2025-07-03T10:00:00"
+    "time": "2025-07-03T10:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -6688,16 +6688,16 @@
     "feels_like": 38.1,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 54,
     "clouds": 100,
     "pop": 0,
     "pressure": 1004,
     "wind_speed": 4.5,
     "wind_deg": 277,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751522400,
-    "time": "2025-07-03T13:00:00"
+    "time": "2025-07-03T13:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -6708,7 +6708,7 @@
     "feels_like": 35.5,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 69,
     "clouds": 100,
     "pop": 95,
     "pressure": 1004,
@@ -6717,7 +6717,7 @@
     "visibility": 10.0,
     "rain_3h": 0.92,
     "timestamp": 1751533200,
-    "time": "2025-07-03T16:00:00"
+    "time": "2025-07-03T16:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -6728,7 +6728,7 @@
     "feels_like": 30.9,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 84,
     "clouds": 96,
     "pop": 100,
     "pressure": 1006,
@@ -6737,7 +6737,7 @@
     "visibility": 10.0,
     "rain_3h": 0.97,
     "timestamp": 1751544000,
-    "time": "2025-07-03T19:00:00"
+    "time": "2025-07-03T19:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -6748,7 +6748,7 @@
     "feels_like": 26.3,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 87,
     "clouds": 90,
     "pop": 25,
     "pressure": 1008,
@@ -6757,7 +6757,7 @@
     "visibility": 10.0,
     "rain_3h": 0.12,
     "timestamp": 1751554800,
-    "time": "2025-07-03T22:00:00"
+    "time": "2025-07-03T22:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -6768,16 +6768,16 @@
     "feels_like": 26.2,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 86,
     "clouds": 93,
     "pop": 12,
     "pressure": 1006,
     "wind_speed": 10.4,
     "wind_deg": 259,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751565600,
-    "time": "2025-07-04T01:00:00"
+    "time": "2025-07-04T01:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -6788,16 +6788,16 @@
     "feels_like": 26.0,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 84,
     "clouds": 100,
     "pop": 0,
     "pressure": 1005,
     "wind_speed": 8.9,
     "wind_deg": 232,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751576400,
-    "time": "2025-07-04T04:00:00"
+    "time": "2025-07-04T04:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -6808,16 +6808,16 @@
     "feels_like": 29.7,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 79,
     "clouds": 99,
     "pop": 0,
     "pressure": 1007,
     "wind_speed": 13.0,
     "wind_deg": 260,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751587200,
-    "time": "2025-07-04T07:00:00"
+    "time": "2025-07-04T07:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -6828,16 +6828,16 @@
     "feels_like": 34.1,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 63,
     "clouds": 99,
     "pop": 0,
     "pressure": 1007,
     "wind_speed": 19.5,
     "wind_deg": 267,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751598000,
-    "time": "2025-07-04T10:00:00"
+    "time": "2025-07-04T10:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -6848,16 +6848,16 @@
     "feels_like": 37.3,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 55,
     "clouds": 96,
     "pop": 0,
     "pressure": 1005,
     "wind_speed": 18.1,
     "wind_deg": 251,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751608800,
-    "time": "2025-07-04T13:00:00"
+    "time": "2025-07-04T13:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -6868,16 +6868,16 @@
     "feels_like": 36.2,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 62,
     "clouds": 100,
     "pop": 2,
     "pressure": 1003,
     "wind_speed": 11.3,
     "wind_deg": 243,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751619600,
-    "time": "2025-07-04T16:00:00"
+    "time": "2025-07-04T16:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -6888,7 +6888,7 @@
     "feels_like": 32.4,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 76,
     "clouds": 99,
     "pop": 20,
     "pressure": 1006,
@@ -6897,7 +6897,7 @@
     "visibility": 10.0,
     "rain_3h": 0.18,
     "timestamp": 1751630400,
-    "time": "2025-07-04T19:00:00"
+    "time": "2025-07-04T19:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -6908,7 +6908,7 @@
     "feels_like": 29.6,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 77,
     "clouds": 100,
     "pop": 46,
     "pressure": 1008,
@@ -6917,7 +6917,7 @@
     "visibility": 10.0,
     "rain_3h": 0.38,
     "timestamp": 1751641200,
-    "time": "2025-07-04T22:00:00"
+    "time": "2025-07-04T22:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -6928,16 +6928,16 @@
     "feels_like": 26.0,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 80,
     "clouds": 100,
     "pop": 26,
     "pressure": 1006,
     "wind_speed": 7.2,
     "wind_deg": 245,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751652000,
-    "time": "2025-07-05T01:00:00"
+    "time": "2025-07-05T01:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -6948,16 +6948,16 @@
     "feels_like": 26.3,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 81,
     "clouds": 100,
     "pop": 0,
     "pressure": 1005,
     "wind_speed": 7.7,
     "wind_deg": 238,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751662800,
-    "time": "2025-07-05T04:00:00"
+    "time": "2025-07-05T04:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -6968,16 +6968,16 @@
     "feels_like": 30.4,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 69,
     "clouds": 100,
     "pop": 0,
     "pressure": 1006,
     "wind_speed": 12.6,
     "wind_deg": 260,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751673600,
-    "time": "2025-07-05T07:00:00"
+    "time": "2025-07-05T07:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -6988,16 +6988,16 @@
     "feels_like": 35.4,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 58,
     "clouds": 100,
     "pop": 0,
     "pressure": 1007,
     "wind_speed": 20.2,
     "wind_deg": 268,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751684400,
-    "time": "2025-07-05T10:00:00"
+    "time": "2025-07-05T10:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -7008,16 +7008,16 @@
     "feels_like": 39.4,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 52,
     "clouds": 98,
     "pop": 0,
     "pressure": 1004,
     "wind_speed": 9.3,
     "wind_deg": 244,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751695200,
-    "time": "2025-07-05T13:00:00"
+    "time": "2025-07-05T13:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -7028,7 +7028,7 @@
     "feels_like": 35.3,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 74,
     "clouds": 89,
     "pop": 56,
     "pressure": 1004,
@@ -7037,7 +7037,7 @@
     "visibility": 10.0,
     "rain_3h": 0.45,
     "timestamp": 1751706000,
-    "time": "2025-07-05T16:00:00"
+    "time": "2025-07-05T16:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -7048,7 +7048,7 @@
     "feels_like": 31.7,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 85,
     "clouds": 93,
     "pop": 100,
     "pressure": 1006,
@@ -7057,7 +7057,7 @@
     "visibility": 10.0,
     "rain_3h": 3.85,
     "timestamp": 1751716800,
-    "time": "2025-07-05T19:00:00"
+    "time": "2025-07-05T19:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -7068,7 +7068,7 @@
     "feels_like": 26.7,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 89,
     "clouds": 99,
     "pop": 100,
     "pressure": 1007,
@@ -7077,7 +7077,7 @@
     "visibility": 10.0,
     "rain_3h": 1.67,
     "timestamp": 1751727600,
-    "time": "2025-07-05T22:00:00"
+    "time": "2025-07-05T22:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -7088,16 +7088,16 @@
     "feels_like": 26.6,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 87,
     "clouds": 99,
     "pop": 80,
     "pressure": 1005,
     "wind_speed": 9.2,
     "wind_deg": 253,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751738400,
-    "time": "2025-07-06T01:00:00"
+    "time": "2025-07-06T01:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -7108,16 +7108,16 @@
     "feels_like": 26.4,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 85,
     "clouds": 97,
     "pop": 0,
     "pressure": 1005,
     "wind_speed": 8.5,
     "wind_deg": 223,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751749200,
-    "time": "2025-07-06T04:00:00"
+    "time": "2025-07-06T04:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -7128,16 +7128,16 @@
     "feels_like": 30.9,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 79,
     "clouds": 85,
     "pop": 0,
     "pressure": 1007,
     "wind_speed": 12.9,
     "wind_deg": 246,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751760000,
-    "time": "2025-07-06T07:00:00"
+    "time": "2025-07-06T07:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -7148,16 +7148,16 @@
     "feels_like": 35.8,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 59,
     "clouds": 96,
     "pop": 0,
     "pressure": 1006,
     "wind_speed": 23.4,
     "wind_deg": 264,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751770800,
-    "time": "2025-07-06T10:00:00"
+    "time": "2025-07-06T10:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -7168,16 +7168,16 @@
     "feels_like": 39.1,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 51,
     "clouds": 93,
     "pop": 0,
     "pressure": 1004,
     "wind_speed": 18.2,
     "wind_deg": 257,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751781600,
-    "time": "2025-07-06T13:00:00"
+    "time": "2025-07-06T13:00:00+07:00"
   },
   {
     "city": "Quy Nhon",
@@ -7188,16 +7188,16 @@
     "feels_like": 38.6,
     "weather_main": "Clouds",
     "weather_description": "broken clouds",
-    "humidity": null,
+    "humidity": 57,
     "clouds": 54,
     "pop": 0,
     "pressure": 1004,
     "wind_speed": 13.6,
     "wind_deg": 196,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751792400,
-    "time": "2025-07-06T16:00:00"
+    "time": "2025-07-06T16:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7208,7 +7208,7 @@
     "feels_like": 24.5,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 96,
     "clouds": 99,
     "pop": 100,
     "pressure": 1007,
@@ -7217,7 +7217,7 @@
     "visibility": 10.0,
     "rain_3h": 3.52,
     "timestamp": 1751371200,
-    "time": "2025-07-01T19:00:00"
+    "time": "2025-07-01T19:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7228,7 +7228,7 @@
     "feels_like": 24.1,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 97,
     "clouds": 98,
     "pop": 86,
     "pressure": 1008,
@@ -7237,7 +7237,7 @@
     "visibility": 10.0,
     "rain_3h": 1.21,
     "timestamp": 1751382000,
-    "time": "2025-07-01T22:00:00"
+    "time": "2025-07-01T22:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7248,7 +7248,7 @@
     "feels_like": 23.5,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 97,
     "clouds": 99,
     "pop": 81,
     "pressure": 1008,
@@ -7257,7 +7257,7 @@
     "visibility": 10.0,
     "rain_3h": 0.24,
     "timestamp": 1751392800,
-    "time": "2025-07-02T01:00:00"
+    "time": "2025-07-02T01:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7268,16 +7268,16 @@
     "feels_like": 22.6,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 97,
     "clouds": 100,
     "pop": 0,
     "pressure": 1007,
     "wind_speed": 3.4,
     "wind_deg": 192,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751403600,
-    "time": "2025-07-02T04:00:00"
+    "time": "2025-07-02T04:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7288,16 +7288,16 @@
     "feels_like": 24.2,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 94,
     "clouds": 100,
     "pop": 0,
     "pressure": 1009,
     "wind_speed": 3.5,
     "wind_deg": 211,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751414400,
-    "time": "2025-07-02T07:00:00"
+    "time": "2025-07-02T07:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7308,7 +7308,7 @@
     "feels_like": 29.4,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 75,
     "clouds": 100,
     "pop": 51,
     "pressure": 1009,
@@ -7317,7 +7317,7 @@
     "visibility": 10.0,
     "rain_3h": 0.26,
     "timestamp": 1751425200,
-    "time": "2025-07-02T10:00:00"
+    "time": "2025-07-02T10:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7328,7 +7328,7 @@
     "feels_like": 26.3,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 90,
     "clouds": 100,
     "pop": 100,
     "pressure": 1008,
@@ -7337,7 +7337,7 @@
     "visibility": 6.3,
     "rain_3h": 3.05,
     "timestamp": 1751436000,
-    "time": "2025-07-02T13:00:00"
+    "time": "2025-07-02T13:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7348,7 +7348,7 @@
     "feels_like": 26.5,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 89,
     "clouds": 100,
     "pop": 100,
     "pressure": 1006,
@@ -7357,7 +7357,7 @@
     "visibility": 7.1,
     "rain_3h": 2.81,
     "timestamp": 1751446800,
-    "time": "2025-07-02T16:00:00"
+    "time": "2025-07-02T16:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7368,7 +7368,7 @@
     "feels_like": 23.5,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 96,
     "clouds": 100,
     "pop": 100,
     "pressure": 1008,
@@ -7377,7 +7377,7 @@
     "visibility": 10.0,
     "rain_3h": 3.21,
     "timestamp": 1751457600,
-    "time": "2025-07-02T19:00:00"
+    "time": "2025-07-02T19:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7388,16 +7388,16 @@
     "feels_like": 23.0,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 97,
     "clouds": 100,
     "pop": 0,
     "pressure": 1010,
     "wind_speed": 3.0,
     "wind_deg": 164,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751468400,
-    "time": "2025-07-02T22:00:00"
+    "time": "2025-07-02T22:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7408,16 +7408,16 @@
     "feels_like": 22.7,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 97,
     "clouds": 100,
     "pop": 0,
     "pressure": 1008,
     "wind_speed": 3.1,
     "wind_deg": 196,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751479200,
-    "time": "2025-07-03T01:00:00"
+    "time": "2025-07-03T01:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7428,7 +7428,7 @@
     "feels_like": 21.8,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 98,
     "clouds": 100,
     "pop": 71,
     "pressure": 1008,
@@ -7437,7 +7437,7 @@
     "visibility": 10.0,
     "rain_3h": 0.48,
     "timestamp": 1751490000,
-    "time": "2025-07-03T04:00:00"
+    "time": "2025-07-03T04:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7448,16 +7448,16 @@
     "feels_like": 22.4,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 97,
     "clouds": 100,
     "pop": 53,
     "pressure": 1009,
     "wind_speed": 1.8,
     "wind_deg": 178,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751500800,
-    "time": "2025-07-03T07:00:00"
+    "time": "2025-07-03T07:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7468,16 +7468,16 @@
     "feels_like": 24.2,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 91,
     "clouds": 100,
     "pop": 3,
     "pressure": 1010,
     "wind_speed": 3.6,
     "wind_deg": 220,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751511600,
-    "time": "2025-07-03T10:00:00"
+    "time": "2025-07-03T10:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7488,7 +7488,7 @@
     "feels_like": 29.6,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 71,
     "clouds": 96,
     "pop": 38,
     "pressure": 1007,
@@ -7497,7 +7497,7 @@
     "visibility": 10.0,
     "rain_3h": 0.35,
     "timestamp": 1751522400,
-    "time": "2025-07-03T13:00:00"
+    "time": "2025-07-03T13:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7508,7 +7508,7 @@
     "feels_like": 25.4,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 94,
     "clouds": 97,
     "pop": 100,
     "pressure": 1006,
@@ -7517,7 +7517,7 @@
     "visibility": 5.2,
     "rain_3h": 3.44,
     "timestamp": 1751533200,
-    "time": "2025-07-03T16:00:00"
+    "time": "2025-07-03T16:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7528,7 +7528,7 @@
     "feels_like": 23.2,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 96,
     "clouds": 95,
     "pop": 100,
     "pressure": 1008,
@@ -7537,7 +7537,7 @@
     "visibility": 10.0,
     "rain_3h": 3.68,
     "timestamp": 1751544000,
-    "time": "2025-07-03T19:00:00"
+    "time": "2025-07-03T19:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7548,7 +7548,7 @@
     "feels_like": 22.5,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 98,
     "clouds": 100,
     "pop": 94,
     "pressure": 1010,
@@ -7557,7 +7557,7 @@
     "visibility": 10.0,
     "rain_3h": 1.11,
     "timestamp": 1751554800,
-    "time": "2025-07-03T22:00:00"
+    "time": "2025-07-03T22:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7568,16 +7568,16 @@
     "feels_like": 22.3,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 98,
     "clouds": 100,
     "pop": 81,
     "pressure": 1009,
     "wind_speed": 3.0,
     "wind_deg": 222,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751565600,
-    "time": "2025-07-04T01:00:00"
+    "time": "2025-07-04T01:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7588,7 +7588,7 @@
     "feels_like": 22.2,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 98,
     "clouds": 100,
     "pop": 20,
     "pressure": 1009,
@@ -7597,7 +7597,7 @@
     "visibility": 10.0,
     "rain_3h": 0.28,
     "timestamp": 1751576400,
-    "time": "2025-07-04T04:00:00"
+    "time": "2025-07-04T04:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7608,7 +7608,7 @@
     "feels_like": 23.2,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 97,
     "clouds": 100,
     "pop": 20,
     "pressure": 1010,
@@ -7617,7 +7617,7 @@
     "visibility": 10.0,
     "rain_3h": 0.26,
     "timestamp": 1751587200,
-    "time": "2025-07-04T07:00:00"
+    "time": "2025-07-04T07:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7628,7 +7628,7 @@
     "feels_like": 24.5,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 91,
     "clouds": 100,
     "pop": 100,
     "pressure": 1011,
@@ -7637,7 +7637,7 @@
     "visibility": 10.0,
     "rain_3h": 0.49,
     "timestamp": 1751598000,
-    "time": "2025-07-04T10:00:00"
+    "time": "2025-07-04T10:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7648,7 +7648,7 @@
     "feels_like": 29.4,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 72,
     "clouds": 99,
     "pop": 88,
     "pressure": 1008,
@@ -7657,7 +7657,7 @@
     "visibility": 10.0,
     "rain_3h": 0.66,
     "timestamp": 1751608800,
-    "time": "2025-07-04T13:00:00"
+    "time": "2025-07-04T13:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7668,7 +7668,7 @@
     "feels_like": 25.8,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 94,
     "clouds": 96,
     "pop": 100,
     "pressure": 1007,
@@ -7677,7 +7677,7 @@
     "visibility": 10.0,
     "rain_3h": 2.55,
     "timestamp": 1751619600,
-    "time": "2025-07-04T16:00:00"
+    "time": "2025-07-04T16:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7688,7 +7688,7 @@
     "feels_like": 23.2,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 97,
     "clouds": 98,
     "pop": 100,
     "pressure": 1009,
@@ -7697,7 +7697,7 @@
     "visibility": 10.0,
     "rain_3h": 3.26,
     "timestamp": 1751630400,
-    "time": "2025-07-04T19:00:00"
+    "time": "2025-07-04T19:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7708,7 +7708,7 @@
     "feels_like": 22.4,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 97,
     "clouds": 100,
     "pop": 80,
     "pressure": 1011,
@@ -7717,7 +7717,7 @@
     "visibility": 10.0,
     "rain_3h": 1.05,
     "timestamp": 1751641200,
-    "time": "2025-07-04T22:00:00"
+    "time": "2025-07-04T22:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7728,16 +7728,16 @@
     "feels_like": 21.8,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 98,
     "clouds": 100,
     "pop": 66,
     "pressure": 1009,
     "wind_speed": 2.0,
     "wind_deg": 200,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751652000,
-    "time": "2025-07-05T01:00:00"
+    "time": "2025-07-05T01:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7748,16 +7748,16 @@
     "feels_like": 21.3,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 98,
     "clouds": 100,
     "pop": 0,
     "pressure": 1009,
     "wind_speed": 2.6,
     "wind_deg": 191,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751662800,
-    "time": "2025-07-05T04:00:00"
+    "time": "2025-07-05T04:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7768,16 +7768,16 @@
     "feels_like": 22.8,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 96,
     "clouds": 99,
     "pop": 0,
     "pressure": 1010,
     "wind_speed": 2.5,
     "wind_deg": 234,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751673600,
-    "time": "2025-07-05T07:00:00"
+    "time": "2025-07-05T07:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7788,7 +7788,7 @@
     "feels_like": 26.0,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 80,
     "clouds": 78,
     "pop": 100,
     "pressure": 1010,
@@ -7797,7 +7797,7 @@
     "visibility": 10.0,
     "rain_3h": 0.78,
     "timestamp": 1751684400,
-    "time": "2025-07-05T10:00:00"
+    "time": "2025-07-05T10:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7808,7 +7808,7 @@
     "feels_like": 29.6,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 81,
     "clouds": 72,
     "pop": 100,
     "pressure": 1008,
@@ -7817,7 +7817,7 @@
     "visibility": 10.0,
     "rain_3h": 2.31,
     "timestamp": 1751695200,
-    "time": "2025-07-05T13:00:00"
+    "time": "2025-07-05T13:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7828,7 +7828,7 @@
     "feels_like": 26.8,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 90,
     "clouds": 37,
     "pop": 100,
     "pressure": 1007,
@@ -7837,7 +7837,7 @@
     "visibility": 10.0,
     "rain_3h": 3.41,
     "timestamp": 1751706000,
-    "time": "2025-07-05T16:00:00"
+    "time": "2025-07-05T16:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7848,7 +7848,7 @@
     "feels_like": 23.4,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 96,
     "clouds": 45,
     "pop": 100,
     "pressure": 1008,
@@ -7857,7 +7857,7 @@
     "visibility": 10.0,
     "rain_3h": 2.52,
     "timestamp": 1751716800,
-    "time": "2025-07-05T19:00:00"
+    "time": "2025-07-05T19:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7868,7 +7868,7 @@
     "feels_like": 22.8,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 97,
     "clouds": 100,
     "pop": 99,
     "pressure": 1010,
@@ -7877,7 +7877,7 @@
     "visibility": 10.0,
     "rain_3h": 1.52,
     "timestamp": 1751727600,
-    "time": "2025-07-05T22:00:00"
+    "time": "2025-07-05T22:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7888,16 +7888,16 @@
     "feels_like": 22.0,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 98,
     "clouds": 100,
     "pop": 71,
     "pressure": 1009,
     "wind_speed": 4.2,
     "wind_deg": 175,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751738400,
-    "time": "2025-07-06T01:00:00"
+    "time": "2025-07-06T01:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7908,16 +7908,16 @@
     "feels_like": 22.4,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 97,
     "clouds": 100,
     "pop": 0,
     "pressure": 1009,
     "wind_speed": 3.8,
     "wind_deg": 190,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751749200,
-    "time": "2025-07-06T04:00:00"
+    "time": "2025-07-06T04:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7928,16 +7928,16 @@
     "feels_like": 23.5,
     "weather_main": "Clouds",
     "weather_description": "overcast clouds",
-    "humidity": null,
+    "humidity": 95,
     "clouds": 100,
     "pop": 0,
     "pressure": 1010,
     "wind_speed": 4.6,
     "wind_deg": 203,
     "visibility": 10.0,
-    "rain_3h": null,
+    "rain_3h": 0,
     "timestamp": 1751760000,
-    "time": "2025-07-06T07:00:00"
+    "time": "2025-07-06T07:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7948,7 +7948,7 @@
     "feels_like": 30.1,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 68,
     "clouds": 100,
     "pop": 20,
     "pressure": 1009,
@@ -7957,7 +7957,7 @@
     "visibility": 10.0,
     "rain_3h": 0.15,
     "timestamp": 1751770800,
-    "time": "2025-07-06T10:00:00"
+    "time": "2025-07-06T10:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7968,7 +7968,7 @@
     "feels_like": 32.0,
     "weather_main": "Rain",
     "weather_description": "light rain",
-    "humidity": null,
+    "humidity": 66,
     "clouds": 96,
     "pop": 25,
     "pressure": 1007,
@@ -7977,7 +7977,7 @@
     "visibility": 10.0,
     "rain_3h": 0.36,
     "timestamp": 1751781600,
-    "time": "2025-07-06T13:00:00"
+    "time": "2025-07-06T13:00:00+07:00"
   },
   {
     "city": "Buon Ma Thuot",
@@ -7988,7 +7988,7 @@
     "feels_like": 26.0,
     "weather_main": "Rain",
     "weather_description": "moderate rain",
-    "humidity": null,
+    "humidity": 91,
     "clouds": 63,
     "pop": 100,
     "pressure": 1007,
@@ -7997,6 +7997,6 @@
     "visibility": 10.0,
     "rain_3h": 3.75,
     "timestamp": 1751792400,
-    "time": "2025-07-06T16:00:00"
+    "time": "2025-07-06T16:00:00+07:00"
   }
 ]

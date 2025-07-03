@@ -7,6 +7,9 @@ from datetime import datetime, timezone, timedelta
 import json
 from timezonefinder import TimezoneFinder
 
+from helpers.json_helpers import load_json_file, save_json_file
+
+
 # Constants
 DEFAULT_COUNTRY = 'VN'
 UNKNOWN_CITY = 'Unknown'
@@ -15,24 +18,11 @@ UNKNOWN_CITY = 'Unknown'
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-def load_json_file(filepath: str) -> List[Dict[str, Any]]:
-    try:
-        with open(filepath, 'r', encoding='utf-8') as file:
-            data = json.load(file)
-            logger.info(f"Loaded {len(data)} records from {filepath}")
-            return data
-    except (FileNotFoundError, json.JSONDecodeError) as e:
-        logger.error(f"Failed to load {filepath}: {str(e)}")
-        raise
-
 def _validate_coordinates(lat: float, lon: float) -> None:
     if not (-90 <= lat <= 90) or not (-180 <= lon <= 180):
         raise ValueError(f"Invalid coordinates: lat={lat}, lon={lon}")
     
-def save_json_file(data: List[Dict[str, Any]], filepath: str) -> None:
-    with open(filepath, 'w+', encoding='utf-8') as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
-    logger.info(f"Saved {len(data)} records to {filepath}")
+
 
 
 
@@ -148,9 +138,15 @@ def transform_weather_data(raw_data: List[Dict[str, any]]) -> List[Dict[str, any
         wind_speed_kmh = round(wind.get('speed') * 3.6, 1) if wind.get('speed') is not None else None
         visibility_km = round(data.get('visibility')/1000, 1) if data.get('visibility') else None
 
-        timezone = data.get('timezone')
+        tz_offset = data.get('timezone', 0) 
         timestamp = data.get('dt')
-        time = datetime.fromtimestamp(timestamp, tz=timezone.utc) if timestamp else None
+        
+        if timestamp:
+            tz_info = timezone(timedelta(seconds=tz_offset))
+            local_dt = datetime.fromtimestamp(timestamp, tz=tz_info)
+            time_local = local_dt.isoformat()
+        else:
+            time_local = None
         
         record = {
             **base_info,
@@ -164,9 +160,9 @@ def transform_weather_data(raw_data: List[Dict[str, any]]) -> List[Dict[str, any
             'wind_speed': wind_speed_kmh,
             'wind_deg': wind.get('deg'),
             'visibility': visibility_km,
-            'rain_1h': rain.get('1h'),
+            'rain_1h': rain.get('1h', 0),
             'timestamp': timestamp,
-            'time': time  
+            'time': time_local
         }
         transformed_data.append(record)
 
@@ -180,7 +176,9 @@ def transform_forecast_data(raw_data: List[Dict[str, any]]) -> List[Dict[str, an
         base_info = _transform_common_fields(row)
         data = row.get('data', {})
         list = data.get('list', [])
-
+        city_data = data.get('city', {})
+        tz_offset = city_data.get('timezone', 0) 
+        
         for item in list:
 
             # extract fields with safe defaults
@@ -201,9 +199,14 @@ def transform_forecast_data(raw_data: List[Dict[str, any]]) -> List[Dict[str, an
                 
             wind_speed_kmh = round(wind.get('speed') * 3.6, 1) if wind.get('speed') is not None else None
             visibility_km = round(item.get('visibility')/1000, 1) if item.get('visibility') else None
-
+            
             timestamp = item.get('dt')
-            time = datetime.fromtimestamp(timestamp, tz=timezone.utc) if timestamp else None
+            if timestamp:
+                tz_info = timezone(timedelta(seconds=tz_offset))
+                local_dt = datetime.fromtimestamp(timestamp, tz=tz_info)
+                time_local = local_dt.isoformat()
+            else:
+                time_local = None
             
 
             record = {
@@ -220,30 +223,58 @@ def transform_forecast_data(raw_data: List[Dict[str, any]]) -> List[Dict[str, an
                 'wind_speed': wind_speed_kmh,
                 'wind_deg': wind.get('deg'),
                 'visibility': visibility_km,
-                'rain_3h': rain.get('3h'),
+                'rain_3h': rain.get('3h', 0),
                 'timestamp': timestamp,
-                'time': time  
+                'time': time_local 
             }
             transformed_data.append(record)
 
     logger.info(f"Transformed forecast data: {len(transformed_data)} records")
     return transformed_data
 
-def transform_air_quality(raw_data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+def load_timezone_mapping(csv_path: str) -> Dict[str, str]:
+    timezone_mapping = {}
+    with open(csv_path, mode='r', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            key = (row['city'].lower(), float(row['lat']), float(row['lon']))
+            timezone_mapping[key] = row['timezone']
+    return timezone_mapping
+
+def transform_air_quality(raw_data: List[Dict[str, Any]],
+    timezone_csv_path: str) -> List[Dict[str, Any]]:
+
+    timezone_mapping = load_timezone_mapping(timezone_csv_path)
     logger.info(f"Transforming air quality data, {len(raw_data)} records")
     transformed_data = []
     
     for row in raw_data:
         # extract location data
         base_info = _transform_common_fields(row)
+        city = base_info['city'].lower()
+        lat = base_info['lat']
+        lon = base_info['lon']
+
+        tz_key = (city, lat, lon)
+        tz_str = timezone_mapping.get(tz_key, 'UTC') # default UTC
         
         
         # extract air quality data
         aqi_data = row.get("data", {}).get("list", [{}])[0]  
         components = aqi_data.get("components", {})
-    
         timestamp = aqi_data.get("dt")
-        time_iso = datetime.fromtimestamp(timestamp, tz=timezone.utc) if timestamp else None
+
+        local_time = None
+        if timestamp:
+            try:
+                if tz_str.startswith('UTC'):
+                    offset_hours = int(tz_str[3:]) if tz_str[3:] else 0
+                    tz_info = timezone(timedelta(hours=offset_hours))
+                
+                local_time = datetime.fromtimestamp(timestamp, tz=tz_info).isoformat()
+            except Exception as e:
+                logger.warning(f"Failed to parse timezone {tz_str} for {city}: {str(e)}")
+                local_time = datetime.fromtimestamp(timestamp, tz=timezone.utc).isoformat()
         
         # transformed record
         record = {
@@ -259,7 +290,7 @@ def transform_air_quality(raw_data: List[Dict[str, Any]]) -> List[Dict[str, Any]
             "pm10": components.get("pm10"),  # PM10
             "nh3": components.get("nh3"),  
             "timestamp": timestamp, 
-            "time": time_iso  
+            "time": local_time
         }
         
         transformed_data.append(record)
@@ -274,17 +305,30 @@ def transform_sun_times_data(raw_data: List[Dict[str, Any]]) -> List[Dict[str, A
         base_info = _transform_common_fields(row)
         data = row.get('data', {})
         sys = data.get('sys', {})
-    
-        sunset_timestamp = sys.get('sunset')
-        sunset = datetime.fromtimestamp(sunset_timestamp, tz=timezone.utc) if sunset_timestamp else None
 
+        tz_offset = data.get('timezone', 0) 
+        sunset_timestamp = sys.get('sunset')
         sunrise_timestamp = sys.get('sunrise')
-        sunrise = datetime.fromtimestamp(sunrise_timestamp, tz=timezone.utc) if sunrise_timestamp else None
+
+        if sunset_timestamp:
+            tz_info = timezone(timedelta(seconds=tz_offset))
+            local_dt = datetime.fromtimestamp(sunset_timestamp, tz=tz_info)
+            sunset_local = local_dt.isoformat()
+        else:
+            sunset_local = None
+
+        if sunrise_timestamp:
+            tz_info = timezone(timedelta(seconds=tz_offset))
+            local_dt = datetime.fromtimestamp(sunrise_timestamp, tz=tz_info)
+            sunrise_local = local_dt.isoformat()
+        else:
+            sunrise_local = None
+    
 
         record = {
             **base_info,
-            'sunrise': sunrise,
-            'sunset': sunset,
+            'sunrise': sunrise_local,
+            'sunset': sunset_local,
             'sunrise_stamp': sunrise_timestamp,
             'sunset_stamp': sunset_timestamp  
         }
@@ -332,7 +376,7 @@ def main():
         # air quality data
         air_quality_file = "raw/air_pollution_2025-07-01T17-39.json"
         air_quality_raw = load_json_file(air_quality_file)
-        air_quality_transformed = transform_air_quality(air_quality_raw)
+        air_quality_transformed = transform_air_quality(air_quality_raw, "raw/geo_data.csv")
         air_quality_output = os.path.join(processed_dir, "air_quality_transformed.json")
         save_json_file(air_quality_transformed, air_quality_output)
         

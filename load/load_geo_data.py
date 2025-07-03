@@ -36,11 +36,13 @@ def create_cities_table(conn: pg.extensions.connection) -> None:
             latitude NUMERIC(9, 6) NOT NULL,
             longitude NUMERIC(9, 6) NOT NULL,
             vi_name VARCHAR(100),
+            timezone VARCHAR(50),
             UNIQUE (city_name, country, latitude, longitude)
         );
         """),
         sql.SQL("CREATE INDEX IF NOT EXISTS idx_cities_country ON cities (country);"),
-        sql.SQL("CREATE INDEX IF NOT EXISTS idx_cities_coordinates ON cities (latitude, longitude);")
+        sql.SQL("CREATE INDEX IF NOT EXISTS idx_cities_coordinates ON cities (latitude, longitude);"),
+        sql.SQL("CREATE INDEX IF NOT EXISTS idx_cities_timezone ON cities (timezone);")
     ]
     
     with conn.cursor() as cursor:
@@ -62,17 +64,20 @@ def load_geo_data(conn: pg.extensions.connection, csv_path: str = 'raw/geo_data.
                     cursor.execute(
                         sql.SQL("""
                             INSERT INTO cities 
-                            (city_name, country, latitude, longitude, vi_name)
-                            VALUES (%s, %s, %s, %s, %s)
+                            (city_name, country, latitude, longitude, vi_name, timezone)
+                            VALUES (%s, %s, %s, %s, %s, %s)
                             ON CONFLICT (city_name, country, latitude, longitude) 
-                            DO UPDATE SET vi_name = EXCLUDED.vi_name;
+                                DO UPDATE SET vi_name = EXCLUDED.vi_name,
+                                timezone = EXCLUDED.timezone;
                         """),
                         (
                             row['city'],
                             row['country'],
                             float(row['lat']),
                             float(row['lon']),
-                            row['vi_name']
+                            row['vi_name'],
+                            row['timezone']
+
                         )
                     )
             conn.commit()
