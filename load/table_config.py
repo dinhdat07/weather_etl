@@ -4,7 +4,13 @@ from sql_query import AIR_POLLUTION_INSERT_SQL, FORECAST_UPSERT_SQL, SUNTIMES_IN
 TABLE_CONFIGS = {
     'weather': {
         'sql': WEATHER_INSERT_SQL,
-        'required': ['city_id', 'city', 'country', 'timestamp', 'time'],
+        'fields_order': [
+            'city_id', 'city_name', 'country',
+            'temperature', 'feels_like', 'weather_main', 'weather_description',
+            'humidity', 'clouds', 'pressure', 'wind_speed', 'wind_deg',
+            'visibility', 'rain_1h', 'timestamp', 'time'
+        ],
+        'required': ['city_id', 'city_name', 'country', 'timestamp', 'time'],
         'optional': [
             'temperature', 'feels_like', 'weather_main', 'weather_description',
             'humidity', 'clouds', 'pressure', 'wind_speed', 'wind_deg',
@@ -13,11 +19,20 @@ TABLE_CONFIGS = {
     },
     'air_pollution': {
         'sql': AIR_POLLUTION_INSERT_SQL,
-        'required': ['city_id', 'city', 'country', 'aqi', 'timestamp', 'measurement_time'],
+        'fields_order': [
+            'city_id', 'city_name', 'country',
+            'aqi', 'co', 'no', 'no2', 'o3', 'so2', 'pm2_5', 'pm10', 'nh3',
+            'timestamp', 'measurement_time'
+        ],
+        'required': ['city_id', 'city_name', 'country', 'aqi', 'timestamp', 'measurement_time'],
         'optional': ['co', 'no', 'no2', 'o3', 'so2', 'pm2_5', 'pm10', 'nh3']
     },
     'suntimes': {
         'sql': SUNTIMES_INSERT_SQL,
+        'fields_order': [
+            'city_id', 'city_name', 'country',
+            'date', 'sunrise', 'sunrise_unix', 'sunset', 'sunset_unix'
+        ],
         'required': [
             'city_id', 'city_name', 'country',
             'date', 'sunrise', 'sunrise_unix', 'sunset', 'sunset_unix'
@@ -26,6 +41,12 @@ TABLE_CONFIGS = {
     },
     'forecast': {
         'sql': FORECAST_UPSERT_SQL,
+        'fields_order': [
+            'city_id', 'city_name', 'country',
+            'temperature', 'feels_like', 'weather_main', 'weather_description',
+            'humidity', 'clouds', 'pop', 'pressure', 'wind_speed', 'wind_deg',
+            'visibility', 'rain_3h', 'timestamp', 'forecast_time'
+        ],
         'required': ['city_id', 'city_name', 'country', 'timestamp', 'forecast_time'],
         'optional': [
             'temperature', 'feels_like', 'weather_main', 'weather_description',

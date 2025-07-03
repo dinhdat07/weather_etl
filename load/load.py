@@ -5,10 +5,15 @@ import os
 from dotenv import load_dotenv
 from helpers.database_helpers import get_city_id
 from helpers.json_helpers import load_json_file, save_json_file
+import logging
+from typing import List, Dict, Optional
+from datetime import datetime
+import argparse
+
 
 from psycopg2.extras import execute_batch
 
-from load.table_config import TABLE_CONFIGS
+from table_config import TABLE_CONFIGS
 from sql_query import AIR_POLLUTION_INSERT_SQL, FORECAST_UPSERT_SQL, SUNTIMES_INSERT_SQL, WEATHER_INSERT_SQL
 load_dotenv()
 
@@ -413,3 +418,165 @@ def clean_old_forecasts(
             conn.rollback()
             raise RuntimeError(f"Failed to clean old forecasts: {e}")
 
+
+
+def configure_logging():
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+        handlers=[
+            logging.FileHandler('data_pipeline.log'),
+            logging.StreamHandler()
+        ]
+    )
+    return logging.getLogger(__name__)
+
+def parse_args():
+    parser = argparse.ArgumentParser(description='Load Weather Data')
+    
+    subparsers = parser.add_subparsers(dest='command', required=True)
+    
+    # Single insert command
+    single_parser = subparsers.add_parser('single-insert')
+    single_parser.add_argument('--table', required=True, 
+                             choices=['weather', 'forecast', 'air_pollution', 'suntimes'],
+                             help='Target table')
+    single_parser.add_argument('--input-file', required=True,
+                             help='Path to JSON input file')
+    
+    # Batch insert command
+    batch_parser = subparsers.add_parser('batch-insert')
+    batch_parser.add_argument('--table', required=True,
+                            choices=['weather', 'forecast', 'air_pollution', 'suntimes'],
+                            help='Target table')
+    batch_parser.add_argument('--input-file', required=True,
+                            help='Path to JSON input file')
+    batch_parser.add_argument('--batch-size', type=int, default=1000,
+                            help='Batch size for bulk insert')
+    
+    # Maintenance command
+    maint_parser = subparsers.add_parser('maintenance')
+    maint_parser.add_argument('--action', required=True,
+                            choices=['clean_forecasts', 'vacuum_analyze'],
+                            help='Maintenance action')
+    maint_parser.add_argument('--retention-days', type=int, default=3,
+                            help='Days to retain for forecast data')
+    
+    return parser.parse_args()
+
+def validate_data(table_type: str, data: Dict) -> bool:
+    config = TABLE_CONFIGS.get(table_type)
+    if not config:
+        raise ValueError(f"Invalid table type: {table_type}")
+    
+    missing_required = [f for f in config['required'] if f not in data]
+    if missing_required:
+        raise ValueError(f"Missing required fields: {missing_required}")
+    
+    return True
+
+def process_single_record(conn, table_type: str, record: Dict) -> bool:
+    try:
+        validate_data(table_type, record)
+        return single_insert_record(conn, table_type, record) == 1
+    except Exception as e:
+        logging.error(f"Failed to process record: {e}", exc_info=True)
+        return False
+
+def process_batch_records(conn, table_type: str, records: List[Dict], batch_size: int = 100) -> Dict:
+    start_time = datetime.now()
+    result = {
+        'table': table_type,
+        'total_records': len(records),
+        'processed': 0,
+        'succeeded': 0,
+        'failed': 0,
+        'start_time': start_time,
+        'duration_seconds': 0
+    }
+    
+    try:
+        batch_result = bulk_insert_records(conn, table_type, records, batch_size)
+        result.update({
+            'processed': batch_result['processed'],
+            'succeeded': batch_result['inserted'],
+            'failed': batch_result['skipped'],
+            'errors': batch_result['errors'][:10] 
+        })
+    except Exception as e:
+        logging.error(f"Batch processing failed: {e}", exc_info=True)
+        result['error'] = str(e)
+    finally:
+        result['duration_seconds'] = (datetime.now() - start_time).total_seconds()
+    
+    return result
+
+def run_maintenance(conn, action: str, retention_days: int = 3) -> Dict:
+    result = {'action': action, 'success': False}
+    
+    try:
+        if action == 'clean_forecasts':
+            deleted = clean_old_forecasts(conn, retention_days)
+            result.update({
+                'deleted_records': deleted,
+                'retention_days': retention_days,
+                'success': True
+            })
+            logging.info(f"Cleaned {deleted} forecast records older than {retention_days} days")
+            
+        elif action == 'vacuum_analyze':
+            with conn.cursor() as cursor:
+                cursor.execute("VACUUM ANALYZE")
+                result['success'] = True
+                logging.info("Database maintenance (VACUUM ANALYZE) completed")
+    
+    except Exception as e:
+        logging.error(f"Maintenance operation failed: {e}", exc_info=True)
+        result['error'] = str(e)
+    
+    return result
+
+def main():
+    logger = configure_logging()
+    args = parse_args()
+    
+    try:
+        with get_db_connection() as conn:
+            logger.info(f"Executing command: {args.command}")
+            
+            if args.command == 'single-insert':
+                data = load_json_file(args.input_file)
+                success = process_single_record(conn, args.table, data)
+                logger.info(f"Single insert {'succeeded' if success else 'failed'}")
+
+            elif args.command == 'batch-insert':
+                records = load_json_file(args.input_file)
+                if not isinstance(records, list):
+                    raise ValueError("Batch input must be a list of records")
+                
+                result = process_batch_records(conn, args.table, records, args.batch_size)
+                logger.info(
+                    f"Batch insert completed - "
+                    f"Processed: {result['processed']}, "
+                    f"Succeeded: {result['succeeded']}, "
+                    f"Failed: {result['failed']}, "
+                    f"Duration: {result['duration_seconds']:.2f}s"
+                )
+                
+                if result.get('errors'):
+                    for error in result['errors']:
+                        logger.error(f"Record error: {error}")
+
+            elif args.command == 'maintenance':
+                result = run_maintenance(conn, args.action, args.retention_days)
+                if result['success']:
+                    logger.info(f"Maintenance action '{args.action}' completed successfully")
+                else:
+                    logger.error(f"Maintenance failed: {result.get('error', 'Unknown error')}")
+
+    except Exception as e:
+        logger.error(f"Pipeline execution failed: {e}", exc_info=True)
+        raise
+
+if __name__ == "__main__":
+    main()
