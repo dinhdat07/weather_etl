@@ -6,6 +6,8 @@ from typing import List, Dict, Any, Optional
 from datetime import datetime, timezone, timedelta
 import json
 from timezonefinder import TimezoneFinder
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from helpers.json_helpers import load_json_file, save_json_file
 
@@ -22,10 +24,6 @@ def _validate_coordinates(lat: float, lon: float) -> None:
     if not (-90 <= lat <= 90) or not (-180 <= lon <= 180):
         raise ValueError(f"Invalid coordinates: lat={lat}, lon={lon}")
     
-
-
-
-
 
 def get_timezone(weather_data: dict) -> str:
     if 'timezone' in weather_data:
@@ -312,21 +310,30 @@ def transform_sun_times_data(raw_data: List[Dict[str, Any]]) -> List[Dict[str, A
 
         if sunset_timestamp:
             tz_info = timezone(timedelta(seconds=tz_offset))
-            local_dt = datetime.fromtimestamp(sunset_timestamp, tz=tz_info)
-            sunset_local = local_dt.isoformat()
+            sunset_dt = datetime.fromtimestamp(sunset_timestamp, tz=tz_info)
+            sunset_local = sunset_dt.isoformat()
         else:
+            sunset_dt = None
             sunset_local = None
 
         if sunrise_timestamp:
             tz_info = timezone(timedelta(seconds=tz_offset))
-            local_dt = datetime.fromtimestamp(sunrise_timestamp, tz=tz_info)
-            sunrise_local = local_dt.isoformat()
+            sunrise_dt = datetime.fromtimestamp(sunrise_timestamp, tz=tz_info)
+            sunrise_local = sunrise_dt.isoformat()
         else:
+            sunrise_dt = None
             sunrise_local = None
-    
+
+        if sunrise_dt:
+            date_str = sunrise_dt.date().isoformat()
+        elif sunset_dt:
+            date_str = sunset_dt.date().isoformat()
+        else:
+            date_str = None
 
         record = {
             **base_info,
+            'date': date_str,
             'sunrise': sunrise_local,
             'sunset': sunset_local,
             'sunrise_stamp': sunrise_timestamp,

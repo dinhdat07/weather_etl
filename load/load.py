@@ -3,15 +3,15 @@ import psycopg2 as pg
 from psycopg2 import sql, errors
 import os
 from dotenv import load_dotenv
-from helpers.database_helpers import get_city_id
-from helpers.json_helpers import load_json_file, save_json_file
 import logging
 from typing import List, Dict, Optional
 from datetime import datetime
 import argparse
 
-
-from psycopg2.extras import execute_batch
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from helpers.database_helpers import get_city_id
+from helpers.json_helpers import load_json_file, save_json_file
 
 from table_config import TABLE_CONFIGS
 from sql_query import AIR_POLLUTION_INSERT_SQL, FORECAST_UPSERT_SQL, SUNTIMES_INSERT_SQL, WEATHER_INSERT_SQL
@@ -134,11 +134,6 @@ def create_forecast_table(conn: pg.extensions.connection):
         CREATE INDEX IF NOT EXISTS idx_forecast_weather 
         ON forecast (weather_main, forecast_time);
         """),
-        
-        sql.SQL("""
-        CREATE INDEX IF NOT EXISTS idx_forecast_location 
-        ON forecast (latitude, longitude);
-        """)
     ]
     
     with conn.cursor() as cursor:
@@ -197,11 +192,7 @@ def create_air_pollution_table(conn: pg.extensions.connection):
         CREATE INDEX IF NOT EXISTS idx_pollution_pm 
         ON air_pollution (pm2_5, pm10, measurement_time);
         """),
-        
-        sql.SQL("""
-        CREATE INDEX IF NOT EXISTS idx_pollution_location 
-        ON air_pollution (latitude, longitude);
-        """)
+    
     ]
     
     with conn.cursor() as cursor:
@@ -225,20 +216,20 @@ def create_suntimes_table(conn: pg.extensions.connection):
                 
             date DATE NOT NULL,
             sunrise TIMESTAMP WITH TIME ZONE NOT NULL,
-            sunrise_unix BIGINT NOT NULL,
+            sunrise_stamp BIGINT NOT NULL,
             sunset TIMESTAMP WITH TIME ZONE NOT NULL,
-            sunset_unix BIGINT NOT NULL,
+            sunset_stamp BIGINT NOT NULL,
             created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
             
             CONSTRAINT unique_city_date UNIQUE (city_id, date),
-            CONSTRAINT valid_sun_times CHECK (sunrise_unix < sunset_unix)
+            CONSTRAINT valid_sun_times CHECK (sunrise_stamp < sunset_stamp)
         );
         """),
         sql.SQL("CREATE INDEX IF NOT EXISTS idx_suntimes_city ON suntimes (city_id);"),
         sql.SQL("CREATE INDEX IF NOT EXISTS idx_suntimes_date ON suntimes (date);"),
         sql.SQL("""
-        CREATE INDEX IF NOT EXISTS idx_suntimes_unix 
-        ON suntimes (sunrise_unix, sunset_unix);
+        CREATE INDEX IF NOT EXISTS idx_suntimes_stamp 
+        ON suntimes (sunrise_stamp, sunset_stamp);
         """)
     ]
     
@@ -267,13 +258,13 @@ def single_insert_record(
     
     try:
         
-        if not all(field in data for field in ['city_name', 'country', 'lat', 'lon']):
+        if not all(field in data for field in ['city', 'country', 'lat', 'lon']):
                 raise ValueError("Missing required fields to get city_id")
             
         with conn.cursor() as cursor:
             city_id = get_city_id(
                 cursor,
-                city_name=data['city_name'],
+                city_name=data['city'],
                 country=data['country'],
                 lat=data['lat'],
                 lon=data['lon']
@@ -317,6 +308,8 @@ def bulk_insert_records(
         raise ValueError(f"Unsupported table type: {table_type}")
     
     config = TABLE_CONFIGS[table_type]
+
+
     results = {
         "total": len(data_list),
         "processed": 0,
@@ -330,29 +323,40 @@ def bulk_insert_records(
         # preload all cities
         cursor.execute("SELECT city_id, city_name, country, latitude, longitude FROM cities")
         for row in cursor:
-            key = (row[1], row[2], round(row[3], 4), round(row[4], 4))  # rounding to 4 decimal places (~11m precision)
-            city_cache[key] = row[0]
+            key = (row[1], row[2])
+            lat = float(row[3])
+            lon = float(row[4])
+            city_cache.setdefault(key, []).append( (lat, lon, row[0]) )
     
+
     # prepare validated data
     validated_data = []
     for idx, data in enumerate(data_list):
         try:
-            required_fields = ['city_name', 'country', 'lat', 'lon']
+            
+            required_fields = ['city', 'country', 'lat', 'lon']
+            
             if not all(field in data for field in required_fields):
                 raise ValueError("Missing required fields to get city_id")
             
-            cache_key = (
-                data['city_name'],
-                data['country'],
-                round(data['lat'], 4),
-                round(data['lon'], 4)
-            )
-            
-            if cache_key not in city_cache:
-                raise ValueError(f"city_id not found for: {cache_key}")
-            
-            data['city_id'] = city_cache[cache_key]
+            city_key = (data['city'], data['country'])
+            if city_key not in city_cache:
+                raise ValueError(f"city {city_key} not found in cache")
 
+            # approximate match (within 0.001 degrees ~ 100m)
+            matched_city_id = None
+            for cached_lat, cached_lon, city_id in city_cache[city_key]:
+                if abs(cached_lat - data['lat']) < 0.001 and abs(cached_lon - data['lon']) < 0.001:
+                    matched_city_id = city_id
+                    break
+
+            if not matched_city_id:
+                raise ValueError(
+                    f"city_id not found within tolerance 0.001 for: "
+                    f"{city_key} at lat={data['lat']}, lon={data['lon']}"
+                )
+
+            data['city_id'] = matched_city_id
             params = []
             for field in config['fields_order']:
                 if field in data: 
@@ -373,6 +377,7 @@ def bulk_insert_records(
             })
             continue
     
+    print(len(validated_data))
     # execute batch insert if we have valid data
     if validated_data:
         with conn.cursor() as cursor:
@@ -579,4 +584,53 @@ def main():
         raise
 
 if __name__ == "__main__":
-    main()
+    conn = get_db_connection()
+
+    try:
+        create_weather_table(conn)
+        create_forecast_table(conn)
+        create_air_pollution_table(conn)
+        create_suntimes_table(conn)
+
+        weather_batch = load_json_file('processed/current_weather_transformed.json')
+        if weather_batch:
+            weather_result = bulk_insert_records(
+                conn, 
+                'weather', 
+                weather_batch, 
+                batch_size=100
+            )
+            print(f"Weather: Inserted {weather_result['inserted']} records, {weather_result['skipped']} skipped, error: {weather_result['errors']}")
+
+        pollution_batch = load_json_file('processed/air_quality_transformed.json')
+        if pollution_batch:
+            pollution_result = bulk_insert_records(
+                conn,
+                'air_pollution',
+                pollution_batch,
+                batch_size=100
+            )
+            print(f"Air Pollution: Inserted {pollution_result['inserted']} records, {pollution_result['skipped']} skipped, error: {pollution_result['errors']}")
+
+        suntimes_batch = load_json_file('processed/sun_times_transformed.json')
+        if suntimes_batch:
+            suntimes_result = bulk_insert_records(
+                conn,
+                'suntimes',
+                suntimes_batch,
+                batch_size=10
+            )
+            print(f"Suntimes: Inserted {suntimes_result['inserted']} records, {suntimes_result['skipped']} skipped, error: {suntimes_result['errors']}")
+
+        forecast_batch = load_json_file('processed/forecast_transformed.json')
+        if forecast_batch:
+            forecast_result = bulk_insert_records(
+                conn,
+                'forecast',
+                forecast_batch,
+                batch_size=400
+            )
+            print(f"Forecast: Inserted or Updated: {forecast_result['processed']} records, error: {forecast_result['errors']}")
+
+    finally:
+        conn.close()

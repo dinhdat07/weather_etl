@@ -6,7 +6,8 @@ INSERT INTO weather_data (
     humidity, clouds, pressure, wind_speed, wind_deg,
     visibility, rain_1h, timestamp, time
 ) VALUES %s
-ON CONFLICT (city_id, time) DO NOTHING;
+ON CONFLICT (city_id, time) DO NOTHING
+RETURNING xmax;
 """
 
 # Air pollution SQL
@@ -16,16 +17,18 @@ INSERT INTO air_pollution (
     aqi, co, no, no2, o3, so2, pm2_5, pm10, nh3,
     timestamp, measurement_time
 ) VALUES %s
-ON CONFLICT (city_id, measurement_time) DO NOTHING;
+ON CONFLICT (city_id, measurement_time) DO NOTHING
+RETURNING xmax;
 """
 
 # Sun times SQL
 SUNTIMES_INSERT_SQL = """
 INSERT INTO suntimes (
     city_id, city_name, country,
-    date, sunrise, sunrise_unix, sunset, sunset_unix
+    date, sunrise, sunrise_stamp, sunset, sunset_stamp
 ) VALUES %s
-ON CONFLICT (city_id, date) DO NOTHING;
+ON CONFLICT (city_id, date) DO NOTHING
+RETURNING xmax;
 """
 
 # Forecast SQL
@@ -51,5 +54,6 @@ DO UPDATE SET
     visibility = EXCLUDED.visibility,
     rain_3h = EXCLUDED.rain_3h,
     timestamp = EXCLUDED.timestamp,
-    updated_at = CURRENT_TIMESTAMP;
+    updated_at = CURRENT_TIMESTAMP
+RETURNING xmax;
 """

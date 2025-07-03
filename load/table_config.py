@@ -5,12 +5,12 @@ TABLE_CONFIGS = {
     'weather': {
         'sql': WEATHER_INSERT_SQL,
         'fields_order': [
-            'city_id', 'city_name', 'country',
+            'city_id', 'city', 'country',
             'temperature', 'feels_like', 'weather_main', 'weather_description',
             'humidity', 'clouds', 'pressure', 'wind_speed', 'wind_deg',
             'visibility', 'rain_1h', 'timestamp', 'time'
         ],
-        'required': ['city_id', 'city_name', 'country', 'timestamp', 'time'],
+        'required': ['city_id', 'city', 'country', 'timestamp', 'time'],
         'optional': [
             'temperature', 'feels_like', 'weather_main', 'weather_description',
             'humidity', 'clouds', 'pressure', 'wind_speed', 'wind_deg',
@@ -20,34 +20,34 @@ TABLE_CONFIGS = {
     'air_pollution': {
         'sql': AIR_POLLUTION_INSERT_SQL,
         'fields_order': [
-            'city_id', 'city_name', 'country',
+            'city_id', 'city', 'country',
             'aqi', 'co', 'no', 'no2', 'o3', 'so2', 'pm2_5', 'pm10', 'nh3',
-            'timestamp', 'measurement_time'
+            'timestamp', 'time'
         ],
-        'required': ['city_id', 'city_name', 'country', 'aqi', 'timestamp', 'measurement_time'],
+        'required': ['city_id', 'city', 'country', 'aqi', 'timestamp', 'time'],
         'optional': ['co', 'no', 'no2', 'o3', 'so2', 'pm2_5', 'pm10', 'nh3']
     },
     'suntimes': {
         'sql': SUNTIMES_INSERT_SQL,
         'fields_order': [
-            'city_id', 'city_name', 'country',
-            'date', 'sunrise', 'sunrise_unix', 'sunset', 'sunset_unix'
+            'city_id', 'city', 'country',
+            'date', 'sunrise', 'sunrise_stamp', 'sunset', 'sunset_stamp'
         ],
         'required': [
-            'city_id', 'city_name', 'country',
-            'date', 'sunrise', 'sunrise_unix', 'sunset', 'sunset_unix'
+            'city_id', 'city', 'country',
+            'date', 'sunrise', 'sunrise_stamp', 'sunset', 'sunset_stamp'
         ],
         'optional': []
     },
     'forecast': {
         'sql': FORECAST_UPSERT_SQL,
         'fields_order': [
-            'city_id', 'city_name', 'country',
+            'city_id', 'city', 'country',
             'temperature', 'feels_like', 'weather_main', 'weather_description',
             'humidity', 'clouds', 'pop', 'pressure', 'wind_speed', 'wind_deg',
-            'visibility', 'rain_3h', 'timestamp', 'forecast_time'
+            'visibility', 'rain_3h', 'timestamp', 'time'
         ],
-        'required': ['city_id', 'city_name', 'country', 'timestamp', 'forecast_time'],
+        'required': ['city_id', 'city', 'country', 'timestamp', 'time'],
         'optional': [
             'temperature', 'feels_like', 'weather_main', 'weather_description',
             'humidity', 'clouds', 'pop', 'pressure', 'wind_speed', 'wind_deg',
