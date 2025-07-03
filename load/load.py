@@ -277,13 +277,13 @@ def single_insert_record(
             data['city_id'] = city_id
 
         # validate and prepare parameters
-        for field in config['required']:
-            if field not in data:
+        for field in config['fields_order']:
+            if field in data:
+                params.append(data[field])
+            elif field in config['required']:
                 raise ValueError(f"Missing required field: {field}")
-            params.append(data[field])
-            
-        for field in config['optional']:
-            params.append(data.get(field)) 
+            else:
+                params.append(None) 
             
         # add extra parameters if provided
         if extra_params:
@@ -348,16 +348,14 @@ def bulk_insert_records(
             
             data['city_id'] = city_cache[cache_key]
 
-            # validate required fields
-            for field in config['required']:
-                if field not in data:
-                    raise ValueError(f"Missing required field: {field}")
-            
-            # prepare parameters in correct order
             params = []
-            for field in config['required'] + config['optional']:
-                if field in data:
-                    params.append(data.get(field))
+            for field in config['fields_order']:
+                if field in data: 
+                    params.append(data[field])
+                elif field in config['required']:
+                    raise ValueError(f"Missing required field: {field}")
+                else:
+                    params.append(None)
             
             validated_data.append(params)
             results["processed"] += 1
