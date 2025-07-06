@@ -1,7 +1,4 @@
-# src/storage/database/connectors.py
 import psycopg2 as pg
-from psycopg2 import errors
-from typing import Optional
 import os
 from dotenv import load_dotenv
 

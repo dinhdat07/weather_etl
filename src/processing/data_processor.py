@@ -1,6 +1,10 @@
 # src/processing/data_processor.py
+import os
 from typing import List, Dict, Tuple, Any
-from ..storage.cache.city_cache import CityCache
+
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
+from src.storage.cache.city_cache import CityCache
 import logging
 
 logger = logging.getLogger(__name__)
@@ -32,22 +36,33 @@ class DataProcessor:
         return validated_data, results
     
     def _process_record(self, data: Dict) -> List[Any]:
-        self._validate_required_fields(data)
+        self._validate_fields_for_city_lookup(data)
         data['city_id'] = self._get_city_id(data)
-        
-        # prepare params in correct order
+        self._validate_fields_for_db_insert(data)
+
+        # build final params
         return [
-            data.get(field) 
+            data.get(field)
             for field in self.config['fields_order']
         ]
-    
-    def _validate_required_fields(self, data: Dict):
+
+        
+    def _validate_fields_for_city_lookup(self, data: Dict):
+        required_for_lookup = self.config['required']['lookup']
         missing = [
-            field for field in self.config['required'] 
-            if field not in data
+            field for field in required_for_lookup if field not in data
         ]
         if missing:
-            raise ValueError(f"Missing required fields to get city_id: {missing}")
+            raise ValueError(f"Missing fields for city_id lookup: {missing}")
+
+    def _validate_fields_for_db_insert(self, data: Dict):
+        required_for_db = self.config['required']['insert']
+        missing = [
+            field for field in required_for_db if field not in data
+        ]
+        if missing:
+            raise ValueError(f"Missing fields for database insert: {missing}")
+
     
     def _get_city_id(self, data: Dict) -> int:
         return self.city_cache.get_city_id(

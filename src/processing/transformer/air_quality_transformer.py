@@ -1,8 +1,12 @@
-from typing import Any, Dict, List, Optional, Tuple
-from datetime import datetime, timezone, timedelta
+import os
+from typing import Any, Dict, List, Optional
 from .base_transformer import BaseTransformer
-from ..utils.time_utils import convert_timestamp_with_offset_str
-from ..utils.file_utils import load_timezone_mapping
+
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..")))
+
+from src.processing.utils.time_utils import convert_timestamp_str_offset
+from src.processing.utils.file_utils import load_timezone_mapping
 
 class AirQualityTransformer(BaseTransformer):
     def __init__(self, timezone_csv_path: str):
@@ -59,7 +63,7 @@ class AirQualityTransformer(BaseTransformer):
         
         try:
             return {
-                'time': convert_timestamp_with_offset_str(timestamp, tz_str)
+                'time': convert_timestamp_str_offset(timestamp, tz_str)
             }
         except Exception as e:
             self.logger.warning(
@@ -67,5 +71,5 @@ class AirQualityTransformer(BaseTransformer):
                 "Falling back to UTC"
             )
             return {
-                'time': convert_timestamp_with_offset_str(timestamp, 'UTC+0')
+                'time': convert_timestamp_str_offset(timestamp, 'UTC+0')
             }

@@ -1,5 +1,4 @@
 from typing import Dict, Tuple, List
-import psycopg2 as pg
 
 class CityCache:
     def __init__(self, conn):

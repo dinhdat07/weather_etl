@@ -1,5 +1,5 @@
-from extraction.geo_lookup import GeoLookup
-from extraction.weather_fetcher import WeatherFetcher
+from geo_lookup import GeoLookup
+from weather_fetcher import WeatherFetcher
 
 def main():
     # geo lookup

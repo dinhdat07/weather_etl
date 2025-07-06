@@ -1,14 +1,16 @@
-from typing import List, Dict, Optional
+import os
+import sys
+from typing import List, Dict
 import psycopg2 as pg
-from psycopg2 import sql, errors
+from psycopg2 import sql
 from psycopg2.extras import execute_values
 import logging
 
-from storage.database.sql.models import TABLE_CONFIGS
 
-from ...processing.data_processor import DataProcessor
-
-from ..cache.city_cache import CityCache
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..")))
+from src.storage.database.sql.models import TABLE_CONFIGS
+from src.processing.data_processor import DataProcessor
+from src.storage.cache.city_cache import CityCache
 
 logger = logging.getLogger(__name__)
 
@@ -16,7 +18,7 @@ class DatabaseOperations:
     def __init__(self, conn):
         self.conn = conn
     
-    def _validate_table_config(table_type: str) -> bool:
+    def _validate_table_config(self, table_type: str) -> dict:
         if table_type not in TABLE_CONFIGS:
             raise ValueError(f"Unsupported table type: {table_type}")
         return TABLE_CONFIGS[table_type]

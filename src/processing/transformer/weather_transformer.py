@@ -1,11 +1,15 @@
+import os
 from typing import Any, Dict, List
-from .base_transformer import BaseTransformer
-from ..utils.unit_conversion import (
+
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..")))
+from src.processing.transformer.base_transformer import BaseTransformer
+from src.processing.utils.unit_conversion import (
     kelvin_to_celsius,
     ms_to_kmh,
     meters_to_km
 )
-from ..utils.time_utils import convert_timestamp
+from src.processing.utils.time_utils import convert_timestamp
 
 class WeatherTransformer(BaseTransformer):
     def transform(self, raw_data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:

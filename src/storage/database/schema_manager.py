@@ -1,8 +1,11 @@
-from psycopg2 import sql, errors
-from typing import List, Dict
+import os
+import sys
+from psycopg2 import errors
+from typing import List
 import logging
 
-from ..database.sql.creation import CREATION_QUERIES
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..")))
+from src.storage.database.sql.creation import CREATION_QUERIES
 
 logger = logging.getLogger(__name__)
 

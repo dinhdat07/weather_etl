@@ -1,7 +1,11 @@
+import os
 from typing import Any, Dict, List
 from datetime import date, datetime, timedelta, timezone
-from .base_transformer import BaseTransformer
-from ..utils.time_utils import convert_timestamp
+
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..")))
+from src.processing.transformer.base_transformer import BaseTransformer
+from src.processing.utils.time_utils import convert_timestamp
 
 class SunTimesTransformer(BaseTransformer):
     def transform(self, raw_data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
@@ -15,7 +19,7 @@ class SunTimesTransformer(BaseTransformer):
         
         return {
             **base_info,
-            **self._extract_date_info(sys_data, data.get('timezone', 0))
+            **self._extract_date_info(sys_data, data.get('timezone', 0)),
             **self._extract_sun_times(sys_data),
         }
     

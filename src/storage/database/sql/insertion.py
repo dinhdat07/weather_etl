@@ -1,4 +1,3 @@
-# src/storage/database/sql_queries.py
 INSERT_QUERIES = {
     'WEATHER': {
         'insert': """

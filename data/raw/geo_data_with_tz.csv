@@ -1,0 +1,11 @@
+city,country,lat,lon,vi_name,timezone
+Hanoi,VN,21.0294498,105.8544441,Thành phố Hà Nội,UTC+7
+Ho Chi Minh City,VN,10.7758439,106.7017555,Thành phố Hồ Chí Minh,UTC+7
+Da Nang,VN,16.068,108.212,Thành phố Đà Nẵng,UTC+7
+Hai Phong,VN,20.858864,106.6749591,Hải Phòng,UTC+7
+Can Tho,VN,10.0364216,105.7875219,Cần Thơ,UTC+7
+Hue,VN,16.4639321,107.5863388,Thành phố Huế,UTC+7
+Nha Trang,VN,12.2431693,109.1898675,Nha Trang,UTC+7
+Vinh,VN,18.6692445,105.6881594,Thành phố Vinh,UTC+7
+Quy Nhon,VN,13.7696017,109.2314599,Quy Nhơn,UTC+7
+Buon Ma Thuot,VN,12.6796827,108.0447368,Buôn Ma Thuột,UTC+7
