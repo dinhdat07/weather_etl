@@ -8,7 +8,7 @@ import pandas as pd
 
 import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
-from configs.api_config import APIConfig
+from config.api_config import APIConfig
 from src.extraction.api_clients.weather_client import WeatherClient
 from src.extraction.utils import APIUtils
 

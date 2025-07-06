@@ -6,7 +6,7 @@ import os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..")))
 
-from configs.api_config import APIConfig
+from config.api_config import APIConfig
 
 load_dotenv()
 
