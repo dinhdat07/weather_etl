@@ -28,9 +28,7 @@ class WeatherFetcher:
             print(f"[WeatherFetcher] Error reading geo file: {e}")
             return None
 
-    def _save_results(self, data: List[Dict], fetch_type: str) -> None:
-        timestamp = datetime.now().strftime("%Y-%m-%dT%H-%M")
-        filename = f"{fetch_type}_{timestamp}.json"
+    def _save_results(self, data: List[Dict], filename: str) -> None:
         path = os.path.join(self.output_dir, filename)
         os.makedirs(self.output_dir, exist_ok=True)
         try:
@@ -40,7 +38,7 @@ class WeatherFetcher:
         except Exception as e:
             print(f"[WeatherFetcher] Failed to save file: {e}")
 
-    def run(self, fetch_type: str = "current"):
+    def run(self, filename: str, fetch_type: str = "current"):
         df = self._read_geo_data()
         if df is None:
             return
@@ -74,7 +72,7 @@ class WeatherFetcher:
             sleep(APIConfig.RATE_LIMIT_DELAY)
         
         if results:
-            self._save_results(results, fetch_type)
+            self._save_results(results, filename)
         else:
             print("[WeatherFetcher] no data fetched.")
         

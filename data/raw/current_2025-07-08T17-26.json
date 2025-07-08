@@ -1,0 +1,502 @@
+[
+  {
+    "city": "Hanoi",
+    "country": "VN",
+    "lat": 21.0294498,
+    "lon": 105.8544441,
+    "data": {
+      "coord": {
+        "lon": 105.8466,
+        "lat": 21.0307
+      },
+      "weather": [
+        {
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02d"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 308.42,
+        "feels_like": 314.07,
+        "temp_min": 308.42,
+        "temp_max": 308.42,
+        "pressure": 997,
+        "humidity": 49,
+        "sea_level": 997,
+        "grnd_level": 996
+      },
+      "visibility": 10000,
+      "wind": {
+        "speed": 0.81,
+        "deg": 273,
+        "gust": 2.27
+      },
+      "clouds": {
+        "all": 21
+      },
+      "dt": 1751970259,
+      "sys": {
+        "country": "VN",
+        "sunrise": 1751926855,
+        "sunset": 1751974919
+      },
+      "timezone": 25200,
+      "id": 1561096,
+      "name": "Xom Pho",
+      "cod": 200
+    }
+  },
+  {
+    "city": "Ho Chi Minh City",
+    "country": "VN",
+    "lat": 10.7758439,
+    "lon": 106.7017555,
+    "data": {
+      "coord": {
+        "lon": 106.7038,
+        "lat": 10.7849
+      },
+      "weather": [
+        {
+          "id": 803,
+          "main": "Clouds",
+          "description": "broken clouds",
+          "icon": "04d"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 304.88,
+        "feels_like": 311.76,
+        "temp_min": 304.88,
+        "temp_max": 304.88,
+        "pressure": 1005,
+        "humidity": 67,
+        "sea_level": 1005,
+        "grnd_level": 1005
+      },
+      "visibility": 10000,
+      "wind": {
+        "speed": 5.77,
+        "deg": 235,
+        "gust": 7.57
+      },
+      "clouds": {
+        "all": 78
+      },
+      "dt": 1751969843,
+      "sys": {
+        "country": "VN",
+        "sunrise": 1751927775,
+        "sunset": 1751973587
+      },
+      "timezone": 25200,
+      "id": 1566083,
+      "name": "Ho Chi Minh City",
+      "cod": 200
+    }
+  },
+  {
+    "city": "Da Nang",
+    "country": "VN",
+    "lat": 16.068,
+    "lon": 108.212,
+    "data": {
+      "coord": {
+        "lon": 108.212,
+        "lat": 16.068
+      },
+      "weather": [
+        {
+          "id": 804,
+          "main": "Clouds",
+          "description": "overcast clouds",
+          "icon": "04d"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 303.43,
+        "feels_like": 310.43,
+        "temp_min": 303.43,
+        "temp_max": 303.43,
+        "pressure": 1001,
+        "humidity": 81,
+        "sea_level": 1001,
+        "grnd_level": 988
+      },
+      "visibility": 10000,
+      "wind": {
+        "speed": 2.37,
+        "deg": 99,
+        "gust": 3.14
+      },
+      "clouds": {
+        "all": 98
+      },
+      "dt": 1751970193,
+      "sys": {
+        "country": "VN",
+        "sunrise": 1751926849,
+        "sunset": 1751973789
+      },
+      "timezone": 25200,
+      "id": 1583992,
+      "name": "Turan",
+      "cod": 200
+    }
+  },
+  {
+    "city": "Hai Phong",
+    "country": "VN",
+    "lat": 20.858864,
+    "lon": 106.6749591,
+    "data": {
+      "coord": {
+        "lon": 106.67,
+        "lat": 20.86
+      },
+      "weather": [
+        {
+          "id": 804,
+          "main": "Clouds",
+          "description": "overcast clouds",
+          "icon": "04d"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 305.23,
+        "feels_like": 312.23,
+        "temp_min": 305.23,
+        "temp_max": 305.23,
+        "pressure": 998,
+        "humidity": 70,
+        "sea_level": 998,
+        "grnd_level": 997
+      },
+      "visibility": 10000,
+      "wind": {
+        "speed": 3.22,
+        "deg": 142,
+        "gust": 3.72
+      },
+      "clouds": {
+        "all": 99
+      },
+      "dt": 1751969915,
+      "sys": {
+        "country": "VN",
+        "sunrise": 1751926677,
+        "sunset": 1751974702
+      },
+      "timezone": 25200,
+      "id": 1581298,
+      "name": "Haiphong",
+      "cod": 200
+    }
+  },
+  {
+    "city": "Can Tho",
+    "country": "VN",
+    "lat": 10.0364216,
+    "lon": 105.7875219,
+    "data": {
+      "coord": {
+        "lon": 105.7875,
+        "lat": 10.0364
+      },
+      "weather": [
+        {
+          "id": 802,
+          "main": "Clouds",
+          "description": "scattered clouds",
+          "icon": "03d"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 302.02,
+        "feels_like": 305.42,
+        "temp_min": 302.02,
+        "temp_max": 302.02,
+        "pressure": 1006,
+        "humidity": 69,
+        "sea_level": 1006,
+        "grnd_level": 1006
+      },
+      "visibility": 10000,
+      "wind": {
+        "speed": 5.53,
+        "deg": 255,
+        "gust": 7.44
+      },
+      "clouds": {
+        "all": 48
+      },
+      "dt": 1751970375,
+      "sys": {
+        "country": "VN",
+        "sunrise": 1751928073,
+        "sunset": 1751973729
+      },
+      "timezone": 25200,
+      "id": 1586203,
+      "name": "Can Tho",
+      "cod": 200
+    }
+  },
+  {
+    "city": "Hue",
+    "country": "VN",
+    "lat": 16.4639321,
+    "lon": 107.5863388,
+    "data": {
+      "coord": {
+        "lon": 107.5863,
+        "lat": 16.4639
+      },
+      "weather": [
+        {
+          "id": 804,
+          "main": "Clouds",
+          "description": "overcast clouds",
+          "icon": "04d"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 306.5,
+        "feels_like": 310.78,
+        "temp_min": 306.5,
+        "temp_max": 306.5,
+        "pressure": 1001,
+        "humidity": 52,
+        "sea_level": 1001,
+        "grnd_level": 998
+      },
+      "visibility": 10000,
+      "wind": {
+        "speed": 3.52,
+        "deg": 100,
+        "gust": 3.44
+      },
+      "clouds": {
+        "all": 86
+      },
+      "dt": 1751970376,
+      "sys": {
+        "country": "VN",
+        "sunrise": 1751926956,
+        "sunset": 1751973983
+      },
+      "timezone": 25200,
+      "id": 1580240,
+      "name": "Hue",
+      "cod": 200
+    }
+  },
+  {
+    "city": "Nha Trang",
+    "country": "VN",
+    "lat": 12.2431693,
+    "lon": 109.1898675,
+    "data": {
+      "coord": {
+        "lon": 109.1899,
+        "lat": 12.2432
+      },
+      "weather": [
+        {
+          "id": 804,
+          "main": "Clouds",
+          "description": "overcast clouds",
+          "icon": "04d"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 307.16,
+        "feels_like": 314.16,
+        "temp_min": 307.16,
+        "temp_max": 307.16,
+        "pressure": 1003,
+        "humidity": 59,
+        "sea_level": 1003,
+        "grnd_level": 994
+      },
+      "visibility": 10000,
+      "wind": {
+        "speed": 0.86,
+        "deg": 52,
+        "gust": 0.34
+      },
+      "clouds": {
+        "all": 85
+      },
+      "dt": 1751970101,
+      "sys": {
+        "country": "VN",
+        "sunrise": 1751927026,
+        "sunset": 1751973143
+      },
+      "timezone": 25200,
+      "id": 1565654,
+      "name": "Thon Dien Ha",
+      "cod": 200
+    }
+  },
+  {
+    "city": "Vinh",
+    "country": "VN",
+    "lat": 18.6692445,
+    "lon": 105.6881594,
+    "data": {
+      "coord": {
+        "lon": 105.69,
+        "lat": 18.67
+      },
+      "weather": [
+        {
+          "id": 804,
+          "main": "Clouds",
+          "description": "overcast clouds",
+          "icon": "04d"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 303.79,
+        "feels_like": 310.79,
+        "temp_min": 303.79,
+        "temp_max": 303.79,
+        "pressure": 999,
+        "humidity": 74,
+        "sea_level": 999,
+        "grnd_level": 997
+      },
+      "visibility": 10000,
+      "wind": {
+        "speed": 4.72,
+        "deg": 215,
+        "gust": 9.17
+      },
+      "clouds": {
+        "all": 100
+      },
+      "dt": 1751970074,
+      "sys": {
+        "country": "VN",
+        "sunrise": 1751927165,
+        "sunset": 1751974685
+      },
+      "timezone": 25200,
+      "id": 1560037,
+      "name": "Yen Vinh",
+      "cod": 200
+    }
+  },
+  {
+    "city": "Quy Nhon",
+    "country": "VN",
+    "lat": 13.7696017,
+    "lon": 109.2314599,
+    "data": {
+      "coord": {
+        "lon": 109.2315,
+        "lat": 13.7696
+      },
+      "weather": [
+        {
+          "id": 803,
+          "main": "Clouds",
+          "description": "broken clouds",
+          "icon": "04d"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 305.82,
+        "feels_like": 312.53,
+        "temp_min": 305.82,
+        "temp_max": 305.82,
+        "pressure": 1003,
+        "humidity": 62,
+        "sea_level": 1003,
+        "grnd_level": 996
+      },
+      "visibility": 10000,
+      "wind": {
+        "speed": 3.1,
+        "deg": 214,
+        "gust": 6.85
+      },
+      "clouds": {
+        "all": 74
+      },
+      "dt": 1751970379,
+      "sys": {
+        "country": "VN",
+        "sunrise": 1751926854,
+        "sunset": 1751973295
+      },
+      "timezone": 25200,
+      "id": 1568574,
+      "name": "Qui Nhon",
+      "cod": 200
+    }
+  },
+  {
+    "city": "Buon Ma Thuot",
+    "country": "VN",
+    "lat": 12.6796827,
+    "lon": 108.0447368,
+    "data": {
+      "coord": {
+        "lon": 108.0447,
+        "lat": 12.6797
+      },
+      "weather": [
+        {
+          "id": 804,
+          "main": "Clouds",
+          "description": "overcast clouds",
+          "icon": "04d"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 300.42,
+        "feels_like": 304.3,
+        "temp_min": 300.42,
+        "temp_max": 300.42,
+        "pressure": 1005,
+        "humidity": 87,
+        "sea_level": 1005,
+        "grnd_level": 960
+      },
+      "visibility": 10000,
+      "wind": {
+        "speed": 1.78,
+        "deg": 321,
+        "gust": 4.44
+      },
+      "clouds": {
+        "all": 97
+      },
+      "dt": 1751970267,
+      "sys": {
+        "country": "VN",
+        "sunrise": 1751927255,
+        "sunset": 1751973464
+      },
+      "timezone": 25200,
+      "id": 1586896,
+      "name": "Buon Ma Thuot",
+      "cod": 200
+    }
+  }
+]

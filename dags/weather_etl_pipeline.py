@@ -1,228 +1,418 @@
+"""
+Production-grade Weather ETL Pipeline
+"""
 from datetime import datetime, timedelta
 from pathlib import Path
-import logging
-import sys
+from typing import Dict, List, Optional
 from airflow.decorators import dag, task
 from airflow.models import Variable
-from airflow.utils.dates import days_ago
+from airflow.utils import timezone
+from airflow.providers.postgres.hooks.postgres import PostgresHook
+import logging
 
-project_root = Path(__file__).parent.parent  
-src_dir = project_root / "src"
-sys.path.insert(0, str(src_dir))
+# ---------- Configuration ----------
+PROJECT_ROOT = Path(__file__).parent.parent.resolve()
+DATA_DIR = Path(Variable.get("DATA_DIR", default_var="/opt/airflow/data"))
+ENVIRONMENT = Variable.get("ENVIRONMENT", default_var="dev")
 
-# logger configuration
-def get_logger():
-    """Configure and return a logger"""
-    logger = logging.getLogger(__name__)
-    logger.setLevel(logging.INFO)
+class PathConfig:
+    def __init__(self):
+        self.raw = DATA_DIR / "raw" / ENVIRONMENT
+        self.processed = DATA_DIR / "processed" / ENVIRONMENT
+        self.logs = DATA_DIR / "logs" / ENVIRONMENT
+        
+        # geo data paths
+        self.cities_data = self.raw/ "cities.csv"
+        self.geo_data = self.raw / "geo_data.csv"
+        self.geo_data_with_tz = self.raw / "geo_data_with_tz.csv"
+        
+        # create directories if not exist
+        self.raw.mkdir(parents=True, exist_ok=True)
+        self.processed.mkdir(parents=True, exist_ok=True)
+        self.logs.mkdir(parents=True, exist_ok=True)
     
-    log_dir = Path(__file__).parent.parent.parent / "logs"
-    log_dir.mkdir(exist_ok=True)
+    def get_weather_paths(self, timestamp: str) -> Dict[str, Path]:
+        return {
+            'current': self.raw / f"current_{timestamp}.json",
+            'forecast': self.raw / f"forecast_{timestamp}.json",
+            'air_pollution': self.raw / f"air_pollution_{timestamp}.json",
+        }
     
-    file_handler = logging.FileHandler(log_dir / "weather_etl.log")
-    file_handler.setFormatter(logging.Formatter(
-        '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-    ))
-    
-    stream_handler = logging.StreamHandler()
-    stream_handler.setFormatter(logging.Formatter(
-        '%(asctime)s - %(levelname)s - %(message)s'
-    ))
-    
-    logger.addHandler(file_handler)
-    logger.addHandler(stream_handler)
-    return logger
+    def get_transformed_paths(self, timestamp: str) -> Dict[str, Path]:
+        return {
+            'current': self.processed / f"current_transformed_{timestamp}.json",
+            'forecast': self.processed / f"forecast_transformed_{timestamp}.json",
+            'air_pollution': self.processed / f"air_quality_transformed_{timestamp}.json",
+            'suntimes': self.processed / f"suntimes_transformed_{timestamp[:10]}.json",
+        }
 
-logger = get_logger()
-
-# default arguments for the DAG
+# ---------- DAG Definition ----------
 default_args = {
-    'owner': 'airflow',
+    'owner': 'data_engineering',
     'depends_on_past': False,
-    'email_on_failure': False,
+    'email_on_failure': True,
     'email_on_retry': False,
-    'retries': 1,
+    'retries': 3,
     'retry_delay': timedelta(minutes=5),
+    'execution_timeout': timedelta(minutes=30),
 }
 
-def get_data_paths():
-    """Get standardized data paths"""
-    data_dir = Path(Variable.get("data_dir", default_var="/opt/airflow/data"))
-    return {
-        'raw': data_dir / "raw",
-        'processed': data_dir / "processed",
-        'geo_data': data_dir / "raw" / "geo_data.csv",
-        'geo_data_with_tz': data_dir / "raw" / "geo_data_with_tz.csv"
-    }
-
 @dag(
-    dag_id='weather_data_pipeline',
+    dag_id='weather_data_pipeline_prod',
     default_args=default_args,
-    description='A pipeline for weather data extraction, transformation and loading',
-    schedule_interval='0 */3 * * *',  # every 3 hours
-    start_date=days_ago(1),
+    description='Production-grade weather data ETL pipeline',
+    schedule_interval='0 */3 * * *',  # Every 3 hours
+    start_date=timezone.datetime(2023, 1, 1),
     catchup=False,
-    tags=['weather', 'etl'],
+    max_active_runs=1,
+    tags=['weather', 'production'],
 )
 def weather_data_pipeline():
 
-    @task(task_id='extract_data')
-    def extract():
-        """Extract data from APIs"""
+    # ---------- Tasks ----------
+    @task(task_id='geo_lookup')
+    def geo_lookup(**context) -> str:
+        """Task to perform geographic data lookup"""
+        logger = context["ti"].log
+        paths = PathConfig()
+        timestamp = timezone.utcnow().strftime("%Y-%m-%dT%H-%M")
+        
         try:
+            logger.info("Starting geo lookup...")
             from extraction.geo_lookup import GeoLookup
-            from extraction.weather_fetcher import WeatherFetcher
             
-            paths = get_data_paths()
-            paths['raw'].mkdir(exist_ok=True)
-            
-            timestamp = datetime.now().strftime("%Y-%m-%dT%H-%M")
-            
-            # run geo lookup
-            geo = GeoLookup()
+            geo = GeoLookup(str(paths.cities_data), str(paths.geo_data))
             geo.run()
             
-            # fetch weather data
+            logger.info(f"Geo lookup completed. Data saved to {paths.geo_data}")
+            return timestamp
+            
+        except Exception as e:
+            logger.exception("Geo lookup failed")
+            raise
+
+    @task(task_id='extract_weather_data')
+    def extract_weather_data(timestamp: str, **context) -> Dict[str, str]:
+        logger = context["ti"].log
+        paths = PathConfig()
+        weather_paths = paths.get_weather_paths(timestamp)
+        
+        try:
+            logger.info("Starting weather data extraction...")
+            
+            from extraction.weather_fetcher import WeatherFetcher
+            
             weather_fetcher = WeatherFetcher()
-            file_paths = {
-                'current': str(paths['raw'] / f"current_{timestamp}.json"),
-                'forecast': str(paths['raw'] / f"forecast_{timestamp}.json"),
-                'air_pollution': str(paths['raw'] / f"air_pollution_{timestamp}.json"),
-                'timestamp': timestamp
+            
+            # fetching data in parallel requires async setup
+            weather_fetcher.run(str(weather_paths['current']), 'current')
+            weather_fetcher.run(str(weather_paths['forecast']), 'forecast')
+            weather_fetcher.run(str(weather_paths['air_pollution']), 'air_pollution')
+            
+            logger.info(f"Weather data extracted to {paths.raw}")
+            return {
+                'timestamp': timestamp,
+                'current': str(weather_paths['current']),
+                'forecast': str(weather_paths['forecast']),
+                'air_pollution': str(weather_paths['air_pollution']),
             }
             
-            weather_fetcher.run('current', filename=file_paths['current'])
-            weather_fetcher.run('forecast', filename=file_paths['forecast'])
-            weather_fetcher.run('air_pollution', filename=file_paths['air_pollution'])
-            
-            logger.info(f"Extracted data saved with timestamp: {timestamp}")
-            return file_paths
-            
         except Exception as e:
-            logger.exception("Extraction failed")
+            logger.exception("Weather data extraction failed")
             raise
 
-    @task(task_id='transform_data')
-    def transform(file_paths: dict):
-        """Transform raw data into processed format"""
+    @task(task_id='add_timezones')
+    def add_timezones(extraction_result: Dict[str, str], **context) -> Dict[str, str]:
+        logger = context["ti"].log
+        paths = PathConfig()
+        
         try:
-            from helpers.json_helper import load_json_file, save_json_file
-            from processing.transformer.air_quality_transformer import AirQualityTransformer
-            from processing.transformer.forecast_transformer import ForecastTransformer
-            from processing.transformer.suntimes_transformer import SunTimesTransformer
-            from processing.transformer.weather_transformer import WeatherTransformer
+            logger.info("Adding timezone information...")
+            
             from processing.utils.timezone_utils import add_timezones_to_csv
             
-            paths = get_data_paths()
-            paths['processed'].mkdir(parents=True, exist_ok=True)
-            timestamp = file_paths['timestamp']
-            
-            # Add timezones to geo data
             add_timezones_to_csv(
-                csv_path=str(paths['geo_data']),
-                json_path=file_paths['current'],
-                output_path=str(paths['geo_data_with_tz'])
+                csv_path=str(paths.geo_data),
+                json_path=extraction_result['current'],
+                output_path=str(paths.geo_data_with_tz)
             )
             
-            # Initialize transformers
-            weather_transformer = WeatherTransformer()
-            forecast_transformer = ForecastTransformer()
-            air_quality_transformer = AirQualityTransformer(
-                timezone_csv_path=str(paths['geo_data_with_tz'])
-            )
-            suntimes_transformer = SunTimesTransformer()
-
-            logger.info("Starting data transformation pipeline...")
-            transformed_files = {}
-            
-            # Current weather
-            weather_raw = load_json_file(file_paths['current'])
-            weather_transformed = weather_transformer.transform(weather_raw)
-            current_output = paths['processed'] / f"current_transformed_{timestamp}.json"
-            save_json_file(weather_transformed, current_output)
-            transformed_files['current'] = str(current_output)
-            
-            # Forecast
-            forecast_transformed = forecast_transformer.transform(
-                load_json_file(file_paths['forecast'])
-            )
-            forecast_output = paths['processed'] / f"forecast_transformed_{timestamp}.json"
-            save_json_file(forecast_transformed, forecast_output)
-            transformed_files['forecast'] = str(forecast_output)
-            
-            # Air quality
-            air_quality_transformed = air_quality_transformer.transform(
-                load_json_file(file_paths['air_pollution'])
-            )
-            air_quality_output = paths['processed'] / f"air_quality_transformed_{timestamp}.json"
-            save_json_file(air_quality_transformed, air_quality_output)
-            transformed_files['air_quality'] = str(air_quality_output)
-            
-            # Sun times (only at midnight)
-            if datetime.now().hour == 0:
-                suntimes_transformed = suntimes_transformer.transform(weather_raw)
-                suntimes_output = paths['processed'] / f"suntimes_transformed_{datetime.now().strftime('%Y-%m-%d')}.json"
-                save_json_file(suntimes_transformed, suntimes_output)
-                transformed_files['suntimes'] = str(suntimes_output)
-            
-            logger.info("Data transformation pipeline completed successfully.")
-            return transformed_files
+            logger.info(f"Timezone data added to {paths.geo_data_with_tz}")
+            return extraction_result  # pass through the same data
             
         except Exception as e:
-            logger.exception(f"Transform failed: {str(e)}")
+            logger.exception("Failed to add timezones")
             raise
 
-    @task(task_id='load_data')
-    def load(transformed_files: dict):
-        """Load processed data into database"""
+    @task(task_id='transform_current_weather')
+    def transform_current_weather(data_paths: Dict[str, str], **context) -> str:
+        """Task to transform current weather data"""
+        logger = context["ti"].log
+        paths = PathConfig()
+        timestamp = data_paths['timestamp']
+        transformed_paths = paths.get_transformed_paths(timestamp)
+        
         try:
-            from storage.database.connector import DatabaseConnector
-            from storage.database.operations import DatabaseOperations
-            from storage.database.schema_manager import SchemaManager
-            from helpers.json_helper import load_json_file
+            logger.info("Transforming current weather data...")
             
-            conn = DatabaseConnector.get_connection()
-            SchemaManager.create_tables(conn)
-            db_ops = DatabaseOperations(conn)
+            from helpers.json_helper import load_json_file, save_json_file
+            from processing.transformer.weather_transformer import WeatherTransformer
             
-            # load current weather
-            current_data = load_json_file(transformed_files['current'])
-            db_ops.bulk_insert("weather", current_data)
-            logger.info("Inserted current weather data")
+            raw_data = load_json_file(data_paths['current'])
+            transformer = WeatherTransformer()
+            transformed_data = transformer.transform(raw_data)
             
-            # load forecast
-            forecast_data = load_json_file(transformed_files['forecast'])
-            db_ops.bulk_insert("forecast", forecast_data)
-            logger.info("Inserted forecast data")
+            save_json_file(transformed_data, transformed_paths['current'])
             
-            # load air quality
-            aq_data = load_json_file(transformed_files['air_quality'])
-            db_ops.bulk_insert("air_quality", aq_data)
-            logger.info("Inserted air quality data")
-            
-            # load suntimes if available
-            if 'suntimes' in transformed_files:
-                sun_data = load_json_file(transformed_files['suntimes'])
-                db_ops.bulk_insert("suntimes", sun_data)
-                logger.info("Inserted suntimes data")
-            
-            # clean old forecasts
-            deleted = db_ops.clean_old_forecasts(retention_days=3)
-            logger.info(f"Cleaned {deleted} old forecast records")
-            
-            return {"status": "success", "records_processed": len(current_data)}
+            logger.info(f"Current weather transformed to {transformed_paths['current']}")
+            return str(transformed_paths['current'])
             
         except Exception as e:
-            logger.exception(f"Load failed: {str(e)}")
+            logger.exception("Current weather transformation failed")
+            raise
+
+    @task(task_id='transform_forecast')
+    def transform_forecast(data_paths: Dict[str, str], **context) -> str:
+        logger = context["ti"].log
+        paths = PathConfig()
+        timestamp = data_paths['timestamp']
+        transformed_paths = paths.get_transformed_paths(timestamp)
+        
+        try:
+            logger.info("Transforming forecast data...")
+            
+            from helpers.json_helper import load_json_file, save_json_file
+            from processing.transformer.forecast_transformer import ForecastTransformer
+            
+            raw_data = load_json_file(data_paths['forecast'])
+            transformer = ForecastTransformer()
+            transformed_data = transformer.transform(raw_data)
+            
+            save_json_file(transformed_data, transformed_paths['forecast'])
+            
+            logger.info(f"Forecast transformed to {transformed_paths['forecast']}")
+            return str(transformed_paths['forecast'])
+            
+        except Exception as e:
+            logger.exception("Forecast transformation failed")
+            raise
+
+    @task(task_id='transform_air_quality')
+    def transform_air_quality(data_paths: Dict[str, str], **context) -> str:
+        logger = context["ti"].log
+        paths = PathConfig()
+        timestamp = data_paths['timestamp']
+        transformed_paths = paths.get_transformed_paths(timestamp)
+        
+        try:
+            logger.info("Transforming air quality data...")
+            
+            from helpers.json_helper import load_json_file, save_json_file
+            from processing.transformer.air_quality_transformer import AirQualityTransformer
+            
+            raw_data = load_json_file(data_paths['air_pollution'])
+            transformer = AirQualityTransformer(timezone_csv_path=str(paths.geo_data_with_tz))
+            transformed_data = transformer.transform(raw_data)
+            
+            save_json_file(transformed_data, transformed_paths['air_pollution'])
+            
+            logger.info(f"Air quality transformed to {transformed_paths['air_pollution']}")
+            return str(transformed_paths['air_pollution'])
+            
+        except Exception as e:
+            logger.exception("Air quality transformation failed")
+            raise
+
+    @task(task_id='transform_suntimes', trigger_rule='none_failed')
+    def transform_suntimes(data_paths: Dict[str, str], **context) -> Optional[str]:
+        logger = context["ti"].log
+        paths = PathConfig()
+        date_str = data_paths['timestamp'][:10]  # YYYY-MM-DD
+        
+        # only run between midnight and 3 AM
+        if datetime.now().hour >= 3:
+            logger.info("Skipping suntimes transformation - not in time window")
+            return None
+        
+        try:
+            logger.info("Transforming suntimes data...")
+            
+            from helpers.json_helper import load_json_file, save_json_file
+            from processing.transformer.suntimes_transformer import SunTimesTransformer
+            
+            raw_data = load_json_file(data_paths['current'])
+            transformer = SunTimesTransformer()
+            transformed_data = transformer.transform(raw_data)
+            
+            output_path = paths.get_transformed_paths(date_str)['suntimes']
+            save_json_file(transformed_data, output_path)
+            
+            logger.info(f"Suntimes transformed to {output_path}")
+            return str(output_path)
+            
+        except Exception as e:
+            logger.exception("Suntimes transformation failed")
+            raise
+
+
+    @task(task_id='create_tables')
+    def create_tables(**context):
+        logger = context["ti"].log
+        hook = PostgresHook(postgres_conn_id="weather_db")
+        conn = None
+        try:
+            conn = hook.get_conn()
+            cursor = conn.cursor()
+            
+            cursor.execute("""
+                SELECT table_name 
+                FROM information_schema.tables 
+                WHERE table_schema = 'public'
+                AND table_name IN ('cities', 'weather_data', 'forecast', 'suntimes', 'air_pollution')
+            """)
+            existing_tables = {row[0] for row in cursor.fetchall()}
+            
+            # execute creation queries for missing tables
+            from storage.database.sql.creation import CREATION_QUERIES
+            for table_name, queries in CREATION_QUERIES.items():
+                if table_name not in existing_tables:
+                    logger.info(f"Creating table {table_name}...")
+                    for query in queries:
+                        try:
+                            cursor.execute(query)
+                            conn.commit()
+                        except Exception as e:
+                            conn.rollback()
+                            logger.warning(f"Table {table_name} might already exist, skip creating...")
+            
+            logger.info("Database tables verified/created")
+        except Exception as e:
+            logger.exception("Failed to create tables")
             raise
         finally:
-            conn.close()
-            logger.info("Closed database connection.")
+            if conn:
+                conn.close()
 
-    # task dependencies
-    file_paths = extract()
-    transformed_files = transform(file_paths)
-    load(transformed_files)
+    @task(
+        task_id='load_data',
+        retries=3,
+        retry_delay=timedelta(minutes=2),
+        execution_timeout=timedelta(minutes=45)
+    )
+    def load_data(
+        current_path: str,
+        forecast_path: str,
+        air_quality_path: str,
+        suntimes_path: Optional[str] = None,
+        **context
+    ) -> Dict[str, int]:
+        logger = context["ti"].log
+        
+        try:
+            logger.info("Initializing database connection...")
+            
+            from helpers.json_helper import load_json_file
+            from storage.database.operations import DatabaseOperations
 
-# instantiate the DAG
+            
+            hook = PostgresHook(postgres_conn_id="weather_db")
+            conn = hook.get_conn()
+
+            _validate_tables_exist(conn, ['cities', 'weather_data', 'forecast', 'air_pollution', 'suntimes'])
+            db_ops = DatabaseOperations(conn)
+            
+            # process in batches
+            def safe_batch_insert(data: List[Dict], table: str) -> int:
+                if not data:
+                    return 0
+                try:
+                    batch_size = 1000
+                    for i in range(0, len(data), batch_size):
+                        db_ops.bulk_insert(table, data[i:i+batch_size])
+                    return len(data)
+                except Exception as e:
+                    logger.error(f"Batch insert failed for {table}: {str(e)}")
+                    raise
+            
+            # load current weather
+            results = {}
+            # Current weather
+            current_data = load_json_file(current_path)
+            results['current'] = safe_batch_insert(current_data, 'weather_data')
+            
+            # Forecast
+            forecast_data = load_json_file(forecast_path)
+            results['forecast'] = safe_batch_insert(forecast_data, 'forecast')
+            
+            # Air quality
+            air_quality_data = load_json_file(air_quality_path)
+            results['air_quality'] = safe_batch_insert(air_quality_data, 'air_pollution')
+            
+            # Suntimes (optional)
+            if suntimes_path:
+                suntimes_data = load_json_file(suntimes_path)
+                results['suntimes'] = safe_batch_insert(suntimes_data, 'suntimes')
+            
+            # Maintenance
+            results['cleaned'] = db_ops.clean_old_forecasts(retention_days=3)
+            
+            logger.info(
+                f"Load completed: {results['current']} current, "
+                f"{results['forecast']} forecast, "
+                f"{results.get('suntimes', 0)} suntimes | "
+                f"Cleaned {results['cleaned']} old records"
+            )
+
+            return results
+            
+        except Exception as e:
+            logger.exception("Data loading failed")
+            raise
+        finally:
+            if 'conn' in locals() and conn:
+                conn.close()
+                logger.info("Database connection closed")
+            
+    
+    def _validate_tables_exist(conn, required_tables: List[str]):
+        with conn.cursor() as cursor:
+            cursor.execute("""
+                SELECT table_name 
+                FROM information_schema.tables 
+                WHERE table_schema = 'public'
+                AND table_name = ANY(%s)
+            """, (required_tables,))
+            
+            existing_tables = {row[0] for row in cursor.fetchall()}
+            missing_tables = set(required_tables) - existing_tables
+            
+            if missing_tables:
+                raise RuntimeError(f"Missing tables: {missing_tables}. Run schema creation first.")
+
+
+    # ---------- Task Dependencies ----------
+    tables_created = create_tables()
+    timestamp = geo_lookup()
+    
+    # Extract weather data in parallel with geo lookup
+    weather_data = extract_weather_data(timestamp)
+    
+    # Add timezones after both geo lookup and weather extraction complete
+    with_timezones = add_timezones(weather_data)
+    
+    # Transform all data types in parallel
+    current_transformed = transform_current_weather(with_timezones)
+    forecast_transformed = transform_forecast(with_timezones)
+    air_quality_transformed = transform_air_quality(with_timezones)
+    suntimes_transformed = transform_suntimes(with_timezones)
+    
+    # Load all transformed data
+    load_results = load_data(
+        current_path=current_transformed,
+        forecast_path=forecast_transformed,
+        air_quality_path=air_quality_transformed,
+        suntimes_path=suntimes_transformed
+    )
+
+# Instantiate the DAG
 weather_dag = weather_data_pipeline()

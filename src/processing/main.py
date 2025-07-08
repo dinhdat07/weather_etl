@@ -22,7 +22,7 @@ def main():
 
         # 1. prepare transformer and data
         geo_data_path = raw_dir / "geo_data.csv"
-        weather_data_path = raw_dir / "current_2025-07-04T11-56.json"
+        weather_data_path = raw_dir / "current_2025-07-08T17-26.json"
         geo_data_with_tz_path = raw_dir / "geo_data_with_tz.csv"
 
         add_timezones_to_csv(
@@ -49,7 +49,7 @@ def main():
         )
 
         # 5. Process forecast data
-        forecast_file = raw_dir / "forecast_2025-07-04T11-56.json"
+        forecast_file = raw_dir / "forecast_2025-07-08T17-26.json"
         forecast_transformed = forecast_transformer.transform(
             load_json_file(forecast_file)
         )
@@ -60,7 +60,7 @@ def main():
 
         # 6. Process air quality data
         air_quality_transformed = air_quality_transformer.transform(
-            load_json_file(raw_dir / "air_pollution_2025-07-04T11-56.json")
+            load_json_file(raw_dir / "air_pollution_2025-07-08T17-26.json")
         )
         save_json_file(
             air_quality_transformed,
@@ -77,7 +77,7 @@ def main():
 
         # 6. Process air quality data
         air_quality_transformed = air_quality_transformer.transform(
-            load_json_file(raw_dir / "air_pollution_2025-07-04T11-56.json")
+            load_json_file(raw_dir / "air_pollution_2025-07-08T17-26.json")
         )
         save_json_file(
             air_quality_transformed,

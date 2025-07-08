@@ -59,7 +59,7 @@ x-airflow-common:
     AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:airflow@postgres/airflow
     AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
     AIRFLOW__CORE__FERNET_KEY: ''
-    AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
+    AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'false'
     AIRFLOW__CORE__LOAD_EXAMPLES: 'true'
     AIRFLOW__CORE__EXECUTION_API_SERVER_URL: 'http://airflow-apiserver:8080/execution/'
     # yamllint disable rule:line-length
@@ -72,12 +72,17 @@ x-airflow-common:
     _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-}
     # The following line can be used to set a custom config file, stored in the local config folder
     AIRFLOW_CONFIG: '/opt/airflow/config/airflow.cfg'
+    APP_DB_NAME: ${APP_DB_NAME:-weather_db}
+    APP_DB_USER: ${APP_DB_USER:-weather_user}
+    APP_DB_PASSWORD: ${APP_DB_PASSWORD:-weather_pass}
+    OPENWEATHER_API_KEY: ${OPENWEATHER_API_KEY:-}
   volumes:
     - ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags
     - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
     - ${AIRFLOW_PROJ_DIR:-.}/config:/opt/airflow/config
     - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
     - weather-data:/opt/airflow/data
+    - ./src:/opt/airflow/src
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
     &airflow-common-depends-on
@@ -91,14 +96,14 @@ services:
     image: python:3.12
     volumes:
       - .:/app
-      - weather-data:/app/data
+      - weather-data:/app/data-slim
     working_dir: /app
     environment:
       - DB_HOST=postgres
-      - DB_PORT=${DB_PORT:-5432}
-      - DB_NAME=${DB_NAME:-airflow}
-      - DB_USER=${DB_USER:-airflow}
-      - DB_PASSWORD=${DB_PASSWORD:-airflow}
+      - DB_PORT= 5432
+      - DB_NAME= airflow
+      - DB_USER= airflow
+      - DB_PASSWORD= airflow
     depends_on:
       postgres:
         condition: service_healthy
@@ -107,9 +112,9 @@ services:
   postgres:
     image: postgres:13
     environment:
-      POSTGRES_USER: ${DB_USER:-airflow}  
-      POSTGRES_PASSWORD: ${DB_PASSWORD:-airflow}
-      POSTGRES_DB: ${DB_NAME:-airflow}
+      POSTGRES_USER: airflow  
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
     volumes:
       - postgres-db-volume:/var/lib/postgresql/data
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql 
@@ -118,7 +123,7 @@ services:
       interval: 10s
       retries: 5
       start_period: 5s
-    restart: always
+    restart: unless-stopped
 
   redis:
     # Redis is limited to 7.2-bookworm due to licencing change
