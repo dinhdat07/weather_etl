@@ -11,7 +11,7 @@ from src.extraction.api_clients.weather_client import WeatherClient
 
 class GeoLookup:
     def __init__(self, cities_input: str = "data/raw/cities.csv", geo_output: str = "data/raw/geo_data.csv"):
-         
+        self.cities_input = cities_input
         self.geo_output = geo_output
     
     def _load_existing(self):

@@ -55,12 +55,12 @@ x-airflow-common:
     &airflow-common-env
     AIRFLOW__CORE__EXECUTOR: CeleryExecutor
     AIRFLOW__CORE__AUTH_MANAGER: airflow.providers.fab.auth_manager.fab_auth_manager.FabAuthManager
-    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
-    AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:airflow@postgres/airflow
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: ${AIRFLOW__DATABASE__SQL_ALCHEMY_CONN:-postgresql+psycopg2://${AIRFLOW_DB_USER:-airflow}:${AIRFLOW_DB_PASSWORD:-airflow}@postgres/airflow}
+    AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://${AIRFLOW_DB_USER:-airflow}:${AIRFLOW_DB_PASSWORD:-airflow}@postgres/airflow
     AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
     AIRFLOW__CORE__FERNET_KEY: ''
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'false'
-    AIRFLOW__CORE__LOAD_EXAMPLES: 'true'
+    AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
     AIRFLOW__CORE__EXECUTION_API_SERVER_URL: 'http://airflow-apiserver:8080/execution/'
     # yamllint disable rule:line-length
     # Use simple http server on scheduler for health checks
@@ -72,18 +72,23 @@ x-airflow-common:
     _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-}
     # The following line can be used to set a custom config file, stored in the local config folder
     AIRFLOW_CONFIG: '/opt/airflow/config/airflow.cfg'
+    PYTHONPATH: /opt/airflow/src
     APP_DB_NAME: ${APP_DB_NAME:-weather_db}
     APP_DB_USER: ${APP_DB_USER:-weather_user}
     APP_DB_PASSWORD: ${APP_DB_PASSWORD:-weather_pass}
+    APP_DB_HOST: ${APP_DB_HOST:-postgres}
+    APP_DB_PORT: ${APP_DB_PORT:-5432}
+    AIRFLOW_DB_USER: ${AIRFLOW_DB_USER:-airflow}  
+    AIRFLOW_DB_PASSWORD: ${AIRFLOW_DB_PASSWORD:-airflow}
     OPENWEATHER_API_KEY: ${OPENWEATHER_API_KEY:-}
   volumes:
     - ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags
     - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
     - ${AIRFLOW_PROJ_DIR:-.}/config:/opt/airflow/config
     - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
-    - weather-data:/opt/airflow/data
+    - ${AIRFLOW_DATA_DIR:-./data}:/opt/airflow/data
     - ./src:/opt/airflow/src
-  user: "${AIRFLOW_UID:-50000}:0"
+  user: "${AIRFLOW_UID:-1000}:${AIRFLOW_GID:-0}"
   depends_on:
     &airflow-common-depends-on
     redis:
@@ -92,38 +97,44 @@ x-airflow-common:
       condition: service_healthy
 
 services:
-  weather-processor:
-    image: python:3.12
-    volumes:
-      - .:/app
-      - weather-data:/app/data-slim
-    working_dir: /app
-    environment:
-      - DB_HOST=postgres
-      - DB_PORT= 5432
-      - DB_NAME= airflow
-      - DB_USER= airflow
-      - DB_PASSWORD= airflow
-    depends_on:
-      postgres:
-        condition: service_healthy
-    command: bash -c "pip install -r requirements.txt && python your_processor_script.py"
-
+  
   postgres:
     image: postgres:13
     environment:
-      POSTGRES_USER: airflow  
-      POSTGRES_PASSWORD: airflow
+      POSTGRES_USER: ${AIRFLOW_DB_USER:-airflow}
+      POSTGRES_PASSWORD: ${AIRFLOW_DB_PASSWORD:-airflow}
       POSTGRES_DB: airflow
+      POSTGRES_MULTIPLE_DATABASES: ${APP_DB_NAME:-weather_db}
+      POSTGRES_MULTIPLE_USERS: ${APP_DB_USER:-weather_user}:${APP_DB_PASSWORD:-weather_pass}
     volumes:
       - postgres-db-volume:/var/lib/postgresql/data
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql 
+      - ./init-user-db.sh:/docker-entrypoint-initdb.d/init-user-db.sh
     healthcheck:
       test: ["CMD", "pg_isready", "-U", "airflow"]
       interval: 10s
       retries: 5
       start_period: 5s
     restart: unless-stopped
+
+
+  weather-processor:
+    image: python:3.12
+    volumes:
+      - .:/app
+      - ${AIRFLOW_DATA_DIR:-./data}:/app/data
+    working_dir: /app
+    environment:
+      DB_HOST: ${APP_DB_HOST:-postgres}
+      DB_PORT: ${APP_DB_PORT:-5432}
+      DB_NAME: ${APP_DB_NAME:-weather_db}
+      DB_USER: ${APP_DB_USER:-weather_user}
+      DB_PASSWORD: ${APP_DB_PASSWORD:-weather_pass}
+      OPENWEATHER_API_KEY: ${OPENWEATHER_API_KEY:-}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    command: bash -c "pip install -r requirements.txt && python script.py"
+
 
   redis:
     # Redis is limited to 7.2-bookworm due to licencing change
@@ -143,7 +154,7 @@ services:
     <<: *airflow-common
     command: api-server
     ports:
-      - "8080:8080"
+      - "8081:8080"
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost:8080/api/v2/version"]
       interval: 30s
@@ -317,6 +328,7 @@ services:
       _AIRFLOW_WWW_USER_PASSWORD: ${_AIRFLOW_WWW_USER_PASSWORD:-airflow}
       _PIP_ADDITIONAL_REQUIREMENTS: ''
     user: "0:0"
+
 
   airflow-cli:
     <<: *airflow-common

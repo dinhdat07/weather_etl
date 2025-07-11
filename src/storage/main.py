@@ -38,7 +38,7 @@ def main():
 
         # insert air quality
         aq_data = load_json_file(processed_dir / "air_quality_transformed.json")
-        results = db_ops.bulk_insert("air_quality", aq_data)
+        results = db_ops.bulk_insert("air_pollution", aq_data)
         logging.info(f"Inserted air quality data: {results}")
 
         # insert sun times

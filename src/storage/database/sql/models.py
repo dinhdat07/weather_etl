@@ -7,7 +7,7 @@ from src.storage.database.sql.insertion import INSERT_QUERIES
 
 
 TABLE_CONFIGS = {
-    'weather': {
+    'weather_data': {
         'sql': INSERT_QUERIES['WEATHER']['insert'],
         'fields_order': [
             'city_id', 'city', 'country',
@@ -25,7 +25,7 @@ TABLE_CONFIGS = {
             'visibility', 'rain_1h'
         ]
     },
-    'air_quality': {
+    'air_pollution': {
         'sql': INSERT_QUERIES['AIR_POLLUTION']['insert'],
         'fields_order': [
             'city_id', 'city', 'country',

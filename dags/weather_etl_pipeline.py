@@ -1,6 +1,3 @@
-"""
-Production-grade Weather ETL Pipeline
-"""
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Dict, List, Optional
@@ -9,6 +6,9 @@ from airflow.models import Variable
 from airflow.utils import timezone
 from airflow.providers.postgres.hooks.postgres import PostgresHook
 import logging
+import pandas as pd
+
+logger = logging.getLogger("airflow.task")
 
 # ---------- Configuration ----------
 PROJECT_ROOT = Path(__file__).parent.parent.resolve()
@@ -61,8 +61,8 @@ default_args = {
     dag_id='weather_data_pipeline_prod',
     default_args=default_args,
     description='Production-grade weather data ETL pipeline',
-    schedule_interval='0 */3 * * *',  # Every 3 hours
-    start_date=timezone.datetime(2023, 1, 1),
+    schedule='0 */3 * * *',  # every 3 hours
+    start_date=timezone.datetime(2025, 1, 1),
     catchup=False,
     max_active_runs=1,
     tags=['weather', 'production'],
@@ -71,9 +71,9 @@ def weather_data_pipeline():
 
     # ---------- Tasks ----------
     @task(task_id='geo_lookup')
-    def geo_lookup(**context) -> str:
+    def geo_lookup() -> str:
         """Task to perform geographic data lookup"""
-        logger = context["ti"].log
+
         paths = PathConfig()
         timestamp = timezone.utcnow().strftime("%Y-%m-%dT%H-%M")
         
@@ -92,8 +92,7 @@ def weather_data_pipeline():
             raise
 
     @task(task_id='extract_weather_data')
-    def extract_weather_data(timestamp: str, **context) -> Dict[str, str]:
-        logger = context["ti"].log
+    def extract_weather_data(timestamp: str) -> Dict[str, str]:
         paths = PathConfig()
         weather_paths = paths.get_weather_paths(timestamp)
         
@@ -102,7 +101,11 @@ def weather_data_pipeline():
             
             from extraction.weather_fetcher import WeatherFetcher
             
-            weather_fetcher = WeatherFetcher()
+            geo_file = paths.raw / "geo_data.csv"
+            weather_fetcher = WeatherFetcher(
+                geo_data=str(geo_file),
+                output_dir=str(paths.raw)  
+            )
             
             # fetching data in parallel requires async setup
             weather_fetcher.run(str(weather_paths['current']), 'current')
@@ -122,8 +125,7 @@ def weather_data_pipeline():
             raise
 
     @task(task_id='add_timezones')
-    def add_timezones(extraction_result: Dict[str, str], **context) -> Dict[str, str]:
-        logger = context["ti"].log
+    def add_timezones(extraction_result: Dict[str, str]) -> Dict[str, str]:
         paths = PathConfig()
         
         try:
@@ -145,9 +147,8 @@ def weather_data_pipeline():
             raise
 
     @task(task_id='transform_current_weather')
-    def transform_current_weather(data_paths: Dict[str, str], **context) -> str:
+    def transform_current_weather(data_paths: Dict[str, str]) -> str:
         """Task to transform current weather data"""
-        logger = context["ti"].log
         paths = PathConfig()
         timestamp = data_paths['timestamp']
         transformed_paths = paths.get_transformed_paths(timestamp)
@@ -172,8 +173,7 @@ def weather_data_pipeline():
             raise
 
     @task(task_id='transform_forecast')
-    def transform_forecast(data_paths: Dict[str, str], **context) -> str:
-        logger = context["ti"].log
+    def transform_forecast(data_paths: Dict[str, str]) -> str:
         paths = PathConfig()
         timestamp = data_paths['timestamp']
         transformed_paths = paths.get_transformed_paths(timestamp)
@@ -198,8 +198,7 @@ def weather_data_pipeline():
             raise
 
     @task(task_id='transform_air_quality')
-    def transform_air_quality(data_paths: Dict[str, str], **context) -> str:
-        logger = context["ti"].log
+    def transform_air_quality(data_paths: Dict[str, str]) -> str:
         paths = PathConfig()
         timestamp = data_paths['timestamp']
         transformed_paths = paths.get_transformed_paths(timestamp)
@@ -224,8 +223,7 @@ def weather_data_pipeline():
             raise
 
     @task(task_id='transform_suntimes', trigger_rule='none_failed')
-    def transform_suntimes(data_paths: Dict[str, str], **context) -> Optional[str]:
-        logger = context["ti"].log
+    def transform_suntimes(data_paths: Dict[str, str]) -> Optional[str]:
         paths = PathConfig()
         date_str = data_paths['timestamp'][:10]  # YYYY-MM-DD
         
@@ -256,8 +254,7 @@ def weather_data_pipeline():
 
 
     @task(task_id='create_tables')
-    def create_tables(**context):
-        logger = context["ti"].log
+    def create_tables():
         hook = PostgresHook(postgres_conn_id="weather_db")
         conn = None
         try:
@@ -293,6 +290,34 @@ def weather_data_pipeline():
             if conn:
                 conn.close()
 
+    @task(task_id='sync_cities')
+    def sync_cities():
+        try:
+            hook = PostgresHook(postgres_conn_id="weather_db")
+            conn = hook.get_conn()
+            paths = PathConfig()
+            df = pd.read_csv(paths.geo_data_with_tz)
+
+            with conn.cursor() as cur:
+                for _, row in df.iterrows():
+                    cur.execute("""
+                        INSERT INTO cities (city_name, country, latitude, longitude, vi_name, timezone)
+                        VALUES (%s, %s, %s, %s, %s, %s)
+                        ON CONFLICT (city_name, country, latitude, longitude)
+                        DO UPDATE SET
+                            vi_name = EXCLUDED.vi_name,
+                            timezone = EXCLUDED.timezone;
+                    """, (row.city, row.country, row.lat, row.lon, row.get('vi_name'), row.get('timezone')))
+                conn.commit()
+
+            logger.info("Synced cities into database.")
+        except Exception as e:
+            logger.exception("Syncing cities failed")
+            raise
+        finally:
+            if conn:
+                conn.close()
+
     @task(
         task_id='load_data',
         retries=3,
@@ -303,11 +328,9 @@ def weather_data_pipeline():
         current_path: str,
         forecast_path: str,
         air_quality_path: str,
-        suntimes_path: Optional[str] = None,
-        **context
+        suntimes_path: Optional[str] = None
     ) -> Dict[str, int]:
-        logger = context["ti"].log
-        
+    
         try:
             logger.info("Initializing database connection...")
             
@@ -399,6 +422,9 @@ def weather_data_pipeline():
     
     # Add timezones after both geo lookup and weather extraction complete
     with_timezones = add_timezones(weather_data)
+
+    cities_synced = sync_cities()
+    cities_synced.set_upstream(with_timezones)
     
     # Transform all data types in parallel
     current_transformed = transform_current_weather(with_timezones)
@@ -406,6 +432,7 @@ def weather_data_pipeline():
     air_quality_transformed = transform_air_quality(with_timezones)
     suntimes_transformed = transform_suntimes(with_timezones)
     
+
     # Load all transformed data
     load_results = load_data(
         current_path=current_transformed,
