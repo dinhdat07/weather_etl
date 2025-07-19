@@ -6,47 +6,14 @@ from airflow.models import Variable
 from airflow.utils import timezone
 from airflow.providers.postgres.hooks.postgres import PostgresHook
 import logging
+from google.cloud import storage
 import pandas as pd
+
+from config.path_config import PathConfig
+from utils.gcs_utils import download_blob, upload_blob
 
 logger = logging.getLogger("airflow.task")
 
-# ---------- Configuration ----------
-PROJECT_ROOT = Path(__file__).parent.parent.resolve()
-DATA_DIR = Path(Variable.get("DATA_DIR", default_var="/opt/airflow/data"))
-ENVIRONMENT = Variable.get("ENVIRONMENT", default_var="dev")
-
-class PathConfig:
-    def __init__(self):
-        self.raw = DATA_DIR / "raw" / ENVIRONMENT
-        self.processed = DATA_DIR / "processed" / ENVIRONMENT
-        self.logs = DATA_DIR / "logs" / ENVIRONMENT
-        
-        # geo data paths
-        self.cities_data = self.raw/ "cities.csv"
-        self.geo_data = self.raw / "geo_data.csv"
-        self.geo_data_with_tz = self.raw / "geo_data_with_tz.csv"
-        
-        # create directories if not exist
-        self.raw.mkdir(parents=True, exist_ok=True)
-        self.processed.mkdir(parents=True, exist_ok=True)
-        self.logs.mkdir(parents=True, exist_ok=True)
-    
-    def get_weather_paths(self, timestamp: str) -> Dict[str, Path]:
-        return {
-            'current': self.raw / f"current_{timestamp}.json",
-            'forecast': self.raw / f"forecast_{timestamp}.json",
-            'air_pollution': self.raw / f"air_pollution_{timestamp}.json",
-        }
-    
-    def get_transformed_paths(self, timestamp: str) -> Dict[str, Path]:
-        return {
-            'current': self.processed / f"current_transformed_{timestamp}.json",
-            'forecast': self.processed / f"forecast_transformed_{timestamp}.json",
-            'air_pollution': self.processed / f"air_quality_transformed_{timestamp}.json",
-            'suntimes': self.processed / f"suntimes_transformed_{timestamp[:10]}.json",
-        }
-
-# ---------- DAG Definition ----------
 default_args = {
     'owner': 'data_engineering',
     'depends_on_past': False,
@@ -72,24 +39,34 @@ def weather_data_pipeline():
     # ---------- Tasks ----------
     @task(task_id='geo_lookup')
     def geo_lookup() -> str:
-        """Task to perform geographic data lookup"""
-
         paths = PathConfig()
         timestamp = timezone.utcnow().strftime("%Y-%m-%dT%H-%M")
+
+        bucket_name = Variable.get("GCS_BUCKET")
+
+        cities_blob = f"{paths.gcs_prefix}/config/cities.csv"
+        geo_output_blob = f"{paths.gcs_prefix}/outputs/geo_data.csv"
+        local_geo_data = paths.geo_data
         
         try:
             logger.info("Starting geo lookup...")
             from extraction.geo_lookup import GeoLookup
             
-            geo = GeoLookup(str(paths.cities_data), str(paths.geo_data))
+            geo = GeoLookup(
+                bucket_name=bucket_name,
+                cities_blob=cities_blob,
+                geo_blob=geo_output_blob,
+                local_geo_path=local_geo_data
+            )
+
             geo.run()
-            
-            logger.info(f"Geo lookup completed. Data saved to {paths.geo_data}")
+
             return timestamp
-            
         except Exception as e:
-            logger.exception("Geo lookup failed")
+            logger.exception("Geo lookup failed: ", e)
             raise
+
+
 
     @task(task_id='extract_weather_data')
     def extract_weather_data(timestamp: str) -> Dict[str, str]:
@@ -123,6 +100,9 @@ def weather_data_pipeline():
         except Exception as e:
             logger.exception("Weather data extraction failed")
             raise
+
+
+        
 
     @task(task_id='add_timezones')
     def add_timezones(extraction_result: Dict[str, str]) -> Dict[str, str]:

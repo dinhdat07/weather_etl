@@ -4,7 +4,7 @@ import os
 import json
 from typing import Dict, List, Optional
 import pandas as pd
-
+from utils.gcs_utils import upload_blob
 
 import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
@@ -13,9 +13,23 @@ from src.extraction.api_clients.weather_client import WeatherClient
 from src.extraction.utils import APIUtils
 
 class WeatherFetcher:
-    def __init__(self, geo_data: str = "data/raw/geo_data.csv", output_dir: str = "data/raw"):
+    def __init__(self, geo_data: str = "data/raw/geo_data.csv", output_dir: str = "data/raw", 
+                 bucket_name: Optional[str] = None, gcs_output_path: Optional[str] = None):
         self.geo_data = geo_data
         self.output_dir = output_dir
+        self.bucket_name = bucket_name
+        self.gcs_output_path = gcs_output_path 
+
+    def _upload_to_gcs(self, local_path: str, gcs_filename: str):
+        if not self.bucket_name or not self.gcs_output_path:
+            print("[WeatherFetcher] Skipping GCS upload: bucket/path not set.")
+            return
+        try:
+            blob_path = os.path.join(self.gcs_output_path, gcs_filename)
+            upload_blob(self.bucket_name, local_path, blob_path)
+            print(f"[WeatherFetcher] Uploaded to GCS: {blob_path}")
+        except Exception as e:
+            print(f"[WeatherFetcher] GCS upload failed: {e}")
     
     def _read_geo_data(self) -> Optional[pd.DataFrame]:
         try:
